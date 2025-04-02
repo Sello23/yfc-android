@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        style="@style/Widget.YFC.BottomSheet.Gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_close_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_2.5x"
+                android:layout_marginTop="30dp"
+                android:maxLines="1"
+                android:text="@string/log_in_your_daily_progress"
+                android:textAppearance="@style/TextAppearance.YFC.Heading7"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="10dp"
+                android:text="@string/dubai30x30_calendar_msg"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.YFC.Hint"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <include
+                android:id="@+id/workout_calendar_container"
+                layout="@layout/view_calendar_dubai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1.5x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_positive"
+                style="@style/Widget.YFC.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1.5x"
+                android:layout_marginBottom="@dimen/spacing_0.25x"
+                android:text="@string/save_progress"
+                app:layout_constraintBottom_toTopOf="@id/action_negative"
+                app:layout_constraintTop_toBottomOf="@id/workout_calendar_container"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_negative"
+                style="@style/Widget.YFC.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginBottom="@dimen/spacing_0.5x"
+                android:background="@color/transparent"
+                android:text="@string/discard_the_changes_and_close"
+                android:textColor="@color/main_active"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <include
+                android:id="@+id/progress_secondary"
+                layout="@layout/layout_loading"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_progress"
+        android:icon="@drawable/ic_progress"
+        android:title="@string/bottom_menu_progress_text" />
+
+    <item
+        android:id="@+id/fragment_map"
+        android:icon="@drawable/ic_gym_dumbbell"
+        android:title="@string/bottom_menu_map_text" />
+
+    <item
+        android:id="@+id/fragment_lock"
+        android:enabled="false"
+        android:title="" />
+
+    <item
+        android:id="@+id/fragment_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/bottom_menu_profile_text" />
+
+    <item
+        android:id="@+id/fragment_more"
+        android:icon="@drawable/ic_more"
+        android:title="@string/bottom_menu_more_text" />
+
+</menu>

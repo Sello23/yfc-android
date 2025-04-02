@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom_sheet_multilines"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/layout_dialog_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="@dimen/spacing_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:srcCompat="@drawable/image_went_wrong" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/message"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1.5x"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="6dp"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintVertical_bias="0"
+        tools:text="@string/sign_up_invalid_corporate_code_msg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/bonus_coins"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="18dp"
+        android:drawableStart="@drawable/ic_profile_coins"
+        android:drawablePadding="@dimen/spacing_0.4x"
+        android:textAppearance="@style/TextAppearance.YFC.Body6"
+        android:textColor="@color/text_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        tools:text="10 bonus coins" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/info_msg"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_5.75x"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/subscription_screen_will_credited_text"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bonus_coins" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/action_main"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_msg"
+        tools:text="@string/btn_retry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/action_secondary"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        android:background="@color/white_transparent"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_main"
+        tools:text="@string/got_it" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

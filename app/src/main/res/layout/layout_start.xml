@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp">
+
+    <View
+        android:id="@+id/view_thumb"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/shape_thumb_yellow" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/newt_level_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="4dp"
+        android:lines="1"
+        android:text="Newcomer"
+        android:textAppearance="@style/TextAppearance.YFC.Heading5"
+        android:textColor="@color/yellow" />
+
+</FrameLayout>

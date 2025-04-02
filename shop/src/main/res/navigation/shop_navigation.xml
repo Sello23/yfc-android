@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shop_navigation"
+    app:startDestination="@id/fragment_orders_history">
+
+    <fragment
+        android:id="@+id/fragment_shop_intro"
+        android:name="com.yourfitness.shop.ui.features.intro.ShopIntroFragment">
+
+        <argument
+            android:name="coins_amount"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="coins_cost"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="currency"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <deepLink app:uri="android-app://com.yourfitness.shop/fragment_shop_intro/{coins_amount}/{coins_cost}/{currency}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_shop_categories"
+        android:name="com.yourfitness.shop.ui.features.categories.CategoriesFragment">
+        <deepLink app:uri="android-app://com.yourfitness.shop/fragment_shop_categories" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_apparel"
+        android:name="com.yourfitness.shop.ui.features.catalog.ApparelFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_services"
+        android:name="com.yourfitness.shop.ui.features.catalog.ServicesFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_equipment"
+        android:name="com.yourfitness.shop.ui.features.catalog.EquipmentFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_accessories"
+        android:name="com.yourfitness.shop.ui.features.catalog.AccessoriesFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_cart"
+        android:name="com.yourfitness.shop.ui.features.orders.cart.CartFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_product_details"
+        android:name="com.yourfitness.shop.ui.features.product_details.ProductDetailsFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_service_details"
+        android:name="com.yourfitness.shop.ui.features.product_details.ServiceDetailsFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_delivery_address"
+        android:name="com.yourfitness.shop.ui.features.checkout.address.DeliveryAddressFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_payment_options"
+        android:name="com.yourfitness.shop.ui.features.payment.payment_options.PaymentOptionsFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_service_payment_options"
+        android:name="com.yourfitness.shop.ui.features.payment.payment_options.services.ServicesPaymentOptionsFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_orders_history"
+        android:name="com.yourfitness.shop.ui.features.orders.history.OrdersHistoryFragment">
+        <deepLink app:uri="android-app://com.yourfitness.shop/fragment_orders_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_orders_history_details"
+        android:name="com.yourfitness.shop.ui.features.orders.details.OrderDetailsFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_service_orders_history_details"
+        android:name="com.yourfitness.shop.ui.features.orders.details.services.ServiceOrderDetailsFragment">
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_product_filters"
+        android:name="com.yourfitness.shop.ui.features.catalog.filters.ProductFiltersDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_services_filters"
+        android:name="com.yourfitness.shop.ui.features.catalog.filters.ServicesFiltersDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_enter_range"
+        android:name="com.yourfitness.shop.ui.features.catalog.filters.enter_range.EnterRangeDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_enter_coins"
+        android:name="com.yourfitness.shop.ui.features.orders.cart.enter_coins.EnterCoinsDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_products_payment_error"
+        android:name="com.yourfitness.shop.ui.features.payment.payment_error.PaymentErrorDialog" />
+
+    <dialog
+        android:id="@+id/dialog_products_payment_success"
+        android:name="com.yourfitness.shop.ui.features.payment.payment_success.PaymentSuccessDialog" />
+
+    <dialog
+        android:id="@+id/dialog_coin_redemption_info"
+        android:name="com.yourfitness.shop.ui.features.product_details.dialogs.CoinRedemptionDialog" />
+
+    <dialog
+        android:id="@+id/dialog_initial_info"
+        android:name="com.yourfitness.shop.ui.features.product_details.dialogs.InitialInfoDialog" />
+
+    <dialog
+        android:id="@+id/dialog_cancel_order_confirm"
+        android:name="com.yourfitness.shop.ui.features.orders.details.CancelOrderDialog" />
+
+    <dialog
+        android:id="@+id/dialog_order_cancelled"
+        android:name="com.yourfitness.shop.ui.features.orders.details.OrderCancelledDialog" />
+
+    <dialog
+        android:id="@+id/dialog_claim_voucher_confirm"
+        android:name="com.yourfitness.shop.ui.features.orders.details.services.ClaimVoucherDialog" />
+
+    <dialog
+        android:id="@+id/dialog_voucher_claimed_confirm"
+        android:name="com.yourfitness.shop.ui.features.orders.details.services.VoucherClaimedDialog" />
+
+    <dialog
+        android:id="@+id/dialog_voucher_claimed_successfully"
+        android:name="com.yourfitness.shop.ui.features.orders.details.services.VoucherClaimedSuccessfullyDialog" />
+
+    <dialog
+        android:id="@+id/dialog_coins_usage"
+        android:name="com.yourfitness.shop.ui.features.dialogs.CoinUsageDialog"/>
+
+    <dialog
+        android:id="@+id/dialog_select_coins_amount"
+        android:name="com.yourfitness.shop.ui.features.product_details.dialogs.SelectCoinsAmountDialog"/>
+
+</navigation>

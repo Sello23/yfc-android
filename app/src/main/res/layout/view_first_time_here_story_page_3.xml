@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_first_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/black_light"
+        app:layout_constraintStart_toStartOf="@id/image_background_first"
+        app:layout_constraintTop_toTopOf="@id/image_background_first"
+        tools:text="Pro" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_first_cost"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_first"
+        app:layout_constraintStart_toStartOf="@id/image_background_first"
+        tools:text="2000 AED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_first_credits"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_first"
+        app:layout_constraintEnd_toEndOf="@id/image_background_first"
+        app:layout_constraintTop_toTopOf="@id/image_background_first"
+        tools:text="100 credits" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_background_first"
+        android:layout_width="305dp"
+        android:layout_height="78dp"
+        android:src="@drawable/image_background_first_time_here_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_background_second"
+        android:layout_width="335dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:src="@drawable/image_background_first_time_here_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_background_first" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_second_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/image_background_second"
+        app:layout_constraintTop_toTopOf="@id/image_background_second"
+        tools:text="Pro" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_second_cost"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_second"
+        app:layout_constraintStart_toStartOf="@id/image_background_second"
+        tools:text="2000 AED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_second_credits"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_second"
+        app:layout_constraintEnd_toEndOf="@id/image_background_second"
+        app:layout_constraintTop_toTopOf="@id/image_background_second"
+        tools:text="100 credits" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_third_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/black_light"
+        app:layout_constraintStart_toStartOf="@id/image_background_third"
+        app:layout_constraintTop_toTopOf="@id/image_background_third"
+        tools:text="Pro" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_third_cost"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_third"
+        app:layout_constraintStart_toStartOf="@id/image_background_third"
+        tools:text="2000 AED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_third_credits"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_third"
+        app:layout_constraintEnd_toEndOf="@id/image_background_third"
+        app:layout_constraintTop_toTopOf="@id/image_background_third"
+        tools:text="100 credits" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_background_third"
+        android:layout_width="305dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_height="78dp"
+        android:src="@drawable/image_background_first_time_here_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_background_second" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

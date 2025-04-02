@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_header"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1.5x"
+        android:textColor="@color/white"
+        android:text="@string/progress_screen_ready_lets_go_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ready? Lets go!" />
+
+    <include
+        android:id="@+id/view_coins_and_credits"
+        layout="@layout/view_coins_and_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.4x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_header" />
+
+    <include
+        android:id="@+id/view_steps_kcal_points"
+        layout="@layout/view_steps_calories_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        app:layout_constraintBottom_toBottomOf="@+id/view_ring_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_ring_chart" />
+
+    <include
+        android:id="@+id/view_ring_chart"
+        layout="@layout/view_ring_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_coins_and_credits" />
+
+    <include
+        android:id="@+id/view_blur"
+        layout="@layout/view_blur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_ring_chart"
+        app:layout_constraintStart_toStartOf="@id/view_ring_chart"
+        app:layout_constraintTop_toBottomOf="@id/view_coins_and_credits" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_view_blur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="view_blur" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

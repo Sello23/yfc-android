@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:drawablePadding="@dimen/spacing_0.75x"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+            android:textColor="@color/black"
+            tools:drawableStart="@drawable/ic_menu_subscription"
+            tools:text="Subscription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.5x"
+            android:background="@drawable/rounded_active"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/spacing_0.25x"
+            android:textAppearance="@style/TextAppearance.YFC.Hint3"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:text="ACTIVE"
+            tools:visibility="visible" />
+
+        <View
+            android:layout_width="@dimen/spacing_1x"
+            android:layout_height="1dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:background="#DAE4EE" />
+
+</FrameLayout>

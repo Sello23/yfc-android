@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yfc_shop">YFC Shop</string>
+
+    <!--Categories-->
+    <string name="card_apparel">Apparel</string>
+    <string name="card_services">Services</string>
+    <string name="card_equipment">Equipment</string>
+    <string name="card_accessories">Accessories</string>
+
+    <string name="apparel_favorites">Apparel favorites</string>
+    <string name="services_favorites">Services favorites</string>
+    <string name="equipment_favorites">Equipment favorites</string>
+    <string name="accessories_favorites">Accessories favorites</string>
+
+    <!--Orders card-->
+    <string name="my_orders">My orders</string>
+    <string name="my_orders_msg">Your order history can be found in your profile</string>
+    <string name="my_orders_action">Go to My orders</string>
+
+    <string name="catalog_price_part">AED %d</string>
+    <string name="max_coins_redemption">Max coin redemption</string>
+    <string name="max_coins_redemption_per_product">Max coin redemption per product</string>
+    <string name="coins_redemption">Coin redemption</string>
+
+    <string name="catalog_filter">Filter</string>
+    <string name="catalog_sort">Sort</string>
+    <string name="filters_no_items">No items</string>
+    <plurals name="filters_show_items">
+        <item quantity="one">Show %d item</item>
+        <item quantity="other">Show %d items</item>
+    </plurals>
+    <string name="filters_apply">Apply</string>
+    <string name="filters_category">Category</string>
+    <string name="filters_categories">Categories</string>
+    <string name="filters_brands">Brands</string>
+    <string name="filters_gender">Gender</string>
+
+    <string name="cart">Cart</string>
+    <string name="delete">Delete</string>
+    <string name="empty_cart">Empty cart</string>
+    <string name="cart_screen_redemption_data">%d / %s</string>
+    <string name="place_order">Place order</string>
+    <string name="cancel_order">Cancel order</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="total">Total</string>
+
+    <!--Catalog-->
+    <string name="product_info">%s:</string>
+    <string name="product_added_to_cart">Item added to cart</string>
+    <string name="favorite_added_to_cart">Item added to Favourites</string>
+    <string name="color">Color</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="add_to_cart">Add to cart</string>
+    <plurals name="items_amount">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <string name="price_low_to_high">Price: low to high</string>
+    <string name="price_high_to_low">Price: high to low</string>
+    <string name="price_range">Price Range</string>
+    <string name="price_range_value">%s - %s</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="item_size">Size: %s</string>
+    <string name="item_color">Color: %s</string>
+    <string name="item_status">Status: %s</string>
+    <string name="redemption_current_item_label">Max coin redemption for this item</string>
+    <string name="redemption_balance_label">Available coins on your balance</string>
+    <string name="cart_select_redemption">Select coin redemption</string>
+    <string name="not_enough_coins_error">You don\'t have enough available coins on your balance</string>
+    <plurals name="coins_amount_error">
+        <item quantity="one">You can\'t use more than %d coin for this item</item>
+        <item quantity="other">You can\'t use more than %d coins for this item</item>
+    </plurals>
+    <string name="coin_redemption_info">You can claim up to %s\'s worth of YFC coins on this product.</string>
+    <string name="no_favorites_found">No favorites found</string>
+    <string name="no_items_found">No items found</string>
+    <string name="purchase_button_message">Purchase | %s</string>
+    <plurals name="purchase_button_coins">
+        <item quantity="one">&#160;+ %s YFC coin</item>
+        <item quantity="other">&#160;+ %s YFC coins</item>
+    </plurals>
+
+    <!--Checkout address-->
+    <string name="checkout">Checkout</string>
+    <string name="delivery_address">Delivery address</string>
+    <string name="city_town">Town/City</string>
+    <string name="city">City</string>
+    <string name="street">Street</string>
+    <string name="apartment">Apartment</string>
+    <string name="building">Building</string>
+    <string name="address_details">Address details</string>
+    <string name="save_address">Save address</string>
+    <string name="save_address_msg">Place future orders quickly</string>
+    <string name="contact_info">Contact info</string>
+    <string name="full_name">Full name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="action_continue">Continue</string>
+    <string name="save_address_title">Save address</string>
+    <string name="save_address_subtitle">Place future orders quickly</string>
+    <string name="address_details_hint">Building, apt, floor (optional)</string>
+
+    <!--Payment-->
+    <string name="purchase">Purchase</string>
+    <string name="continue_text">Continue</string>
+    <string name="product_payment_success_message">You can track the progress of your order on the main page of the YFC Shop or in your profile.</string>
+    <string name="go_to_yfs_shop_orders">Go to YFC Shop Orders</string>
+    <string name="order_placed">Order Placed</string>
+
+    <!--Orders history-->
+    <string name="orders_title">YFC Shop Orders</string>
+    <string name="goods">Goods</string>
+    <string name="services">Services</string>
+    <string name="order_number">Order no.</string>
+    <string name="order_number_formatted">Order no.: %s</string>
+    <string name="order_date_formatted">Order date: %s</string>
+    <string name="claim_date_formatted">Claim date: %s</string>
+    <string name="order_date">Date ordered</string>
+    <string name="sort_by_status">Sort by status</string>
+    <string name="filter_last_3_months">Last 3 months</string>
+    <string name="status_up_to_down">Status: up to down</string>
+    <string name="status_down_to_up">Status: down to up</string>
+    <string name="no_orders_found">No orders found</string>
+
+    <!--Orders details-->
+    <string name="details_title">Order details</string>
+    <string name="download_invoice">Download Invoices</string>
+
+    <string name="cancel_request_title">Want to cancel order?</string>
+    <string name="cancel_request_msg">Are you sure you want to cancel the order? %s will be refunded.</string>
+    <string name="cancel_request_action">Yes, I want to cancel</string>
+
+    <string name="order_cancelled_title">Order cancellation request formed</string>
+    <string name="order_cancelled_msg">As soon as we review your request, we will send you a notification.</string>
+
+    <string name="claim_voucher">Claim voucher</string>
+    <string name="not_now">Not now</string>
+    <string name="claim_voucher_title">Want to claim voucher?</string>
+    <string name="claim_voucher_msg">You are about to claim the following voucher. Please note that once this voucher has been claimed it cannot be used again.</string>
+    <string name="voucher_claimed_title">Your voucher is claimed</string>
+    <string name="voucher_claimed_msg">Your %s voucher %s is claimed. Enjoy your time!</string>
+    <string name="voucher_number">Voucher number</string>
+
+    <string name="workouts_updated_title">Changes have been saved</string>
+    <string name="workouts_updated_msg">Your progress has been saved. Keep up the good work!</string>
+    <string name="your_coin_balance">Your coin\nbalance</string>
+    <string name="shop_intro_subtitle">You can use these coins to get discounts on any products available in our shop.</string>
+    <string name="shop_intro_action">Got it, go to the YFC Shop</string>
+    <string name="shop_intro_no_coins_title">Discover a wide\nrange of brands and\nproducts available\nin the YFC Shop</string>
+    <string name="shop_intro_no_coins_subtitle">Don\'t forget you can earn YFC coins and redeem them against any products in our shop</string>
+    <string name="shop_intro_no_coins_helper_action"><u>How do I earn more coins?</u></string>
+    <string name="shop_intro_coins_info">%s   =   %s</string>
+    <string name="you_can_use_up_to">You can use up to</string>
+    <string name="to_pay_for_this_item">to pay for this item</string>
+    <string name="product_details_initial_info_subtitle">Make smart purchases by using the coins in your account to partially pay for shop products!</string>
+    <string name="you_have">You have</string>
+    <string name="coin_balance_card_action"><u>How to use my coins?</u></string>
+    <string name="coin_balance_card_no_coins_action"><u>How to earn YFC coins?</u></string>
+    <string name="coin_balance_card_secondary_msg">You can earn YFC coins and redeem\nthem on any product in our shop</string>
+    <string name="coin_usage_message">You have the option to use these coins to get discounts on any product available in our shop</string>
+    <string name="ok_cool">Ok cool!</string>
+    <string name="redeem_your_yfc_coins">Redeem your YFC coins</string>
+    <string name="coins_redeemed">Coins redeemed</string>
+    <string name="price">Price</string>
+    <string name="if_you_use">If you use</string>
+
+</resources>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/Widget.YFC.ScrollView.Content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="false"
+        android:overScrollMode="always"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/pager_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="336dp" />
+
+                <LinearLayout
+                    android:id="@+id/indicators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginBottom="@dimen/spacing_1x"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/button_sign_up"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_toolbar">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/spacing_1.5x"
+                    android:layout_marginEnd="@dimen/spacing_0.75x"
+                    android:scaleType="centerCrop"
+                    android:src="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_ladies"
+                    style="@style/Widget.YFC.TextView.Ladies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_0.75x"
+                    android:text="@string/map_screen_ladies_only"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:paddingVertical="0dp"
+                    android:textAppearance="@style/TextAppearance.YFC.Heading1"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/text_ladies"
+                    app:layout_goneMarginTop="@dimen/spacing_1.5x"
+                    tools:text="Classic Pilates" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_types"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:textAppearance="@style/TextAppearance.YFC.Input"
+                    app:layout_constraintTop_toBottomOf="@id/text_title"
+                    tools:text="Yoga, Boxing" />
+
+                <View
+                    android:id="@+id/spacer"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/text_types" />
+
+                <include
+                    android:id="@+id/work_time"
+                    layout="@layout/view_work_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@id/text_address"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spacer"
+                    app:layout_constraintVertical_bias="1"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_0.5x"
+                    android:layout_marginBottom="@dimen/spacing_1x"
+                    android:drawableStart="@drawable/ic_address_small"
+                    android:drawablePadding="@dimen/spacing_0.25x"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textAppearance="@style/TextAppearance.YFC.Hint"
+                    android:textColor="@color/grey"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/work_time"
+                    tools:text="489 Al Bridge Apt. 307 " />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_toolbar"
+                android:paddingHorizontal="@dimen/spacing_1x"
+                android:paddingVertical="@dimen/spacing_1x"
+                android:textAppearance="@style/TextAppearance.YFC.Body1"
+                android:textColor="@color/black"
+                tools:text="It's where greatness lives. It's where legacies are built. And they're built every single day with the best weight &amp; strength training, classes, ..." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:text="@string/facility_details_amenities"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_amenities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_toolbar"
+                android:paddingHorizontal="@dimen/spacing_1x"
+                android:paddingTop="@dimen/spacing_0.75x"
+                android:paddingBottom="@dimen/spacing_1x"
+                app:chipSpacingVertical="@dimen/spacing_0.5x" />
+
+            <LinearLayout
+                android:id="@+id/facility_trainer_sections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/spacing_3.5x"
+                android:orientation="vertical" >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_0.75x"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    android:text="@string/facility_details_personal_trainers"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_21x"
+                    android:layout_marginBottom="-16dp"
+                    android:layout_weight="1"
+                    android:background="#F6F7FB"
+                    android:clipToPadding="false"
+                    android:paddingTop="@dimen/spacing_0.5x"
+                    android:paddingBottom="@dimen/spacing_4.5x"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_pt_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/list_classes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_3.5x"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIconTint="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_get_access"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_1x"
+            android:text="@string/map_screen_get_gym_access"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

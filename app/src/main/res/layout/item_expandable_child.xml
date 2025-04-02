@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/subscription_option_child_bg"
+    android:padding="@dimen/spacing_1.25x">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOption1"
+        style="@style/Subscription_ImageOption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvOption1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOption1"
+        style="@style/Subscription_TextViewOption"
+        android:text="@string/subscription_screen_sign_up_flow_option_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivOption1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOption2"
+        style="@style/Subscription_ImageOption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvOption2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOption2"
+        style="@style/Subscription_TextViewOption"
+        android:layout_marginTop="14dp"
+        android:text="@string/subscription_screen_sign_up_flow_option_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivOption2"
+        app:layout_constraintTop_toBottomOf="@id/tvOption1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOption3"
+        style="@style/Subscription_ImageOption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvOption3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOption3"
+        style="@style/Subscription_TextViewOption"
+        android:layout_marginTop="14dp"
+        android:text="@string/subscription_screen_sign_up_flow_option_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivOption3"
+        app:layout_constraintTop_toBottomOf="@id/tvOption2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

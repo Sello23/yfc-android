@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_0.125x">2dp</dimen>
+    <dimen name="spacing_0.25x">4dp</dimen>
+    <dimen name="spacing_0.4x">6dp</dimen>
+    <dimen name="spacing_0.5x">8dp</dimen>
+    <dimen name="spacing_0.625x">10dp</dimen>
+    <dimen name="spacing_0.75x">12dp</dimen>
+    <dimen name="spacing_0.875x">14dp</dimen>
+    <dimen name="spacing_1x">16dp</dimen>
+    <dimen name="spacing_1.25x">20dp</dimen>
+    <dimen name="spacing_1.5x">24dp</dimen>
+    <dimen name="spacing_1.75x">28dp</dimen>
+    <dimen name="spacing_2x">32dp</dimen>
+    <dimen name="spacing_2.125x">34dp</dimen>
+    <dimen name="spacing_2.5x">40dp</dimen>
+    <dimen name="spacing_2.75x">44dp</dimen>
+    <dimen name="spacing_3x">48dp</dimen>
+    <dimen name="spacing_3.25x">52dp</dimen>
+    <dimen name="spacing_3.5x">56dp</dimen>
+    <dimen name="spacing_3.75x">60dp</dimen>
+    <dimen name="spacing_4x">64dp</dimen>
+    <dimen name="spacing_4.5x">72dp</dimen>
+    <dimen name="spacing_4.75x">76dp</dimen>
+    <dimen name="spacing_5x">80dp</dimen>
+    <dimen name="spacing_5.75x">92dp</dimen>
+    <dimen name="spacing_11.5x">184dp</dimen>
+    <dimen name="spacing_12x">192dp</dimen>
+
+    <dimen name="text_size_heading1">28sp</dimen>
+    <dimen name="marker_icon_size">44dp</dimen>
+    <dimen name="marker_icon_size_big">61dp</dimen>
+    <dimen name="spacing_21x">336dp</dimen>
+
+    <dimen name="more_card_corner_radius">4dp</dimen>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    style="@style/Widget.YFC.Toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_toolbar"
+    android:gravity="center"
+    app:menu="@menu/search_menu"
+    app:navigationIconTint="@color/grey"
+    app:title="@string/list_of_clients"
+    app:titleCentered="true"
+    app:titleTextAppearance="@style/TextAppearance.YFC.Heading2">
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <SearchView
+            android:id="@+id/search_view"
+            style="@style/Widget.YFC.EditText.Search"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:closeIcon="@drawable/ic_clean"
+            android:drawablePadding="0dp"
+            android:focusable="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:queryBackground="@android:color/transparent"
+            android:searchIcon="@drawable/ic_search_small" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/button_cancel"
+            style="@style/Widget.YFC.TextView.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="@dimen/spacing_1.5x"
+            android:text="@string/btn_cancel" />
+
+    </LinearLayout>
+
+</com.google.android.material.appbar.MaterialToolbar>

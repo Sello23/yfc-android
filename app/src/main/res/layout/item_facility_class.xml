@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_gallery"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_toolbar"
+    android:drawableEnd="@drawable/ic_facility_class"
+    android:drawablePadding="@dimen/spacing_0.5x"
+    android:ellipsize="end"
+    android:gravity="center_vertical"
+    android:lines="1"
+    android:minHeight="56dp"
+    android:paddingHorizontal="@dimen/spacing_1x"
+    android:textAppearance="@style/TextAppearance.YFC.Button"
+    android:textColor="@color/black"
+    tools:text="Beginner classes" />

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_subscribe_banner_progress_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_dumbbell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_dumbbell"
+            app:layout_constraintEnd_toEndOf="@id/image_background"
+            app:layout_constraintTop_toTopOf="@id/image_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_get_subscription"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:gravity="center"
+            android:text="@string/progress_screen_get_a_subscription_text"
+            android:textAppearance="@style/TextAppearance.YFC.Heading2"
+            app:layout_constraintStart_toStartOf="@id/image_background"
+            app:layout_constraintTop_toTopOf="@id/image_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_get_access"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:text="@string/progress_screen_get_access_to_gyms_text"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+            app:layout_constraintBottom_toTopOf="@id/text_subscribe"
+            app:layout_constraintEnd_toStartOf="@id/image_dumbbell"
+            app:layout_constraintStart_toStartOf="@id/image_background"
+            app:layout_constraintTop_toBottomOf="@id/text_get_subscription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_subscribe"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_1x"
+            android:background="@drawable/background_text_view_solid"
+            android:padding="6dp"
+            android:paddingStart="@dimen/spacing_1x"
+            android:paddingEnd="@dimen/spacing_1x"
+            android:text="@string/progress_screen_subscribe_text"
+            android:textAppearance="@style/TextAppearance.YFC.Heading5"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/image_background"
+            app:layout_constraintStart_toStartOf="@id/image_background" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

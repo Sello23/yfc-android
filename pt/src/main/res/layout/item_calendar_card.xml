@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/item_time_slot"
+        layout="@layout/item_time_slot"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/item_calendar_selected"
+        layout="@layout/item_calendar_selected"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/item_calendar_filled"
+        layout="@layout/item_calendar_filled"
+        android:visibility="gone" />
+
+</FrameLayout>

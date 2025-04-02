@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_1x"
+    android:background="@drawable/view_round">
+
+    <View
+        android:id="@+id/top_separator"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_friend"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginVertical="@dimen/spacing_1x"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_separator"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Avatar" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/circle_outer"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="-1dp"
+        android:src="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/image_friend"
+        app:layout_constraintTop_toTopOf="@id/image_friend"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Avatar" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/circle_inner"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@color/main_active"
+        app:layout_constraintBottom_toBottomOf="@id/circle_outer"
+        app:layout_constraintEnd_toEndOf="@id/circle_outer"
+        app:layout_constraintStart_toStartOf="@id/circle_outer"
+        app:layout_constraintTop_toTopOf="@id/circle_outer"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Avatar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_0.625x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_friend"
+        app:layout_constraintTop_toTopOf="@id/image_friend"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Esther Howard" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_0.625x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@id/image_friend"
+        app:layout_constraintEnd_toStartOf="@id/steps"
+        app:layout_constraintStart_toEndOf="@id/image_friend"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        tools:text="Level 13: Hall of Fame" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_0.5x"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/steps"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/ic_steps"
+        app:layout_constraintBottom_toBottomOf="@id/description"
+        app:layout_constraintEnd_toStartOf="@id/calories"
+        app:layout_constraintStart_toEndOf="@id/description"
+        app:layout_constraintTop_toTopOf="@id/description" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/kcal"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/ic_kcal"
+        app:layout_constraintBottom_toBottomOf="@id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/description"
+        app:layout_goneMarginEnd="@dimen/spacing_0.75x" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/new_like_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="circle_outer,circle_inner"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/activity_info_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="steps,calories"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

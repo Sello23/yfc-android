@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/spacing_0.4x"
+    android:paddingTop="@dimen/spacing_0.875x">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_calendar_day_of_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Hint5"
+        android:textColor="@color/user_calendar_day_text"
+        app:layout_constraintBottom_toTopOf="@id/text_calendar_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Mon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_calendar_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/user_calendar_day_number"
+        android:layout_marginBottom="@dimen/spacing_0.75x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        tools:text="22" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/view_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:cardBackgroundColor="@color/main_active"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

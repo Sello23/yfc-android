@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/Widget.YFC.CheckBox.Chip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Heading5"
+        android:textColor="@color/text_chip"
+        tools:text="New" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/amount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/background_circle"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:textAppearance="@style/TextAppearance.YFC.Body3.SemiBold"
+        android:textColor="@color/value_text_chip"
+        tools:text="3" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/Widget.YFC.ScrollView.Content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="false"
+        android:overScrollMode="always"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/pager_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <LinearLayout
+                    android:id="@+id/indicators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginBottom="@dimen/spacing_1x"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/button_sign_up"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|top"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_border_in_stock"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/spacing_0.25x"
+                    android:paddingVertical="@dimen/spacing_0.125x"
+                    android:textAppearance="@style/TextAppearance.YFC.Hint3"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    tools:text="IN STOCK" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/favorite_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/favorite_state" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_1x" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:maxLines="2"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/service_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Magnify Nitro" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/service_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_1x"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:minWidth="100dp"
+                    android:paddingVertical="0dp"
+                    android:textAppearance="@style/TextAppearance.YFC.Body2"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Classic Pilates" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_0.5x"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/spacing_1x"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_title"
+                    tools:text="Vlad’s gym equipment" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_0.75x"
+                    android:drawableStart="@drawable/ic_address"
+                    android:drawablePadding="@dimen/spacing_0.25x"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.YFC.Body2"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/service_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_title"
+                    tools:text="489 Al Bridge Apt." />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/distance_to"
+                    style="@style/Widget.YFC.TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_0.125x"
+                    android:drawablePadding="@dimen/spacing_0.4x"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading8"
+                    android:textColor="@color/main_active"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_distance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_address"
+                    tools:text="13 km" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/service_logo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginVertical="@dimen/spacing_0.4x"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/distance_to"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/service_name"
+                    app:shapeAppearanceOverlay="@style/Widget.YFC.Shop.ImageView.Rounded"
+                    tools:srcCompat="@drawable/image_accessories" />
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    android:layout_marginBottom="@dimen/spacing_0.75x"
+                    android:background="@color/grey_separator"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/distance_to" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:drawablePadding="@dimen/spacing_0.25x"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                android:textColor="@color/text_gray"
+                tools:text="AED 200" />
+
+            <LinearLayout
+                android:id="@+id/discount_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/old_currency_price"
+                    style="@style/Widget.YFC.TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_0.5x"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                    android:textColor="@color/issue_red"
+                    tools:text="AED 100" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/redemption_label"
+                    style="@style/Widget.YFC.TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/spacing_0.5x"
+                    android:maxLines="1"
+                    android:text="@string/if_you_use"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+                    android:textColor="@color/text_gray" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/redemption_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/spacing_0.4x"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="@dimen/spacing_0.25x"
+                    app:drawableStartCompat="@drawable/ic_profile_coins"
+                    tools:ignore="TextContrastCheck"
+                    tools:text="50" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/icon_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/spacing_0.125x"
+                    app:srcCompat="@drawable/ic_info" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_1.5x" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/color_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:paddingVertical="0dp"
+                android:text="@string/color"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/spacer1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_0.75x" />
+
+            <HorizontalScrollView
+                android:id="@+id/list_colors_container"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/list_colors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/spacing_0.625x" />
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/spacer2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_1.5x" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/size_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:paddingVertical="0dp"
+                android:text="@string/size"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/spacer3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_0.75x" />
+
+            <HorizontalScrollView
+                android:id="@+id/list_sizes_container"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/list_sizes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/spacing_0.625x" />
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/spacer4"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_1.5x" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/description_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:paddingVertical="0dp"
+                android:text="@string/description"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_0.75x" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/spacing_1x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+                android:textColor="@color/text_gray"
+                tools:text="Lorem ipsum dolor sit amet, ne magna mediocrem vel, eu mea atqui doctus, eum et graece accusam. Eam melius iriure ne, eos cu causae mandamus molestiae. In vim enim harum, has dico suas alia in. Dicam fastidii pertinacia ad mel. Vel odio utamur praesent no." />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_1.5x" />
+
+            <LinearLayout
+                android:id="@+id/list_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/spacing_1x" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_0.875x" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_1x"
+            android:text="@string/add_to_cart" />
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/shop_bucket"
+        layout="@layout/shop_bucket"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1.5x"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/snackbar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/view_how_fitness_count"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/spacing_1x"
+    android:paddingBottom="@dimen/spacing_1.25x">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/step_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_steps"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        android:text="@string/_1_step"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/step_separator"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/step_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_0.75x"
+        android:text="@string/equals_sign"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading9"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/step_label"
+        app:layout_constraintEnd_toStartOf="@id/step_value"
+        app:layout_constraintStart_toEndOf="@id/step_label"
+        app:layout_constraintTop_toTopOf="@id/step_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/step_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading9"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/step_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/step_separator"
+        app:layout_constraintTop_toTopOf="@id/step_label"
+        tools:text="0.03 point" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/calorie_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_kcal"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        android:text="@string/_1_calorie"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/step_label"
+        app:layout_constraintTop_toBottomOf="@id/step_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/calorie_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_0.75x"
+        android:text="@string/equals_sign"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading9"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/calorie_label"
+        app:layout_constraintStart_toEndOf="@id/calorie_label"
+        app:layout_constraintTop_toTopOf="@id/calorie_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/calorie_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_0.75x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading9"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/calorie_label"
+        app:layout_constraintStart_toEndOf="@id/calorie_separator"
+        app:layout_constraintTop_toTopOf="@id/calorie_label"
+        tools:text="@string/_1_calorie" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

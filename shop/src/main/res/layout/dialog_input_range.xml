@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_input_toolbar_rounded"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="@dimen/spacing_1x">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_shop_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/range_start_label"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_0.5x"
+        android:maxLines="1"
+        android:text="@string/from"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/range_end_label"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/range_end_label"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/spacing_0.5x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:maxLines="1"
+        android:text="@string/to"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/range_start_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_range_start"
+        style="@style/Widget.YFC.EditText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginEnd="@dimen/spacing_0.5x"
+        android:digits="0123456789"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:maxLines="1"
+        android:nextFocusRight="@id/input_range_end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/input_range_end"
+        app:layout_constraintTop_toBottomOf="@id/range_start_label"
+        tools:hint="10                   AED" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_range_end"
+        style="@style/Widget.YFC.EditText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_0.5x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:digits="0123456789"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:maxLines="1"
+        app:layout_constraintLeft_toRightOf="@id/input_range_start"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/range_start_label"
+        app:passwordToggleEnabled="true"
+        tools:hint="1500               AED" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_action"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_2.5x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:enabled="false"
+        android:text="@string/filters_apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_range_start"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

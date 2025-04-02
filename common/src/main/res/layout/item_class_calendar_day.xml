@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:textAppearance="@style/TextAppearance.YFC.Heading3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="13:00" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            app:layout_constraintStart_toStartOf="@+id/text_time"
+            app:layout_constraintTop_toBottomOf="@id/text_time"
+            tools:text="Jane Cooper" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            android:textColor="@color/grey"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Monday, January 10" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:drawableStart="@drawable/available_spots_state"
+            android:drawablePadding="@dimen/spacing_0.25x"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.YFC.Hint"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintEnd_toStartOf="@id/button_action"
+            app:layout_constraintStart_toStartOf="@id/text_name"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            app:layout_goneMarginBottom="@dimen/spacing_0.75x"
+            tools:text="Class booked" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_status_booked"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans_bold"
+            android:maxLines="2"
+            android:text="@string/class_booked"
+            android:textAppearance="@style/TextAppearance.YFC.Hint"
+            android:textColor="@color/text_gray"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_status"
+            app:layout_constraintStart_toStartOf="@id/text_status"
+            tools:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_action"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@drawable/button_background_radius_32"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/issue_red"
+            app:layout_constraintBottom_toBottomOf="@+id/text_status"
+            app:layout_constraintEnd_toEndOf="@+id/text_date"
+            tools:text="Cancel" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_0.5x"
+            android:background="@color/grey_separator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_no_classes_booked_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_1.25x"
+        android:layout_marginBottom="@dimen/spacing_1.5x"
+        android:text="@string/no_classes_available"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/gray_light"
+        android:visibility="gone" />
+
+</FrameLayout>

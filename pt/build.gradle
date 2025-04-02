@@ -1,0 +1,124 @@
+plugins {
+    id 'com.android.library'
+    id 'com.google.dagger.hilt.android'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'org.jetbrains.kotlin.plugin.parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    namespace 'com.yourfitness.pt'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        performance {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        qa {
+            dimension 'environment'
+        }
+        prod {
+            dimension 'environment'
+        }
+        flavorDimensions 'environment'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+        freeCompilerArgs = freeCompilerArgs = ["-Xstring-concat=inline"]
+    }
+    kotlin {
+        jvmToolchain(17)
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig = true
+    }
+}
+
+dependencies {
+    implementation project(path: ':common')
+
+    // Kotlin
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0'
+
+    // AndroidX
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation "androidx.paging:paging-runtime-ktx:3.2.1"
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
+
+    // Google
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.maps.android:android-maps-utils:3.4.0'
+
+    // Dagger & Hilt
+    implementation 'com.google.dagger:hilt-android:2.45'
+    implementation 'androidx.databinding:viewbinding:8.2.1'
+    kapt 'com.google.dagger:hilt-compiler:2.48'
+
+    // Retrofit & OkHttp
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11'
+
+    // Room
+    implementation 'androidx.room:room-runtime:2.6.1'
+    implementation 'androidx.room:room-ktx:2.6.1'
+    kapt 'androidx.room:room-compiler:2.6.1'
+
+    // Timber
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    // 3rd party UI Components
+    implementation 'com.facebook.fbui.textlayoutbuilder:staticlayout-proxy:1.6.0'
+
+    // Flow Bindings
+    implementation 'io.github.reactivecircus.flowbinding:flowbinding-android:1.2.0'
+    implementation 'io.github.reactivecircus.flowbinding:flowbinding-material:1.2.0'
+
+    // ViewBinding Delegate
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.6'
+
+    // Calendar
+    implementation 'com.kizitonwose.calendar:view:2.3.0'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+}

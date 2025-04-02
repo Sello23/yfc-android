@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_background"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_subscription_banner_map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_credits_skipping_rope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_credits_skipping_rope"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_attend_classes"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.75x"
+            android:layout_marginEnd="@dimen/spacing_2x"
+            android:text="@string/map_screen_buy_credits_to_attend_text"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+            app:layout_constraintEnd_toStartOf="@id/image_credits_skipping_rope"
+            app:layout_constraintStart_toStartOf="@id/image_background"
+            app:layout_constraintTop_toTopOf="@id/image_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_buy_credits"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.75x"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            android:gravity="center"
+            android:text="@string/map_screen_buy_credits_text"
+            android:textAppearance="@style/TextAppearance.YFC.Heading2"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/image_background"
+            app:layout_constraintStart_toStartOf="@id/image_background" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.4x"
+            android:layout_marginEnd="@dimen/spacing_0.4x"
+            android:src="@drawable/ic_close_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

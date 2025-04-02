@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fieldCityId" type="id"/>
+    <item name="fieldStreetId" type="id"/>
+    <item name="fieldApartmentId" type="id"/>
+    <item name="fieldBuildingId" type="id"/>
+    <item name="fieldFloorId" type="id"/>
+    <item name="fieldNameId" type="id"/>
+    <item name="fieldEmailId" type="id"/>
+    <item name="fieldNumberId" type="id"/>
+</resources>

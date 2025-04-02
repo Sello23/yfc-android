@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_day_of_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        android:textColor="@color/grey"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/text_day"
+        app:layout_constraintStart_toStartOf="@id/text_day"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Heading1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_day_of_week"
+        tools:text="09" />
+
+    <include
+        android:id="@+id/view_card"
+        layout="@layout/view_facility_full_info_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_4x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_day_of_week"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view_empty_day"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/spacing_4x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@id/text_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_day" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

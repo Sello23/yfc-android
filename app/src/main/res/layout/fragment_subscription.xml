@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:paddingHorizontal="@dimen/spacing_1x"
+        android:paddingTop="@dimen/spacing_0.75x"
+        android:paddingBottom="@dimen/spacing_1.25x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_3.5x"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_circle_logo" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1.25x"
+                android:layout_marginTop="@dimen/spacing_1.5x"
+                android:fontFamily="@font/work_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                tools:text="@string/subscription_screen_sign_up_now" />
+
+            <include
+                android:id="@+id/monthly_option"
+                layout="@layout/item_expandable_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_2.5x"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <include
+                android:id="@+id/monthly_option_description"
+                layout="@layout/item_expandable_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <include
+                android:id="@+id/one_time_option"
+                layout="@layout/item_expandable_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <include
+                android:id="@+id/one_time_option_description"
+                layout="@layout/item_expandable_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_redeem_referral_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1.75x"
+                android:drawableEnd="@drawable/ic_referral_code"
+                android:drawablePadding="@dimen/spacing_1x"
+                android:paddingBottom="@dimen/spacing_0.25x"
+                android:text="@string/sign_up_activation_code"
+                android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                android:textColor="@color/yellow"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_referral_code_redeemed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1.75x"
+                android:text="@string/subscription_screen_referral_code_redeemed_text"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+                android:textColor="@color/grey"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_discard_referral_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:text="@string/subscription_screen_discard_code_text"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                android:textColor="@color/blue"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardActivePlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1.25x"
+                android:elevation="1dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_discard_referral_code"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/pic_active_subcription" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_1.25x"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    android:text="@string/subscription_screen_monthly_plan"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_1.25x"
+                    android:layout_marginBottom="@dimen/spacing_1x"
+                    android:text="@string/subscription_screen_status_"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading9"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvType" />
+
+                <TextView
+                    android:id="@+id/tvActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_0.25x"
+                    android:text="@string/subscription_screen_active"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/tvStatus"
+                    app:layout_constraintStart_toEndOf="@id/tvStatus"
+                    app:layout_constraintTop_toTopOf="@id/tvStatus" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvNextPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardActivePlan"
+                tools:text="@string/subscription_screen_your_next_payment"
+                tools:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProcced"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_1x"
+            android:visibility="gone"
+            tools:text="Proceed to Payment  |  AED 1,350"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_1x"
+            android:background="@drawable/button_background_red"
+            android:text="@string/subscription_screen_cancel_auto_subscription"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResubscribe"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_1x"
+            android:text="@string/subscription_screen_resubscribe"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

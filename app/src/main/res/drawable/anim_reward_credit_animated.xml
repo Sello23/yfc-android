@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/anim_reward_credit">
+    <target
+        android:name="bar"
+        android:animation="@animator/fill_left_to_right_2" />
+    <target
+        android:name="coin"
+        android:animation="@animator/fade_color" />
+    <target
+        android:name="rays_1"
+        android:animation="@animator/rotate_1" />
+    <target
+        android:name="rays_2"
+        android:animation="@animator/rotate_2" />
+    <target
+        android:name="rays_path_1"
+        android:animation="@animator/fade_in_1" />
+    <target
+        android:name="rays_path_2"
+        android:animation="@animator/fade_in_2" />
+</animated-vector>

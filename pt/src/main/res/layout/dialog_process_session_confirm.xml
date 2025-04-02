@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.YFC.BottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_bottom_sheet_gray"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/card"
+        layout="@layout/view_facility_full_info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/action_btn"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1.5x"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        android:background="@drawable/button_background_2"
+        android:text="@string/yes_confirm_session"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</LinearLayout>

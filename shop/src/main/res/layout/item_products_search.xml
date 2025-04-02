@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_toolbar">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:text="@string/map_screen_results_format"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_facility"
+        style="@style/ShapeAppearance.YFC.ImageView.Rounded"
+        android:layout_width="74dp"
+        android:layout_height="76dp"
+        android:layout_marginVertical="@dimen/spacing_1x"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_results"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Search" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Heading5"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_facility"
+        app:layout_constraintTop_toTopOf="@id/image_facility"
+        tools:text="Training Shorts" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@id/text_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_facility"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:text="Vlad’s gym equipment" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/image_facility"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_facility"
+        app:layout_constraintTop_toBottomOf="@id/text_brand"
+        tools:text="AED 200" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

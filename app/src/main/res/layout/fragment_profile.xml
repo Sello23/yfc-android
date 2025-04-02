@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/Widget.YFC.ScrollView.Content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-16dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_photo"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="@dimen/spacing_1x"
+                    android:background="#C5D4E2"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Avatar.Small" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_photo_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_photo_upload"
+                    android:translationX="6dp"
+                    android:translationY="6dp"
+                    app:layout_constraintBottom_toBottomOf="@id/image_photo"
+                    app:layout_constraintEnd_toEndOf="@id/image_photo" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1.5x"
+                    android:textAppearance="@style/TextAppearance.YFC.Heading1"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_coins"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_photo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="Marvin McKinney" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_coins"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_1.5x"
+                    android:layout_marginTop="@dimen/spacing_0.5x"
+                    android:drawableStart="@drawable/ic_profile_coins"
+                    android:drawablePadding="@dimen/spacing_0.4x"
+                    android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                    android:textColor="@color/grey"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_photo"
+                    app:layout_constraintTop_toBottomOf="@id/text_name"
+                    tools:text="52 coins" />
+
+               <!-- <com.google.android.material.textview.MaterialTextView // TODO temporary removed Studios
+                    android:id="@+id/text_credits"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1.5x"
+                    android:layout_marginTop="@dimen/spacing_0.5x"
+                    android:drawableStart="@drawable/ic_profile_credits"
+                    android:drawablePadding="@dimen/spacing_0.4x"
+                    android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                    android:textColor="@color/blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/text_coins"
+                    app:layout_constraintTop_toBottomOf="@id/text_name"
+                    tools:text="90 credits" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.5x"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_user"
+                app:layout_constraintVertical_bias="0">
+
+                <View
+                    android:id="@+id/view_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="#DAE4EE" />
+
+                <include
+                    android:id="@+id/item_subscription"
+                    layout="@layout/item_list" />
+
+              <!--  <include // TODO temporary removed Studios
+                    android:id="@+id/item_buy_credits"
+                    layout="@layout/item_list" />-->
+
+                <include
+                    android:id="@+id/item_shop_orders"
+                    layout="@layout/item_list" />
+
+                <include
+                    android:id="@+id/item_profile_settings"
+                    layout="@layout/item_list" />
+
+                <include
+                    android:id="@+id/item_payment_history"
+                    layout="@layout/item_list" />
+
+<!--                <include-->
+<!--                    android:id="@+id/item_notification_settings"-->
+<!--                    layout="@layout/item_list" />-->
+
+                <include
+                    android:id="@+id/item_connected_devices"
+                    layout="@layout/item_list" />
+
+                <include
+                    android:id="@+id/item_my_referral_code"
+                    layout="@layout/item_list" />
+
+                <include
+                    android:id="@+id/item_privacy_policy"
+                    layout="@layout/item_list" />
+
+                <include
+                    android:id="@+id/item_terms_and_conditions"
+                    layout="@layout/item_list" />
+
+                <include
+                    android:id="@+id/item_deletion_request"
+                    layout="@layout/item_list" />
+
+                <include
+                    android:id="@+id/item_help_center"
+                    layout="@layout/item_list" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/app_version_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_0.4x"
+                    android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+                    android:textColor="@color/black"
+                    android:text="@string/app_version_label" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_bar"
+        android:name="com.yourfitness.coach.ui.features.bottom_menu.BottomMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

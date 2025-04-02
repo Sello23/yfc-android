@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_sessions" />
+
+    <com.kizitonwose.calendar.view.WeekCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cv_daySize="rectangle"
+        app:cv_dayViewResource="@layout/view_user_calendar_day"
+        app:cv_scrollPaged="true"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/view_user_calendar_day" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_separator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendar_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/spacing_1x"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="40"
+        tools:listitem="@layout/item_time_slot" />
+
+    <include
+        android:id="@+id/action_area"
+        layout="@layout/view_action_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="88dp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

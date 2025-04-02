@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="card_swipe_background">#EE3A50</color>
+    <color name="menu_item_background">#CCF5F5F5</color>
+    <color name="input_dialog_background">#FFD7D7D7</color>
+
+    <color name="status_gb_fulfilled">#49C594</color>
+    <color name="status_text_delivered">#53C549</color>
+</resources>

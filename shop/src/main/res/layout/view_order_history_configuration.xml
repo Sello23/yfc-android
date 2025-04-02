@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/configuration"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/spacing_1x"
+    android:paddingVertical="@dimen/spacing_1x"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        android:text="@string/filter_last_3_months"
+        app:drawableStartCompat="@drawable/ic_calendar_start"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/text_gray" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sort"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        app:drawableStartCompat="@drawable/ic_toolbar_sort_reversed"
+        android:layout_weight="1"
+        android:text="@string/sort_by_status"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/text_gray" />
+
+</LinearLayout>

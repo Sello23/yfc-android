@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.YFC.ScrollView.Content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_progress" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_welcome"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_4.75x"
+            android:gravity="center"
+            android:text="@string/sign_up_what_is_your_name"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_name"
+            style="@style/Widget.YFC.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginVertical="@dimen/spacing_2.75x"
+            android:hint="@string/name"
+            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintTop_toBottomOf="@id/text_welcome"
+            app:layout_constraintVertical_bias="0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_next"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginVertical="@dimen/spacing_1x"
+            android:text="@string/next"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

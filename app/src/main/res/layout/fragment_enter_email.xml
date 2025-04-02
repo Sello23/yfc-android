@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.YFC.ScrollView.Content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_progress" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_nice_to_meet"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_4.75x"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:text="@string/sign_up_nice_to_meet_you" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_we_need_email"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:gravity="center"
+            android:text="@string/sign_up_we_need_your_email"
+            android:textAppearance="@style/TextAppearance.YFC.Body1"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/text_nice_to_meet" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_email"
+            style="@style/Widget.YFC.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1.5x"
+            android:hint="@string/email"
+            app:layout_constraintTop_toBottomOf="@id/text_we_need_email" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_email_error"
+            style="@style/Widget.YFC.TextView.Error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@id/edit_email"
+            tools:text="The code was not entered correctly" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_terms_and_privacy"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginVertical="@dimen/spacing_2x"
+            android:gravity="center"
+            android:text="@string/sign_up_terms_and_privacy_policy"
+            android:textAppearance="@style/TextAppearance.YFC.Body2"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintTop_toBottomOf="@id/edit_email"
+            app:layout_constraintVertical_bias="0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_next"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_1x"
+            android:text="@string/next"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

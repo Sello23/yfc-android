@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.YFC.ScrollView.Content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_progress" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_lets_confirm"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_4.75x"
+            android:gravity="center"
+            android:text="@string/sign_up_lets_confirm_its_you"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_share_phone"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:gravity="center"
+            android:text="@string/sign_up_please_share_your_phone"
+            android:textAppearance="@style/TextAppearance.YFC.Body1"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/text_lets_confirm" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/edit_country_code"
+            style="@style/Widget.YFC.EditText"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_3.5x"
+            android:focusable="true"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_share_phone" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_phone"
+            style="@style/Widget.YFC.EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_3.5x"
+            android:layout_marginStart="@dimen/spacing_0.5x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:digits="@string/characters_phone_number"
+            android:hint="@string/phone"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edit_country_code"
+            app:layout_constraintTop_toBottomOf="@id/text_share_phone"
+            app:layout_constraintVertical_bias="0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_phone_error"
+            style="@style/Widget.YFC.TextView.Error"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/edit_phone"
+            app:layout_constraintTop_toBottomOf="@id/edit_phone"
+            tools:text="The code was not entered correctly" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_next"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_1x"
+            android:text="@string/next"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

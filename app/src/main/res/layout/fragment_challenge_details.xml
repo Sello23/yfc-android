@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/Widget.YFC.ScrollView.Content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_background"
+        android:fitsSystemWindows="false"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_challenge"
+                android:layout_width="match_parent"
+                android:layout_height="258dp"
+                android:scaleType="centerCrop"
+                android:src="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_challenge_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:textAppearance="@style/TextAppearance.YFC.Heading1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_challenge"
+                tools:text="Dubai 30x30" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:drawableStart="@drawable/ic_start_challenge"
+                android:drawablePadding="@dimen/spacing_0.5x"
+                android:text="@string/challenge_details_screen_start_text"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="@id/text_challenge_name"
+                app:layout_constraintTop_toBottomOf="@id/text_challenge_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_start_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_5x"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                app:layout_constraintStart_toStartOf="@id/text_challenge_name"
+                app:layout_constraintTop_toBottomOf="@id/text_challenge_name"
+                tools:text="24 May 2022" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_finish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.4x"
+                android:drawableStart="@drawable/ic_flag"
+                android:drawablePadding="@dimen/spacing_0.5x"
+                android:text="@string/challenge_details_screen_finish_text"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="@id/text_challenge_name"
+                app:layout_constraintTop_toBottomOf="@id/text_start" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_finish_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_5x"
+                android:layout_marginTop="@dimen/spacing_0.4x"
+                android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                app:layout_constraintStart_toStartOf="@id/text_challenge_name"
+                app:layout_constraintTop_toBottomOf="@id/text_start"
+                tools:text="24 May 2022" />
+
+            <View
+                android:id="@+id/view_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:background="@color/grey_separator"
+                app:layout_constraintTop_toBottomOf="@id/text_finish" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:text="@string/challenge_details_screen_description_text"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_separator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_description_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_description"
+                tools:text="Lorem ipsum dolor sit amet, ne magna mediocrem vel, eu mea atqui doctus, eum et graece accusam. Eam melius iriure ne, eos cu causae mandamus molestiae. In vim enim harum, has dico suas alia in. Dicam fastidii pertinacia ad mel. Vel odio utamur praesent no." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:text="@string/challenge_details_screen_rules_text"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_description_content" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_rules_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_rules"
+                tools:text="Lorem ipsum dolor sit amet, ne magna mediocrem vel, eu mea atqui doctus, eum et graece accusam. Eam melius iriure ne, eos cu causae mandamus molestiae. In vim enim harum, has dico suas alia in. Dicam fastidii pertinacia ad mel. Vel odio utamur praesent no." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_leave_challenge"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_1x"
+            android:background="@drawable/button_background_red"
+            android:text="@string/challenge_details_screen_leave_challenge_text"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_join_challenge"
+            style="@style/Widget.YFC.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_1x"
+            android:text="@string/challenge_details_screen_join_challenge_text" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

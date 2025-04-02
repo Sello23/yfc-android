@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginVertical="@dimen/spacing_0.75x"
+    android:layout_height="26dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/label_day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint4"
+        android:textColor="@color/black"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:text="Friday, Jan 15" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

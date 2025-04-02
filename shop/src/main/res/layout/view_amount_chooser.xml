@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="72dp"
+    android:layout_height="24dp"
+    android:background="@drawable/rounded_container">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/action_remove"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@color/white"
+        android:scaleType="center"
+        app:shapeAppearance="@style/Widget.YFC.Shop.ImageView.Rounded"
+        app:srcCompat="@drawable/ic_decrease"
+        app:strokeColor="@color/gray_light"
+        app:strokeWidth="0.5sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/amount"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:text="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/black_light" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/action_add"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@color/white"
+        android:scaleType="center"
+        app:shapeAppearance="@style/Widget.YFC.Shop.ImageView.Rounded"
+        app:srcCompat="@drawable/ic_increase"
+        app:strokeColor="@color/gray_light"
+        app:strokeWidth="0.5sp" />
+</LinearLayout>

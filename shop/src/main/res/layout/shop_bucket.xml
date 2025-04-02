@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bucket_container"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:layout_gravity="bottom|end"
+    android:layout_marginEnd="@dimen/spacing_1x"
+    android:layout_marginBottom="@dimen/spacing_3x"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone">
+
+    <View
+        android:id="@+id/button_lock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_shop_bucket"
+        android:elevation="88dp" />
+
+    <TextView
+        android:id="@+id/bucket_items"
+        style="@style/TextAppearance.YFC.Heading5"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/shape_circle"
+        android:elevation="88dp"
+        android:fontFamily="@font/work_sans_medium"
+        android:gravity="center"
+        android:textColor="@color/main_active"
+        tools:text="5" />
+</FrameLayout>

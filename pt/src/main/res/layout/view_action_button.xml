@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/spacing_1x">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_checkout"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/book_session" />
+
+</FrameLayout>

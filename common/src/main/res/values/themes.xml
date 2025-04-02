@@ -1,0 +1,51 @@
+<resources>
+
+    <style name="Theme.YFCAndroid" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.YFCAndroid.BottomSheetDialog</item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.YFCAndroid.MaterialCalendar</item>
+    </style>
+
+    <style name="Theme.YFCAndroid.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.YFCAndroid.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.YFCAndroid.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeOverlay.YFCAndroid.BottomSheetDialog" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="enableEdgeToEdge">true</item>
+        <item name="bottomSheetStyle">@style/Widget.YFC.BottomSheet</item>
+    </style>
+
+    <style name="ThemeOverlay.YFCAndroid.MaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="materialCalendarHeaderToggleButton">@style/Widget.YFC.MaterialCalendar.HeaderToggleButton</item>
+        <item name="materialCalendarHeaderTitle">@style/Widget.YFC.MaterialCalendar.HeaderTitle</item>
+    </style>
+
+    <style name="Theme.YFCAndroid.CropImage" parent="@style/Theme.MaterialComponents">
+        <item name="colorSecondary">@android:color/black</item>
+    </style>
+
+</resources>

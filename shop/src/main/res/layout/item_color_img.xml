@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_image_container"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_marginHorizontal="@dimen/spacing_0.4x"
+    android:background="@drawable/product_colors_state">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/color_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0.5dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/Widget.YFC.Shop.ImageView.Rounded" />
+</FrameLayout>

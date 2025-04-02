@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@color/white"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Avatar" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_profile"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Avatar"
+        app:srcCompat="@color/main_active" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        tools:text="+2"
+        tools:visibility="visible" />
+</FrameLayout>

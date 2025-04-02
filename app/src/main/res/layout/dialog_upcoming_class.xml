@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="327dp"
+        android:layout_height="287dp"
+        android:background="@drawable/image_background_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_profile"
+        android:layout_width="327dp"
+        android:layout_height="185dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/view_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView"
+        app:srcCompat="@drawable/gradient_blue" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/image_profile"
+        app:layout_constraintStart_toStartOf="@id/image_profile"
+        app:layout_constraintTop_toTopOf="@id/image_profile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_username"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_0.5x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/text_date"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintTop_toTopOf="@id/view_background"
+        tools:text="Marvin McKinney" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_date"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:drawableStart="@drawable/ic_calendar_black"
+        android:drawablePadding="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintTop_toTopOf="@id/view_background"
+        tools:text="April 11 2022" />
+
+    <View
+        android:id="@+id/view_dot_separator"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:layout_marginTop="@dimen/spacing_4x"
+        android:layout_marginEnd="@dimen/spacing_1.5x"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintTop_toTopOf="@id/view_background" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_class_name"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintTop_toBottomOf="@id/view_dot_separator"
+        tools:text="Gold gym" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_coach_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        app:layout_constraintStart_toStartOf="@id/text_class_name"
+        app:layout_constraintTop_toBottomOf="@id/text_class_name"
+        tools:text="Jane Cooper" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_gym_type"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:layout_marginEnd="@dimen/spacing_0.25x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        app:layout_constraintEnd_toStartOf="@id/image_gym_logo"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintTop_toBottomOf="@id/text_gym_address"
+        tools:text="MMA, Crossfit, Powerlifting" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_gym_address"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.4x"
+        android:drawableStart="@drawable/ic_location"
+        android:drawablePadding="@dimen/spacing_0.5x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/gray_light"
+        app:drawableTint="@color/gray_light"
+        app:layout_constraintEnd_toStartOf="@id/image_gym_logo"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintTop_toBottomOf="@id/text_coach_name"
+        tools:text="489 Al Bridge Apt. 307 " />
+
+    <View
+        android:id="@+id/view_dot_separator_second"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:layout_marginEnd="@dimen/spacing_1.5x"
+        android:layout_marginBottom="@dimen/spacing_1.25x"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintBottom_toTopOf="@id/button_successfully_passed"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@id/view_background" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_gym_logo"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/view_dot_separator"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintTop_toBottomOf="@id/view_dot_separator_second"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon.Medium" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_successfully_passed"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1.5x"
+        android:text="@string/map_screen_successfully_passed_text"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@id/view_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

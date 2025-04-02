@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="-50dp"
+    android:background="@color/white_background"
+    android:paddingVertical="@dimen/spacing_1x">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:paddingEnd="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_title"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:maxLines="2"
+            android:paddingBottom="@dimen/spacing_0.25x"
+            android:textAppearance="@style/TextAppearance.YFC.Body3.SemiBold"
+            android:textColor="@color/black_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Training Shorts" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_subtitle"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:maxLines="2"
+            android:paddingBottom="@dimen/spacing_0.125x"
+            android:textAppearance="@style/TextAppearance.YFC.Hint2"
+            android:textColor="@color/text_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            tools:text="Vlad’s gym equipment" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/size_default"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:maxLines="1"
+            android:text="@string/item_size"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/item_subtitle"
+            tools:text="Size: 43" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/color_default"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:maxLines="1"
+            android:text="@string/item_color"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/size_default"
+            tools:text="Color: Grey" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/order_status"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:maxLines="1"
+            android:paddingTop="@dimen/spacing_0.25x"
+            android:text="@string/item_status"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/color_default"
+            tools:text="Status: Processing"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/price_label"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:maxLines="1"
+            android:text="@string/price"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+            android:textColor="@color/black_light"
+            app:layout_constraintBottom_toTopOf="@id/item_price2"
+            app:layout_constraintStart_toEndOf="@id/image" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_price"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/text_gray"
+            app:layout_constraintBottom_toBottomOf="@id/price_label"
+            app:layout_constraintEnd_toStartOf="@id/old_currency_price"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/price_label"
+            app:layout_constraintTop_toTopOf="@id/price_label"
+            tools:text="AED 200" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/old_currency_price"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.25x"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/text_gray"
+            app:layout_constraintBottom_toBottomOf="@id/price_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_price"
+            app:layout_constraintTop_toTopOf="@id/price_label"
+            tools:text="800" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/select_info_label"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:maxLines="2"
+            android:paddingTop="@dimen/spacing_0.25x"
+            android:text="@string/coins_redeemed"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/price_label"
+            app:layout_constraintStart_toEndOf="@id/image" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/spinner"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_0.5x"
+            android:drawableStart="@drawable/ic_profile_coins"
+            android:drawableEnd="@drawable/ic_expand_up_down"
+            android:drawablePadding="@dimen/spacing_0.25x"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/main_active"
+            app:layout_constraintBottom_toBottomOf="@id/select_info_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/select_info_label"
+            tools:text="50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_price2"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/text_gray"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintEnd_toStartOf="@id/old_currency_price2"
+            app:layout_constraintHorizontal_bias="0"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@id/coins_used"
+            tools:text="AED 200" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/old_currency_price2"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.25x"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/text_gray"
+            app:layout_constraintBottom_toBottomOf="@id/item_price2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_price2"
+            app:layout_constraintTop_toTopOf="@id/item_price2"
+            tools:text="800" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/coins_used"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_0.75x"
+            android:drawableStart="@drawable/ic_profile_coins"
+            android:drawablePadding="@dimen/spacing_0.25x"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+            android:textColor="@color/grey"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/image"
+            tools:text="50/25"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/coin_redemption_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="spinner,select_info_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/delete_container"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:background="@color/card_swipe_background"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:srcCompat="@drawable/ic_delete" />
+</androidx.constraintlayout.widget.ConstraintLayout>

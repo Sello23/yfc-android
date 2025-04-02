@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:override="true">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/country_flag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:padding="@dimen/spacing_0.5x" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/country_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/black" />
+
+</LinearLayout>

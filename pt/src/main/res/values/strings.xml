@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--PT LIST-->
+    <string name="pt_facility_info">%s, %s</string>
+    <string name="hide">Hide</string>
+    <string name="show_all_gyms">Show all gyms</string>
+    <string name="book">Book</string>
+    <string name="book_time_slot">Book time slot</string>
+    <string name="buy_and_book">Buy and Book</string>
+    <plurals name="sessions_number">
+        <item quantity="one">%d session</item>
+        <item quantity="other">%d sessions</item>
+    </plurals>
+    <plurals name="show_n_trainers">
+        <item quantity="one">Show %d trainer</item>
+        <item quantity="other">Show %d trainers</item>
+    </plurals>
+    <string name="filters_no_matching_trainers">No matching trainers</string>
+    <string name="see_more">See more</string>
+    <string name="focus_areas">Focus areas</string>
+    <string name="certification_qualification"><![CDATA[Certification & Qualification]]></string>
+    <string name="book_session">Book session</string>
+    <string name="buy_and_book_session">Buy and Book session</string>
+    <string name="your_personal_trainer">Your personal trainer</string>
+    <string name="personal_trainer">Personal trainer</string>
+    <string name="general_info_label">General Information</string>
+
+    <plurals name="available_sessions">
+        <item quantity="one">%d session available</item>
+        <item quantity="other">%d sessions available</item>
+    </plurals>
+
+    <string name="session_buy_options_title">Get sessions</string>
+    <string name="session_buy_options_subtitle">Buy sessions now to book your personal trainer session</string>
+    <string name="buy_sessions">Buy sessions</string>
+    <string name="back_to_trainers_list">Back to the list of trainers</string>
+    <string name="pt_success_payment_msg">Lucky you, %S!\nYour Trainer %s has been allocated.</string>
+    <string name="choose_a_time_slot">Choose a time slot</string>
+    <string name="pt_success_payment_title">Boom! You\'re loaded with</string>
+    <string name="one_hour_session">one-hour session</string>
+
+    <string name="status_requested">Requested</string>
+    <string name="status_booked">Booked</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_confirmed">Confirmed</string>
+    <string name="status_cancellation_requested">Cancellation requested</string>
+    <string name="status_charged">Charged</string>
+    <string name="status_blocked">Blocked</string>
+
+    <string name="status_info">(needs confirmation)</string>
+
+    <string name="select_facility">Select facility</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="confirm_training">Confirm Training</string>
+    <string name="book_time_slot_info_1">All the gyms in which the trainer works are displayed</string>
+    <string name="book_time_slot_info_2">You can cancel your booking anytime</string>
+    <string name="debited_info">1 session will be debited</string>
+
+    <string name="booking_success_title">Your booking request is sent</string>
+    <string name="booking_success_msg">will be debited from your account\n\nAs soon as the trainer approves your request,\nthe session will appear in your calendar</string>
+
+    <string name="booking_error_title">Oops, this slot has been taken!</string>
+    <string name="booking_error_msg">Someone was faster and has already booked this slot, but you can choose another</string>
+    <string name="booking_error_action">Choose another one</string>
+
+    <string name="confirm_booking_title">Confirmation of the session</string>
+    <string name="confirm_booking_msg">It is important for you to confirm your sessions. Please ensure you confirm after each session</string>
+    <string name="confirm_booking_action">Confirm session</string>
+    <string name="confirm_booking_action_negative">I do not confirm</string>
+    <string name="yes_confirm_session">Yes, confirm session</string>
+    <string name="process_confirm_booking_title">Are you sure you want to confirm?</string>
+
+    <string name="select_your_trainer">Select your trainer</string>
+    <string name="upcoming_training">Upcoming training</string>
+
+    <!--PT DASHBOARD-->
+    <string name="commission">commission</string>
+    <string name="total_sessions">total sessions</string>
+    <string name="clients">clients</string>
+    <string name="total_commissions">total commissions</string>
+    <string name="no_trainers_msg">No trainers available</string>
+    <string name="trainer_dashboard">Trainer dashboard</string>
+    <string name="percent_value">%d\%%</string>
+    <string name="more_items_label">+%d</string>
+    <string name="latest_requests">Latest requests</string>
+    <string name="latest_requests_empty_state">No requests available</string>
+    <string name="next_appointment">Next appointment</string>
+    <string name="next_appointment_empty_state">No appointments available</string>
+    <string name="list_of_clients">List of clients</string>
+    <string name="list_of_clients_empty_state">No clients available</string>
+    <string name="manage_request">Manage request</string>
+    <string name="manage_booking">Manage booking</string>
+    <string name="cancel_session">Cancel session</string>
+
+    <string name="all_label">All</string>
+    <string name="new_label">New</string>
+    <string name="re_schedule">Re-schedule</string>
+    <string name="decline_request">Decline request</string>
+    <string name="new_request_details">New request details</string>
+    <string name="booking_request_confirm">Yes, confirm booking request</string>
+    <string name="decline_session_info">This action will refund the session to the trainee.</string>
+
+    <string name="confirm_session_title">Confirm this booking request?</string>
+    <string name="decline_session_title">Decline booking request?</string>
+    <string name="confirm_session_action_msg">Yes, confirm booking request</string>
+    <string name="decline_session_action_msg">Yes, decline booking request</string>
+    <string name="decline_session_info_msg">This action will refund the session to the trainee.</string>
+    <string name="confirm_session_result_title">Booking has been confirmed</string>
+    <string name="decline_session_result_title">Booking request has been declined</string>
+    <string name="confirm_session_result_msg">Session has been successfully booked and the trainee will be notified</string>
+    <string name="decline_session_result_msg">Booking request has been declined and the trainee will be notified</string>
+
+    <string name="cancel_session_title">Cancel completed session?</string>
+    <string name="cancel_session_action_msg">Yes, cancel this session</string>
+    <string name="cancel_session_info_msg">This action will cancel this booking and credit the trainee\'s session balance.</string>
+
+    <string name="confirm_cancel_session_result_title">Session has been cancelled</string>
+    <string name="confirm_cancel_session_result_msg">The trainee will be notified and will get the unused session back</string>
+
+    <string name="sessions_conducted">Sessions conducted: %d</string>
+    <string name="no_clients_found">No clients found</string>
+    <string name="client_details">Client details</string>
+
+    <string name="sessions_available_label">Sessions available</string>
+    <string name="sessions_conducted_label">Sessions conducted</string>
+
+    <string name="inductions_label">Inductions</string>
+    <string name="inductions_empty_state">No inductions available</string>
+    <string name="leave_us_a_note">Leave us a note</string>
+
+    <string name="induction_details">Induction details</string>
+    <string name="complete_induction">Complete induction</string>
+
+    <string name="confirm_complete_induction_title">Are you sure you want to complete this induction?</string>
+    <string name="confirm_induction">Confirm induction</string>
+    <string name="confirm_induction_success_title">Induction has been completed</string>
+    <string name="confirm_induction_success_msg">Induction has been successfully confirmed and will no longer be on the list of inductions</string>
+
+    <string name="block_out_time_slot">Block out time slotn</string>
+    <string name="date">Date</string>
+    <string name="set_date">Set date</string>
+    <string name="change_date">Change date</string>
+    <string name="time">Time</string>
+    <string name="set_time">Set time</string>
+    <string name="change_time">Change time</string>
+    <string name="block_time_slot">Block time slot</string>
+    <string name="repeat">Repeat</string>
+    <string name="block_slot_success_title">Time slot has been blocked</string>
+    <string name="block_slot_success_msg">You have successfully blocked the time slot</string>
+    <string name="cancel_conflicting_appointment">Cancel conflicting appointment</string>
+    <string name="remove_conflicting_blocked_time_slot">Remove conflicting blocked time slot</string>
+    <string name="scheduling_conflict">Scheduling conflict</string>
+    <string name="choose_another_time_slot">Choose another time slot</string>
+    <string name="session_conflict_msg">There is a scheduling conflict on %s, %s. To resolve this, it is required that you cancel the existing appointment with %s.</string>
+    <string name="block_conflict_msg">There is a scheduling conflict on %s, %s. To resolve this it is required that you cancel the existing blocked time slot.</string>
+
+    <string name="cancel_conflict_session_title">Are you sure you want to cancel?</string>
+    <string name="cancel_conflict_session_action_msg">Yes, I want to cancel</string>
+    <string name="cancel_conflict_session_info_msg">This action will cancel this booking and credit the trainee\'s session balance.</string>
+
+    <string name="cancel_block_conflict_session_title">Remove blocked time slot?</string>
+    <string name="cancel_block_conflict_session_action_msg">Yes, remove blocked time slot </string>
+    <string name="all_instances">All instances</string>
+
+    <string name="cancel_block_list_title">Remove chosen blocked time slots?</string>
+    <string name="cancel_block_list_action_msg">Yes, remove blocked time slots</string>
+
+    <string name="block_remove_result_title">Blocked time slot has been removed</string>
+    <string name="block_remove_result_msg">This time slot is now available for booking</string>
+
+    <string name="block_multi_remove_result_title">Blocked time slots have been removed</string>
+    <string name="block_multi_remove_result_msg">Selected blocked time slots have been successfully removed.</string>
+
+    <string name="blocked_time_slots">Blocked time slots</string>
+    <string name="block_new_time_slot">Block new time slot</string>
+    <string name="manage_time_slots">Manage time slots</string>
+
+    <plurals name="weeks_number">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+
+    <plurals name="repeat_weeks">
+        <item quantity="one">Repeat for %d week</item>
+        <item quantity="other">Repeat for %d weeks</item>
+    </plurals>
+
+    <string name="select_facility_msg">Unfortunately, no gyms are available at this time. Please choose another time slot.</string>
+    <string name="pt_coming_soon_title">Schedule appointments with accredited personal trainers at any of our available facilities</string>
+    <string name="pt_coming_soon_msg">Achieve your fitness goals like never before. Book 1-on-1 sessions with certified Personal Trainers directly through our app. Whether you\'re a newbie or a pro, get tailored guidance and motivation. Stay tuned for this exciting update!</string>
+
+    <string name="trainer_availability">Explore Trainer\'s Availability</string>
+    <string name="available_slots">Available slots</string>
+
+    <string name="block_out_time_slots">Block out time slots</string>
+    <string name="choose_date">Choose date</string>
+    <string name="chose_date_msg">Select a day to block time slots.</string>
+
+    <string name="set_label">Set</string>
+    <string name="select">Select</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove_all">Remove all</string>
+    <string name="remove_label">Remove</string>
+    <string name="slots_selected_default">0 slots selected</string>
+
+    <plurals name="selected_slots">
+        <item quantity="one">%d slot selected</item>
+        <item quantity="other">%d slots selected</item>
+    </plurals>
+</resources>

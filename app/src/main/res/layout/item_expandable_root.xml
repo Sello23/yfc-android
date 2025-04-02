@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/subscription_option_bg"
+    android:padding="@dimen/spacing_1.25x">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/option_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_0.125x"
+        android:maxLines="1"
+        android:text="@string/subscription_screen_monthly_plan"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/text_buy_option"
+        app:layout_constraintEnd_toStartOf="@id/price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/option_subtitle"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.4x"
+        android:maxLines="1"
+        android:text="@string/subscription_screen_cancel_anytime"
+        android:textAppearance="@style/TextAppearance.YFC.Hint4"
+        android:textColor="@color/text_buy_option_hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/option_title"
+        app:layout_constraintTop_toBottomOf="@id/option_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Button"
+        android:textColor="@color/text_buy_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/option_title"
+        tools:text="AED 1,400/month" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price_old"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:maxLines="2"
+        android:text="@string/equivalent_to_month_price"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.YFC.Heading5"
+        android:textColor="@color/text_buy_option_secondary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        app:layout_constraintVertical_bias="1"
+        tools:text="Equivalent to\n249 AED/month" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/discount_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.4x"
+        android:background="@drawable/label_discount_background"
+        android:paddingVertical="@dimen/spacing_0.125x"
+        android:paddingHorizontal="@dimen/spacing_0.25x"
+        android:text="@string/corporate_discount"
+        android:textAppearance="@style/TextAppearance.YFC.Hint3"
+        android:textColor="@color/label_discount_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        app:layout_constraintVertical_bias="1" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/card_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="option_title,option_subtitle,price_old,price,discount_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

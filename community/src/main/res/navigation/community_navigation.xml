@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/community_navigation"
+    app:startDestination="@id/fragment_friends">
+
+    <fragment
+        android:id="@+id/fragment_friends"
+        android:name="com.yourfitness.community.ui.features.friends.FriendsFragment">
+        <argument
+            android:name="tab_position"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <deepLink app:uri="android-app://com.yourfitness.community/fragment_friends/{tab_position}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_friend_details"
+        android:name="com.yourfitness.community.ui.features.details.FriendDetailsFragment">
+        <deepLink app:uri="android-app://com.yourfitness.community/fragment_friend_details" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_unfriend"
+        android:name="com.yourfitness.community.ui.features.details.UnfriendDialog" >
+        <deepLink app:uri="android-app://com.yourfitness.community/dialog_unfriend" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_likes_list"
+        android:name="com.yourfitness.community.ui.features.likes.LikesListDialog" >
+
+        <argument
+            android:name="workout_date"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="min_amount"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="new_likes"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <deepLink app:uri="android-app://com.yourfitness.community/dialog_likes_list/{workout_date}/{min_amount}/{new_likes}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_how_get_likes"
+        android:name="com.yourfitness.community.ui.features.likes.HowGetLikesDialog" >
+        <deepLink app:uri="android-app://com.yourfitness.community/dialog_how_get_likes" />
+    </dialog>
+
+</navigation>

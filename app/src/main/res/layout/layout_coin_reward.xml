@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_reward"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_cup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_reward_cup"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/image_reward"
+        app:layout_constraintEnd_toEndOf="@id/image_reward"
+        app:layout_constraintStart_toStartOf="@id/image_reward"
+        app:layout_constraintTop_toTopOf="@id/image_reward" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/image_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_reward_coin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/image_reward"
+        app:layout_constraintEnd_toEndOf="@id/image_reward"
+        app:layout_constraintStart_toStartOf="@id/image_reward"
+        app:layout_constraintTop_toTopOf="@id/image_reward" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2x"
+        android:layout_marginBottom="@dimen/spacing_0.75x"
+        android:gravity="center_horizontal"
+        android:text="@string/coin_reward_thats_a_great_start"
+        android:textAppearance="@style/TextAppearance.YFC.Heading1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/text_message" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2x"
+        android:layout_marginBottom="@dimen/spacing_3.25x"
+        android:gravity="center_horizontal"
+        android:text="@string/coin_reward_you_have_reached_your_goal"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

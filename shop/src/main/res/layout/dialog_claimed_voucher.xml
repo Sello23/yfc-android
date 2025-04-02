@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="539dp"
+    android:layout_marginHorizontal="@dimen/spacing_1.5x"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="327dp"
+        android:layout_height="539dp"
+        android:background="@drawable/image_claim_voucher_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_service"
+        android:layout_width="327dp"
+        android:layout_height="185dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView"
+        app:srcCompat="@drawable/gradient_blue" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1.5x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_bg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_username"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_0.5x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/text_date"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_service"
+        tools:text="Marvin McKinney" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_date"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:drawableStart="@drawable/ic_calendar_black"
+        android:drawablePadding="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Body2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/text_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_username"
+        tools:text="April 11 2022" />
+
+    <View
+        android:id="@+id/view_dot_separator"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:layout_marginTop="@dimen/spacing_0.875x"
+        android:layout_marginEnd="@dimen/spacing_1.5x"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_username" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_service_name"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:layout_marginEnd="@dimen/spacing_0.25x"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        app:layout_constraintEnd_toStartOf="@id/service_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_dot_separator"
+        tools:text="Aroma massage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_vendor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.125x"
+        android:layout_marginEnd="@dimen/spacing_0.25x"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        app:layout_constraintEnd_toStartOf="@id/service_logo"
+        app:layout_constraintStart_toStartOf="@id/text_service_name"
+        app:layout_constraintTop_toBottomOf="@id/text_service_name"
+        tools:text="Classic pilates" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_address"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:drawableStart="@drawable/ic_location"
+        android:drawablePadding="@dimen/spacing_0.5x"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/gray_light"
+        app:drawableTint="@color/gray_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_vendor_name"
+        tools:text="489 Al Bridge Apt. 307 " />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_phone"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="@dimen/spacing_0.5x"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/gray_light"
+        app:drawableTint="@color/gray_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_address"
+        tools:text="+971-50-6256243" />
+
+    <View
+        android:id="@+id/view_dot_separator_center"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginEnd="@dimen/spacing_1.5x"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintTop_toBottomOf="@id/text_phone" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/voucher_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:layout_marginEnd="@dimen/spacing_0.25x"
+        android:maxLines="1"
+        android:text="@string/voucher_number"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/voucher_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_dot_separator_center"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/voucher_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:layout_marginEnd="@dimen/spacing_0.25x"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Label"
+        android:textColor="@color/main_active"
+        app:layout_constraintBottom_toTopOf="@id/view_dot_separator_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voucher_number_label"
+        tools:text="YFC-54" />
+
+    <View
+        android:id="@+id/view_dot_separator_second"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:layout_marginEnd="@dimen/spacing_1.5x"
+        android:layout_marginBottom="@dimen/spacing_1.25x"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintBottom_toTopOf="@id/button_successfully_passed"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@id/view_background" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/service_logo"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/text_vendor_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_service_name"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon.Medium" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_successfully_passed"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1.5x"
+        android:text="@string/map_screen_successfully_passed_text"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@id/view_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

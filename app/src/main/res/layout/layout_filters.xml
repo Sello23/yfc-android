@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/type_container"
+            layout="@layout/layout_filter_cutted" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:text="@string/filters_screen_distance"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/slider_distance"
+                style="@style/Widget.YFC.SeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:max="20000"
+                android:paddingStart="@dimen/spacing_1x"
+                android:paddingEnd="@dimen/spacing_1x"
+                android:progress="10000"
+                app:layout_constraintTop_toBottomOf="@id/text_distance" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_min_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_0.25x"
+                android:layout_marginBottom="@dimen/spacing_1x"
+                android:text="@string/filters_screen_1_km"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+                android:textColor="@color/gray_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/slider_distance" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_max_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.25x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:text="@string/filters_screen_no_limits"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+                android:textColor="@color/gray_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/slider_distance" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_amenities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_amenities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:text="@string/facility_details_amenities"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/button_amenities_all"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/button_amenities_all"
+                style="@style/Widget.YFC.TextView.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:text="@string/filters_see_all"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/group_amenities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/spacing_1x"
+                android:paddingTop="@dimen/spacing_0.75x"
+                android:paddingBottom="@dimen/spacing_1x"
+                app:chipSpacingVertical="@dimen/spacing_0.5x"
+                app:layout_constraintTop_toBottomOf="@id/text_amenities" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

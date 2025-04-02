@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_1x"
+    android:layout_marginVertical="@dimen/spacing_0.5x"
+    android:layout_marginTop="@dimen/spacing_1x"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_current_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1.25x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="September 2022" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/button_next_month"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="@dimen/spacing_1.25x"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@id/text_current_month"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_current_month" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/button_prev_month"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:src="@drawable/ic_back_button"
+            app:layout_constraintBottom_toBottomOf="@id/text_current_month"
+            app:layout_constraintEnd_toStartOf="@id/button_next_month"
+            app:layout_constraintTop_toTopOf="@id/text_current_month" />
+
+        <include
+            android:id="@+id/view_calendar_day_legend"
+            layout="@layout/view_calendar_day_legend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1.25x"
+            android:layout_marginTop="@dimen/spacing_1.25x"
+            android:layout_marginEnd="@dimen/spacing_1.25x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_current_month" />
+
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:background="@color/gray_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_calendar_day_legend" />
+
+        <com.kizitonwose.calendar.view.CalendarView
+            android:id="@+id/calendar_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1.5x"
+            android:layout_marginTop="@dimen/spacing_1.25x"
+            android:layout_marginEnd="@dimen/spacing_1.5x"
+            android:layout_marginBottom="@dimen/spacing_1x"
+            app:cv_dayViewResource="@layout/view_calendar_month_day"
+            app:cv_orientation="horizontal"
+            app:cv_outDateStyle="endOfGrid"
+            app:cv_scrollPaged="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_separator" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

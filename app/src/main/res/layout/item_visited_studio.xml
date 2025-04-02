@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_1x"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon.Small" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_studio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.5x"
+            android:textAppearance="@style/TextAppearance.YFC.Heading2"
+            app:layout_constraintBottom_toBottomOf="@id/image_icon"
+            app:layout_constraintStart_toEndOf="@id/image_icon"
+            app:layout_constraintTop_toTopOf="@id/image_icon"
+            tools:text="Yoga Time" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_current_studio_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_0.5x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+            app:layout_constraintBottom_toBottomOf="@id/image_icon"
+            app:layout_constraintEnd_toStartOf="@id/image_yfc_logo_current"
+            app:layout_constraintTop_toTopOf="@id/image_icon"
+            tools:text="Yoga Time" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_yfc_logo_current"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:src="@drawable/image_yfc_logo"
+            app:layout_constraintBottom_toBottomOf="@id/image_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_icon" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/spacing_1.5x"
+            android:layout_marginEnd="16dp"
+            android:progressBackgroundTint="@color/gray_light"
+            android:progressTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_icon"
+            tools:progress="50" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_visits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.4x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:textAppearance="@style/TextAppearance.YFC.Heading5"
+            android:textColor="@color/gray_light"
+            app:layout_constraintStart_toStartOf="@id/progressBar"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            tools:text="40/50 visits" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_next_level_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.4x"
+            android:drawableStart="@drawable/image_credits_orange"
+            android:drawablePadding="@dimen/spacing_0.4x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="@id/progressBar"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            tools:text="2" />
+
+        <View
+            android:id="@+id/view_ellipse"
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/spacing_0.5x"
+            android:layout_marginEnd="@dimen/spacing_0.75x"
+            android:background="@drawable/ic_ellipse"
+            android:backgroundTint="@color/gray_light"
+            app:layout_constraintBottom_toBottomOf="@id/text_next_level_credits"
+            app:layout_constraintEnd_toStartOf="@id/text_next_level_credits"
+            app:layout_constraintTop_toTopOf="@id/text_next_level_credits" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_next_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_0.75x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/text_next_level_credits"
+            app:layout_constraintEnd_toStartOf="@id/image_yfc_logo_next"
+            app:layout_constraintTop_toTopOf="@id/text_next_level_credits"
+            tools:text="Silver" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_yfc_logo_next"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:src="@drawable/image_yfc_logo"
+            app:layout_constraintBottom_toBottomOf="@id/text_next_level_credits"
+            app:layout_constraintEnd_toStartOf="@id/view_ellipse"
+            app:layout_constraintTop_toTopOf="@id/text_next_level_credits" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_book_class"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1.75x"
+            android:layout_marginBottom="@dimen/spacing_1x"
+            android:background="@drawable/background_text_view_solid"
+            android:padding="6dp"
+            android:text="@string/progress_screen_available_book_class_text"
+            android:textAppearance="@style/TextAppearance.YFC.Heading5"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/view_separator"
+            app:layout_constraintEnd_toEndOf="@id/progressBar"
+            app:layout_constraintVertical_bias="1" />
+
+        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+            android:id="@+id/progress_visits"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            app:direction="clockwise"
+            app:dotColor="@color/white"
+            app:dotWidth="3dp"
+            app:drawDot="true"
+            app:enableProgressAnimation="true"
+            app:layout_constraintBottom_toTopOf="@id/view_separator"
+            app:layout_constraintStart_toStartOf="@id/progressBar"
+            app:layout_constraintTop_toBottomOf="@id/text_visits"
+            app:progressBackgroundColor="@color/gray_light_transparent"
+            app:progressBackgroundStrokeWidth="4.5dp"
+            app:progressCap="round"
+            app:progressColor="@color/blue"
+            app:progressStrokeWidth="4.5dp"
+            app:textSize="0sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_visits_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.YFC.Button"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/progress_visits"
+            app:layout_constraintEnd_toEndOf="@id/progress_visits"
+            app:layout_constraintStart_toStartOf="@id/progress_visits"
+            app:layout_constraintTop_toTopOf="@id/progress_visits"
+            tools:text="0%" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:text="@string/progress_screen_completed_text"
+            android:textAppearance="@style/TextAppearance.YFC.Body2"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/progress_visits"
+            app:layout_constraintStart_toEndOf="@id/progress_visits"
+            app:layout_constraintTop_toTopOf="@id/progress_visits" />
+
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            android:background="@color/gray_light"
+            app:layout_constraintBottom_toTopOf="@id/text_available_bonus_credits"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progress_visits" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_available_bonus_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            android:text="@string/progress_screen_available_bonus_credits_text"
+            android:textAppearance="@style/TextAppearance.YFC.Body2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_available_bonus_credits_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            android:drawableStart="@drawable/image_credits_orange"
+            android:drawablePadding="@dimen/spacing_0.4x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

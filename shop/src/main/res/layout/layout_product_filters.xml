@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_range"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:text="@string/price_range"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintEnd_toStartOf="@id/limits_range"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/limits_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:gravity="end"
+        android:maxLines="1"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/main_active"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/price_range"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="AED 10 - AED 500" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/slider_range"
+        style="@style/Widget.YFC.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:paddingStart="@dimen/spacing_1x"
+        android:paddingEnd="@dimen/spacing_1x"
+        android:valueFrom="0"
+        android:valueTo="100000000"
+        app:labelBehavior="gone"
+        app:layout_constraintTop_toBottomOf="@id/price_range"
+        app:minSeparation="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_limit_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+        android:textColor="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slider_range"
+        tools:text="AED 10" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_limit_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+        android:textColor="@color/gray_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slider_range"
+        tools:text="15 000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/time_slot"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:background="@drawable/time_slot_background"
+    android:gravity="center_vertical"
+    android:maxLines="1"
+    android:paddingHorizontal="@dimen/spacing_1x"
+    android:textAppearance="@style/TextAppearance.YFC.Body3.SemiBold"
+    android:textColor="@color/time_slot_text_color"
+    tools:text="15:00" />

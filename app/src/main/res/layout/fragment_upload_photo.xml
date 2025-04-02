@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_progress" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_3.5x"
+        android:gravity="center"
+        android:text="@string/sign_up_add_your_photo"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/image_placeholder"
+        style="@style/Widget.YFC.TextView.Avatar"
+        android:layout_width="129dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="@dimen/spacing_5.75x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        tools:text="D" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_photo"
+        android:layout_width="129dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="@dimen/spacing_5.75x"
+        android:background="#C5D4E2"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Rounded" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_photo_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_photo_upload"
+        android:translationX="6dp"
+        android:translationY="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_photo"
+        app:layout_constraintEnd_toEndOf="@id/image_photo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_message_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_2x"
+        android:gravity="center_horizontal"
+        android:text="@string/sign_up_be_true_to_you"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        app:layout_constraintTop_toBottomOf="@id/image_photo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_3.5x"
+        android:gravity="center_horizontal"
+        android:text="@string/sign_up_this_is_for_your_access_pass"
+        android:textAppearance="@style/TextAppearance.YFC.Body2"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@id/button_next"
+        app:layout_constraintTop_toBottomOf="@id/text_message_header"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_next"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

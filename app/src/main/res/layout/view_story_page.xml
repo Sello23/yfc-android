@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_first_time_here_story_page_2"
+        layout="@layout/view_first_time_here_story_page_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_12x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/view_first_time_here_story_page_3"
+        layout="@layout/view_first_time_here_story_page_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_subtitle" />
+
+    <include
+        android:id="@+id/view_how_to_buy_subscription_story_page_2"
+        layout="@layout/view_how_to_buy_subscription_story_page_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_subtitle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/image_coins" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_page"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_5x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_subtitle"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1.5x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Heading3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_page" />
+
+    <include
+        android:id="@+id/view_credits"
+        layout="@layout/view_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_3x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_subtitle" />
+
+    <include
+        android:id="@+id/view_how_to_buy_subscription_story_page_5"
+        layout="@layout/view_how_to_buy_subscription_story_page_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_subtitle" />
+
+    <include
+        android:id="@+id/view_how_to_buy_class_credits_story_page_2"
+        layout="@layout/view_how_to_buy_class_credits_story_page_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <include
+        android:id="@+id/view_how_to_buy_class_credits_story_page_8"
+        layout="@layout/view_how_to_buy_class_credits_story_page_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_4x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_subtitle" />
+
+    <include
+        android:id="@+id/view_stuck_need_help_story"
+        layout="@layout/view_stuck_need_help_story"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/view_how_to_earn_coins_story_page_3"
+        layout="@layout/view_how_to_earn_coins_story_page_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1.5x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_page" />
+
+    <include
+        android:id="@+id/view_manage_your_fitness_calendar_story_page_4"
+        layout="@layout/view_manage_your_fitness_calendar_story_page_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_page" />
+
+    <include
+        android:id="@+id/view_how_to_use_your_class_access_card_story_page_1"
+        layout="@layout/view_how_to_use_your_class_access_card_story_page_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_page" />
+
+    <include
+        android:id="@+id/view_first_time_here_story_page_5"
+        layout="@layout/view_first_time_here_story_page_5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_1.5x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_subtitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_credits" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_first_time_here_story_page_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_first_time_here_story_page_2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_first_time_here_story_page_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_first_time_here_story_page_3" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_how_to_buy_subscription_story_page_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_how_to_buy_subscription_story_page_2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_how_to_buy_subscription_story_page_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_how_to_buy_subscription_story_page_5" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_how_to_buy_class_credits_story_page_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_how_to_buy_class_credits_story_page_2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_how_to_buy_class_credits_story_page_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_how_to_buy_class_credits_story_page_8" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_stuck_need_help_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_stuck_need_help_story" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_how_to_earn_coins_story_page_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_how_to_earn_coins_story_page_3" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_manage_your_fitness_calendar_story_page_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_manage_your_fitness_calendar_story_page_4" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_how_to_use_your_class_access_card_story_page_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_how_to_use_your_class_access_card_story_page_1" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_first_time_here_story_page_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_first_time_here_story_page_5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

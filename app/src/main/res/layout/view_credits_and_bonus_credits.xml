@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_0.4x"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/main_active"
+        app:drawableStartCompat="@drawable/ic_profile_credits"
+        tools:text="52 coins" />
+
+    <View
+        android:id="@+id/view_ellipse"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="@dimen/spacing_0.5x"
+        android:background="@drawable/ic_circe"
+        app:layout_constraintBottom_toBottomOf="@id/text_credits"
+        app:layout_constraintStart_toEndOf="@id/text_credits"
+        app:layout_constraintTop_toTopOf="@id/text_credits" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_bonus_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_0.5x"
+        android:drawablePadding="@dimen/spacing_0.4x"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/text_gray"
+        app:drawableStartCompat="@drawable/ic_profile_credits_yellow"
+        app:layout_constraintStart_toEndOf="@id/view_ellipse"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="90 credits" />
+
+</LinearLayout>

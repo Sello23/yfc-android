@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text_msg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_border_access_hours"
+    android:drawablePadding="@dimen/spacing_0.25x"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:paddingHorizontal="@dimen/spacing_0.4x"
+    android:paddingVertical="@dimen/spacing_0.125x"
+    android:textAppearance="@style/TextAppearance.YFC.Hint5"
+    android:textColor="@color/black"
+    tools:drawableEnd="@drawable/exclamation_yellow"
+    tools:text="Access hours: 10:00 – 22:00 " />

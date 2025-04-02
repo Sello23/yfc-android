@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout_all_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="80dp"
+        android:clipChildren="true"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/group_items_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/spacing_1x"
+            android:paddingVertical="@dimen/spacing_1x"
+            app:chipSpacingVertical="@dimen/spacing_0.5x" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_0.4x"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/text_gray"
+        app:drawableEndCompat="@drawable/ic_info"
+        app:drawableStartCompat="@drawable/ic_profile_coins"
+        tools:text="120 coins" />
+
+</layout>

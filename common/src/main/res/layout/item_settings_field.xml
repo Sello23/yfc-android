@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_toolbar">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_label"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/spacing_1.25x"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_0.75x"
+        android:layout_marginTop="@dimen/spacing_1.25x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:background="@null"
+        android:imeOptions="actionNext"
+        android:paddingVertical="@dimen/spacing_0.25x"
+        android:paddingStart="@dimen/spacing_0.5x"
+        android:maxLength="64"
+        android:textAppearance="@style/TextAppearance.YFC.Input"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_light"
+        app:layout_constraintBottom_toTopOf="@id/text_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginBottom="@dimen/spacing_1.25x"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:text="Marvin McKinney" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_error"
+        style="@style/Widget.YFC.TextView.Error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.25x"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/edit_value"
+        app:layout_constraintTop_toBottomOf="@id/edit_value"
+        app:layout_constraintVertical_bias="1"
+        tools:text="The code was not entered correctly" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

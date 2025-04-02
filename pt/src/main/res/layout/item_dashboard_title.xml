@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/black"
+        tools:text="Latest requests" />
+
+    <View
+        android:layout_width="6dp"
+        android:layout_height="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_border_main_active_8x"
+        android:paddingHorizontal="@dimen/spacing_0.4x"
+        android:paddingBottom="2dp"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Body3.SemiBold"
+        android:textColor="@color/white"
+        tools:text="+2" />
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/go_to_fitness_calendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:text="@string/progress_screen_go_to_fitness_calendar_text"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/blue" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

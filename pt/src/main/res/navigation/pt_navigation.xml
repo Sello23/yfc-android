@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pt_navigation"
+    app:startDestination="@id/fragment_pt_list">
+
+    <fragment
+        android:id="@+id/fragment_pt_list"
+        android:name="com.yourfitness.pt.ui.features.list.PtListFragment">
+        <argument
+            android:name="my_pt"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="force"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_pt_list/{my_pt}/{force}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_pt_details"
+        android:name="com.yourfitness.pt.ui.features.details.PtDetailsFragment">
+        <argument
+            android:name="pt_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_pt_details/{pt_id}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_buy_sessions"
+        android:name="com.yourfitness.pt.ui.features.payments.BuySessionsOptionsFragment">
+        <argument
+            android:name="pt_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="pop_amount"
+            android:defaultValue="3"
+            app:argType="integer" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_buy_sessions/{pt_id}/{pop_amount}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_payment_options"
+        android:name="com.yourfitness.pt.ui.features.payments.payment_options.PtPaymentOptionsFragment" />
+
+    <fragment
+        android:id="@+id/fragment_calendar"
+        android:name="com.yourfitness.pt.ui.features.calendar.CalendarFragment">
+        <argument
+            android:name="pt_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="actions_enabled"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_calendar/{pt_id}/{actions_enabled}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_calendar_pt"
+        android:name="com.yourfitness.pt.ui.features.calendar.CalendarFragmentPt">
+        <argument
+            android:name="date"
+            app:argType="long" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_calendar_pt/{date}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_training_calendar"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.TrainingCalendarFragment">
+        <argument
+            android:name="session_id"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_training_calendar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_training_calendar_pt"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.TrainingCalendarPtFragment">
+        <argument
+            android:name="session_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="is_main"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_training_calendar_pt/{session_id}/{is_main}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_clients_list"
+        android:name="com.yourfitness.pt.ui.features.dashboard.clients.ClientsListFragment">
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_clients_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_inductions_list"
+        android:name="com.yourfitness.pt.ui.features.dashboard.inductions.InductionsListFragment">
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_inductions_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_block_slots_list"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.block_slots.conflicts.list.BlockSlotsFragment">
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_block_slots_list" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_payment_error"
+        android:name="com.yourfitness.pt.ui.features.payments.payment_error.PaymentErrorDialog" />
+
+    <dialog
+        android:id="@+id/dialog_pt_payment_success"
+        android:name="com.yourfitness.pt.ui.features.payments.payment_successful.PaymentSuccessfulDialog" />
+
+    <dialog
+        android:id="@+id/dialog_book_time_slot"
+        android:name="com.yourfitness.pt.ui.features.calendar.book.BookTimeSlotDialog" />
+
+    <dialog
+        android:id="@+id/dialog_booking_error"
+        android:name="com.yourfitness.pt.ui.features.calendar.book.booking_error.BookingErrorDialog" />
+
+    <dialog
+        android:id="@+id/dialog_booking_success"
+        android:name="com.yourfitness.pt.ui.features.calendar.book.booking_success.BookingSuccessDialog" />
+
+    <dialog
+        android:id="@+id/dialog_confirm_session"
+        android:name="com.yourfitness.pt.ui.features.calendar.confirm.ConfirmSessionDialog" />
+
+    <dialog
+        android:id="@+id/dialog_process_confirm_session"
+        android:name="com.yourfitness.pt.ui.features.calendar.confirm.ProcessSessionConfirmDialog" />
+
+    <dialog
+        android:id="@+id/dialog_user_profile_action"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.actions.UserProfileActionsDialog">
+        <argument
+            android:name="session_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="action_flow"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_user_profile_action/{session_id}/{action_flow}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_user_profile_induction"
+        android:name="com.yourfitness.pt.ui.features.dashboard.inductions.UserProfileInductionDialog">
+        <argument
+            android:name="client_string"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="string" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_user_profile_induction/{client_string}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_user_profile_client"
+        android:name="com.yourfitness.pt.ui.features.dashboard.clients.UserProfileClientDialog"/>
+
+    <dialog
+        android:id="@+id/dialog_confirm_induction_complete"
+        android:name="com.yourfitness.pt.ui.features.dashboard.inductions.ConfirmCompleteInductionDialog">
+        <argument
+            android:name="induction_string"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="string" />
+        <argument
+            android:name="note"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="string" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_confirm_induction_complete/{induction_string}/{note}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_user_profile_confirm"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.actions.UserConfirmActionDialog">
+        <argument
+            android:name="session_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="action_flow"
+            app:argType="integer" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_user_profile_confirm/{session_id}/{action_flow}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_user_final_confirm"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.actions.UserFinalConfirmDialog">
+        <argument
+            android:name="action_flow"
+            app:argType="integer" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_user_final_confirm/{action_flow}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_user_profile_result"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.actions.UserActionResultDialog">
+        <argument
+            android:name="action_flow"
+            app:argType="integer" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_user_profile_result/{action_flow}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_confirm_induction_success"
+        android:name="com.yourfitness.pt.ui.features.dashboard.inductions.ConfirmSuccessfulDialog" >
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_confirm_induction_success" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_block_time_slot"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.block_slots.BlockTimeSlotDialog">
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_block_time_slot" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_select_date"
+        android:name="com.yourfitness.pt.ui.views.SelectDateDialog">
+
+        <argument
+            android:name="selected_date"
+            android:defaultValue="0"
+            app:argType="string" />
+
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_select_date/{selected_date}" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_select_weeks_number"
+        android:name="com.yourfitness.pt.ui.views.SelectWeeksNumberDialog">
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_select_weeks_number" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_time_slot_blocked"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.block_slots.TimeSlotsBlockedDialog">
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_time_slot_blocked" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_resolve_conflicts"
+        android:name="com.yourfitness.pt.ui.features.training_calendar.block_slots.conflicts.ResolveConflictDialog">
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_pt_coming_soon"
+        android:name="com.yourfitness.pt.ui.features.coming_soon.ComingSoonDialog">
+        <deepLink app:uri="android-app://com.yourfitness.pt/dialog_pt_coming_soon" />
+    </dialog>
+
+</navigation>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="@dimen/spacing_1x"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/image_accessories" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/product_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/service_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="Magnify Nitro" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:gravity="end"
+        android:maxLines="1"
+        android:minWidth="100dp"
+        android:paddingVertical="0dp"
+        android:textAppearance="@style/TextAppearance.YFC.Body2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="Classic Pilates" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:drawableStart="@drawable/ic_address"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toStartOf="@id/service_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_title"
+        tools:text="489 Al Bridge Apt. 307 " />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.125x"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toStartOf="@id/service_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_address"
+        tools:text="+971-50-6256243" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/service_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginVertical="@dimen/spacing_0.4x"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/text_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/service_name"
+        app:shapeAppearanceOverlay="@style/Widget.YFC.Shop.ImageView.Rounded"
+        tools:srcCompat="@drawable/image_accessories" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.75x"
+        android:background="@color/grey_separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_phone" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/order_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separator"
+        tools:text="Order date: April 8, 2022" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/claim_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.4x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_date"
+        tools:text="Claim date: April 28, 2022" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.4x"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/claim_date"
+        tools:text="Status:" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_claim"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1.25x"
+        android:text="@string/claim_voucher"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status" />
+</androidx.constraintlayout.widget.ConstraintLayout>

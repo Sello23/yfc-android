@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_splash_screen">
+
+    <fragment
+        android:id="@+id/fragment_hard_update"
+        android:name="com.yourfitness.coach.ui.hard_update.HardUpdateFragment" />
+
+    <fragment
+        android:id="@+id/fragment_enter_name"
+        android:name="com.yourfitness.coach.ui.features.sign_up.enter_name.EnterNameFragment" />
+
+    <fragment
+        android:id="@+id/fragment_enter_surname"
+        android:name="com.yourfitness.coach.ui.features.sign_up.enter_surname.EnterSurnameFragment" />
+
+    <fragment
+        android:id="@+id/fragment_enter_email"
+        android:name="com.yourfitness.coach.ui.features.sign_up.enter_email.EnterEmailFragment" />
+
+    <fragment
+        android:id="@+id/fragment_enter_phone"
+        android:name="com.yourfitness.coach.ui.features.sign_up.enter_phone.EnterPhoneFragment" />
+
+    <fragment
+        android:id="@+id/fragment_confirm_phone"
+        android:name="com.yourfitness.coach.ui.features.sign_up.confirm_phone.ConfirmPhoneFragment" />
+
+    <fragment
+        android:id="@+id/fragment_select_birthday"
+        android:name="com.yourfitness.coach.ui.features.sign_up.select_birthday.SelectBirthdayFragment" />
+
+    <fragment
+        android:id="@+id/fragment_select_gender"
+        android:name="com.yourfitness.coach.ui.features.sign_up.select_gender.SelectGenderFragment" />
+
+    <fragment
+        android:id="@+id/fragment_enter_corporate_code"
+        android:name="com.yourfitness.coach.ui.features.sign_up.enter_voucher_code.EnterVoucherCodeFragment" />
+
+    <fragment
+        android:id="@+id/fragment_upload_photo"
+        android:name="com.yourfitness.coach.ui.features.sign_up.upload_photo.UploadPhotoFragment" />
+
+    <fragment
+        android:id="@+id/fragment_welcome_slider"
+        android:name="com.yourfitness.coach.ui.features.welcome.WelcomeSliderFragment" />
+
+    <fragment
+        android:id="@+id/fragment_splash_screen"
+        android:name="com.yourfitness.coach.ui.features.splash.SplashScreenFragment" />
+
+    <fragment
+        android:id="@+id/fragment_more"
+        android:name="com.yourfitness.coach.ui.features.more.MoreFragment" />
+
+    <fragment
+        android:id="@+id/fragment_faq"
+        android:name="com.yourfitness.coach.ui.features.more.faq.FAQFragment" />
+
+    <fragment
+        android:id="@+id/fragment_welcome_back"
+        android:name="com.yourfitness.coach.ui.features.sign_in.welcome_back.WelcomeBackFragment" />
+
+    <fragment
+        android:id="@+id/fragment_almost_there"
+        android:name="com.yourfitness.coach.ui.features.setup.almost_there.AlmostThereFragment" />
+
+    <fragment
+        android:id="@+id/fragment_story"
+        android:name="com.yourfitness.coach.ui.features.more.story.StoryFragment" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <deepLink app:uri="android-app://com.yourfitness.coach/fragment_story/{title}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="com.yourfitness.coach.ui.features.profile.profile.ProfileFragment" />
+
+    <dialog
+        android:id="@+id/dialog_sign_out"
+        android:name="com.yourfitness.coach.ui.features.profile.sign_out.SignOutDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_profile_settings"
+        android:name="com.yourfitness.coach.ui.features.profile.profile_settings.ProfileSettingsFragment" />
+
+    <fragment
+        android:id="@+id/fragment_update_profile"
+        android:name="com.yourfitness.coach.ui.features.profile.update_profile.UpdateProfileFragment" />
+
+    <fragment
+        android:id="@+id/fragment_connected_devices"
+        android:name="com.yourfitness.coach.ui.features.profile.connected_devices.ConnectedDevicesFragment" />
+
+    <dialog
+        android:id="@+id/dialog_google_fit_connected"
+        android:name="com.yourfitness.coach.ui.features.profile.connected_devices.dialog.connected.GoogleFitConnectedDialog" />
+
+    <dialog
+        android:id="@+id/dialog_google_fit_disconnected"
+        android:name="com.yourfitness.coach.ui.features.profile.connected_devices.dialog.disconnected.GoogleFitDisconnectedDialog" />
+
+    <dialog
+        android:id="@+id/dialog_went_wrong"
+        android:name="com.yourfitness.coach.ui.features.profile.connected_devices.dialog.went_wrong.WentWrongDialog" />
+
+    <dialog
+        android:id="@+id/dialog_need_permission"
+        android:name="com.yourfitness.coach.ui.features.profile.connected_devices.dialog.need_permission.NeedPermissionDialog" />
+
+    <dialog
+        android:id="@+id/dialog_help_center"
+        android:name="com.yourfitness.coach.ui.features.profile.help_center.HelpCenterDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_map"
+        android:name="com.yourfitness.coach.ui.features.facility.map.MapFragment" />
+
+    <fragment
+        android:id="@+id/fragment_list"
+        android:name="com.yourfitness.coach.ui.features.facility.list.ListFragment" />
+
+    <fragment
+        android:id="@+id/fragment_facility_details"
+        android:name="com.yourfitness.coach.ui.features.facility.details.FacilityDetailsFragment" />
+
+    <fragment
+        android:id="@+id/fragment_progress"
+        android:name="com.yourfitness.coach.ui.features.progress.fitness_info.FitnessInfoFragment" />
+
+    <fragment
+        android:id="@+id/fragment_dashboard"
+        android:name="com.yourfitness.coach.ui.pt_role.DashboardFragment" />
+
+    <fragment
+        android:id="@+id/fragment_pt_role_training_calendar"
+        android:name="com.yourfitness.coach.ui.pt_role.PtRoleTrainingCalendar">
+        <argument
+            android:name="session_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="is_main"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <deepLink app:uri="android-app://com.yourfitness.pt/fragment_pt_role_training_calendar/{session_id}/{is_main}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_coin_reward"
+        android:name="com.yourfitness.coach.ui.features.progress.coin_reward.RewardFragment" />
+
+    <dialog
+        android:id="@+id/dialog_points_hint"
+        android:name="com.yourfitness.coach.ui.features.progress.points_hint.PointsHintFragment" />
+
+    <dialog
+        android:id="@+id/dialog_my_referral_code"
+        android:name="com.yourfitness.coach.ui.features.profile.my_referral_code.MyReferralCodeDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_payment_history"
+        android:name="com.yourfitness.coach.ui.features.profile.payment_history.PaymentHistoryFragment" />
+
+    <fragment
+        android:id="@+id/fragment_payment_history_webview"
+        android:name="com.yourfitness.coach.ui.features.profile.payment_history.webview.PaymentHistoryWebViewFragment" />
+
+    <dialog
+        android:id="@+id/fragment_subscription_error"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.subscription_error.SubscriptionErrorDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_nearest_gym"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.nearest_gym_dialog.NearestGymDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_what_is_your_position"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.what_is_your_location_dialog.WhatIsYourLocationDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_are_your_here_right_now"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.are_you_here_right_now.AreYouHereRightNowDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_something_went_wrong_gym"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.something_went_wrong_gym.SomethingWentWrongGymDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_no_permission"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.no_permission.NoPermissionDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_no_camera_permission"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.no_permission.NoCameraPermissionDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_manual_search"
+        android:name="com.yourfitness.coach.ui.features.facility.manual_search.ManualSearchFragment" />
+
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.yourfitness.coach.ui.features.facility.search.SearchFragment" />
+
+    <dialog
+        android:id="@+id/fragment_no_result"
+        android:name="com.yourfitness.coach.ui.features.facility.no_result.NoResultDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_filters"
+        android:name="com.yourfitness.coach.ui.features.facility.filters.FiltersDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_bottom_menu"
+        android:name="com.yourfitness.coach.ui.features.bottom_menu.BottomMenuFragment" />
+
+    <fragment
+        android:id="@+id/fragment_fitness_calendar"
+        android:name="com.yourfitness.coach.ui.features.more.fitness_calendar.FitnessCalendarFragment" />
+
+    <dialog
+        android:id="@+id/dialog_you_have_upcoming_class"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.you_have_upcoming_class.YouHaveUpcomingClassDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_upcoming_class"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.upcoming_class.UpcomingClassDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_bit_quiet_here"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.bit_quite_here.BitQuietHereDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_subscription"
+        android:name="com.yourfitness.coach.ui.features.payments.subscription.SubscriptionFragment" />
+
+    <fragment
+        android:id="@+id/fragment_payment_options"
+        android:name="com.yourfitness.coach.ui.features.payments.payment_options.PaymentOptionsFragment" />
+
+    <dialog
+        android:id="@+id/dialog_success_payment_subscription"
+        android:name="com.yourfitness.coach.ui.features.payments.success_subscription.SuccessPaymentSubscriptionDialog" />
+
+    <dialog
+        android:id="@+id/dialog_confirmation_cancel_subscription"
+        android:name="com.yourfitness.coach.ui.features.payments.confirmation_cancel_subscription.ConfirmationCancelSubscriptionDialog" />
+
+    <dialog
+        android:id="@+id/dialog_success_cancel_subscription"
+        android:name="com.yourfitness.coach.ui.features.payments.success_cancel_subscription.SuccessCancelSubscriptionDialog" />
+
+    <dialog
+        android:id="@+id/dialog_bonus_hint"
+        android:name="com.yourfitness.coach.ui.features.progress.bonus_hint.BonusHintFragment" />
+
+    <dialog
+        android:id="@+id/dialog_deletion_request"
+        android:name="com.yourfitness.coach.ui.features.profile.deletion_request.saddest_news_today.DeletionRequestDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_deletion_request_success"
+        android:name="com.yourfitness.coach.ui.features.profile.deletion_request.success.DeletionRequestSuccessDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_deletion_request_error"
+        android:name="com.yourfitness.coach.ui.features.profile.deletion_request.error.DeletionRequestErrorDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_upcoming_class"
+        android:name="com.yourfitness.coach.ui.features.progress.upcoming_class.UpcomingClassFragment" />
+
+    <fragment
+        android:id="@+id/fragment_visited_classes"
+        android:name="com.yourfitness.coach.ui.features.progress.visited_class.VisitedClassesFragment" />
+
+    <dialog
+        android:id="@+id/dialog_referral_code"
+        android:name="com.yourfitness.coach.ui.features.payments.referral_code.ReferralCodeDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_referral_code_redeemed"
+        android:name="com.yourfitness.coach.ui.features.payments.referral_code_redeemed.ReferralCodeRedeemedDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_referral_code_invalid"
+        android:name="com.yourfitness.coach.ui.features.payments.referral_code_invalid.ReferralCodeInvalidDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_class_calendar"
+        android:name="com.yourfitness.coach.ui.features.facility.booking_class_calendar.BookingClassCalendarFragment" />
+
+    <dialog
+        android:id="@+id/fragment_class_cancel"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.confirm_class_cancel.ConfirmCancelClassDialog" />
+
+    <dialog
+        android:id="@+id/fragment_confirm_cancel_result"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.confirm_cancel_result.ConfirmCancelResultFragment" />
+
+    <fragment
+        android:id="@+id/fragment_credits"
+        android:name="com.yourfitness.coach.ui.features.payments.credits.CreditsFragment" />
+
+    <dialog
+        android:id="@+id/dialog_book_class"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.confirm_booking_class.ConfirmBookingClassDialog" />
+
+    <dialog
+        android:id="@+id/dialog_credits_not_enough"
+        android:name="com.yourfitness.coach.ui.features.payments.credits_not_enough.CreditsNotEnoughDialog" />
+
+    <dialog
+        android:id="@+id/dialog_double_booked"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.double_booked.DoubleBookedDialog" />
+
+    <dialog
+        android:id="@+id/dialog_confirm_booking_result"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.confirm_booking_result.ConfirmBookingResultDialog" />
+
+    <dialog
+        android:id="@+id/dialog_payment_error"
+        android:name="com.yourfitness.coach.ui.features.payments.payment_error.PaymentErrorDialog" />
+
+    <dialog
+        android:id="@+id/dialog_thirty_day_challenge"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.thirty_day_challenge.ThirtyDayChallengeDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_challenges"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.ChallengesFragment" />
+
+    <fragment
+        android:id="@+id/fragment_access_thirty_dsay_challenges"
+        android:name="com.yourfitness.coach.ui.features.thirty_day_challenge.AccessThirtyDayChallenge" />
+
+    <fragment
+        android:id="@+id/fragment_challenge_details"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.challenge_details.ChallengeDetailsFragment" >
+
+        <argument
+            android:name="challenge_string"
+            app:argType="string" />
+        <argument
+            android:name="hide_actions"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <deepLink app:uri="android-app://com.yourfitness.coach/fragment_challenge_details/{challenge_string}/{hide_actions}" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_challenge_join"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.dialogs.join.ChallengeJoinDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_challenge_joined"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.dialogs.joined.ChallengeJoinedDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_challenge_leave"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.dialogs.leave.ChallengeLeaveDialogFragment" />
+
+    <fragment
+        android:id="@+id/fragment_leaderboard"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.leaderboard.LeaderboardFragment" >
+
+        <argument
+            android:name="leaderboard"
+            android:defaultValue="-10"
+            app:argType="integer"/>
+        <argument
+            android:name="challenge_string"
+            app:argType="string" />
+        <argument
+            android:name="friend_id"
+            app:argType="string" />
+        <deepLink app:uri="android-app://com.yourfitness.coach/fragment_leaderboard/{leaderboard}/{challenge_string}/{friend_id}" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_challenge_join_private"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.dialogs.join_private.ChallengePrivateJoinDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_challenge_join_private_code"
+        android:name="com.yourfitness.coach.ui.features.more.challenges.dialogs.join_private_code.ChallengeJoinPrivateCodeDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_corporate_code_status"
+        android:name="com.yourfitness.coach.ui.features.sign_up.enter_voucher_code.VoucherCodeStatusDialog" />
+
+    <dialog
+        android:id="@+id/dialog_level_system"
+        android:name="com.yourfitness.coach.ui.features.progress.levels.LevelSystemDialogFragment" />
+
+    <dialog
+        android:id="@+id/dialog_redeem_voucher_result"
+        android:name="com.yourfitness.coach.ui.features.payments.redeem_voucher.RedeemVoucherResultDialog" />
+
+    <dialog
+        android:id="@+id/dialog_work_time"
+        android:name="com.yourfitness.coach.ui.features.facility.dialog.timetable.WorkHoursDialog" />
+
+    <dialog
+        android:id="@+id/dialog_dubai30x30_calendar"
+        android:name="com.yourfitness.coach.ui.features.progress.dubai30x30_calendar.Dubai30x30CalendarDialogFragment" />
+
+    <dialog
+        android:id="@+id/workouts_updated"
+        android:name="com.yourfitness.coach.ui.features.progress.dubai30x30_calendar.WorkoutsUpdatedDialog" />
+
+    <include app:graph="@navigation/common_navigation" />
+
+    <include app:graph="@navigation/shop_navigation" />
+
+    <include app:graph="@navigation/pt_navigation" />
+
+    <include app:graph="@navigation/community_navigation" />
+
+    <fragment
+        android:id="@+id/fragment_pt_details_to"
+        android:name="com.yourfitness.pt.ui.features.details.PtDetailsFragment"/>
+</navigation>

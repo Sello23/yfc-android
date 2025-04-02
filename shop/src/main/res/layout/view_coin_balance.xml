@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:layout_marginBottom="@dimen/spacing_0.75x"
+        android:background="@drawable/button_background_normal"
+        android:paddingStart="@dimen/spacing_0.5x"
+        android:paddingEnd="0dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/you_have"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/coins_label"
+            app:layout_constraintEnd_toStartOf="@id/coins_label"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/coins_label" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/coins_label"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="@dimen/spacing_0.4x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            app:layout_constraintBottom_toTopOf="@id/secondary_message"
+            app:layout_constraintEnd_toStartOf="@id/coins_amount"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/message"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_coins_big" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/coins_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/coins_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/coins_label"
+            app:layout_constraintTop_toTopOf="@id/coins_label"
+            tools:text="120 coins" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/secondary_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.25x"
+            android:layout_marginEnd="@dimen/spacing_0.25x"
+            android:layout_marginBottom="@dimen/spacing_0.5x"
+            android:ellipsize="end"
+            android:text="@string/coin_balance_card_secondary_msg"
+            android:textAppearance="@style/TextAppearance.YFC.Hint"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/helper_action"
+            app:layout_constraintEnd_toStartOf="@id/image_2"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coins_label"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/helper_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.25x"
+            android:layout_marginBottom="@dimen/spacing_0.5x"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:text="@string/coin_balance_card_action"
+            android:textAppearance="@style/TextAppearance.YFC.Hint5"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/helper_action_no_coins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondary_message"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/helper_action_no_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.25x"
+            android:layout_marginBottom="@dimen/spacing_0.5x"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:text="@string/coin_balance_card_no_coins_action"
+            android:textAppearance="@style/TextAppearance.YFC.Hint5"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helper_action"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/coin_balance_image_3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/image_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/coin_balance_image_2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_0.625x"
+            app:layout_constraintEnd_toStartOf="@id/image_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/coin_balance_image_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:background="@color/grey_separator" />
+</FrameLayout>

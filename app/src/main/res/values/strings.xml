@@ -1,0 +1,727 @@
+<resources>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">Push notifications</string>
+    <string name="sign_up_what_is_your_name">Welcome to YFC.\nWhat is your name?</string>
+    <string name="sign_up_and_surname">And Surname?</string>
+    <string name="sign_up_nice_to_meet_you">Nice to meet you,\n%s</string>
+    <string name="sign_up_we_need_your_email">We need your email to welcome you to the YFC network</string>
+    <string name="sign_up_terms_and_privacy_policy">By going through the registration process, you agree to our <a href="https://yourfitness.coach/terms-conditions"><b>Terms &amp; Conditions</b></a> and verify you have read <a href="https://yourfitness.coach/privacy-policy"><b>Privacy Policy</b></a>.</string>
+    <string name="sign_up_lets_confirm_its_you">Let\'s confirm it\'s you</string>
+    <string name="sign_up_please_share_your_phone">Please share your phone number so we can send you a verification code</string>
+    <string name="sign_up_please_enter_code_we_sent">Please enter the code we sent you</string>
+    <string name="sign_up_we_sent_the_code_to">We\'ve sent the code to &lt;br;&gt;&lt;b&gt;%s&lt;/b&gt;</string>
+    <string name="sign_up_resend_code">Get another code</string>
+    <string name="sign_up_resend_code_timer">Resend code: %ds</string>
+    <string name="sign_up_resend_code_whatsapp_timer">Resend code to Whatsapp: %ds</string>
+    <string name="sign_up_send_code_via">Send code via</string>
+    <string name="sign_up_sms">SMS</string>
+    <string name="sign_up_code_was_sent_to_phone">A code was sent to the phone\n%s</string>
+    <string name="sign_up_what_is_your_birthday"><font color="#C5D4E2">When is your</font>\nbirthday?</string>
+    <string name="sign_up_this_help_us_know_when_your_birthday">When were you born?</string>
+    <string name="sign_up_what_is_your_gender"><font color="#C5D4E2">What’s your</font>\ngender?</string>
+    <string name="sign_up_we_have_some_female_only_sports">We have some female-only spots to suggest here</string>
+    <string name="sign_up_add_your_photo"><font color="#C5D4E2">Add your</font>\nphoto</string>
+    <string name="sign_up_be_true_to_you">Smile!</string>
+    <string name="sign_up_this_is_for_your_access_pass">This is for your access pass so they can recognise you at the gym/studio.</string>
+    <string name="sign_up_do_you_have_a_corporate_code">Do you have a referral, influencer or corporate code?</string>
+    <string name="sign_up_activation_code">Enter code</string>
+    <string name="sign_up_enter_it_here">Enter it here</string>
+    <string name="sign_up_invalid_corporate_code">Corporate code is invalid</string>
+    <string name="sign_up_error_referral_code_title">The code you entered is a referral code</string>
+    <string name="sign_up_error_challenge_code_title">The code you entered is a challenge code</string>
+    <string name="sign_up_error_gender_msg">The code you provided is for a female only challenge. Please make sure that you have selected the correct gender.</string>
+    <string name="sign_up_success_corporate_code_title">You\'ve entered a valid corporate code</string>
+    <string name="sign_up_success_influencer_code_title">You\'ve entered a valid influencer code</string>
+    <string name="sign_up_success_corporate_code_msg">As a %s affiliate you are eligible for an exclusive subscription rate of %s</string>
+    <string name="sign_up_success_influencer_code_msg">You\'ve entered a valid influencer code. You are now eligible for an exclusive subscription rate of %s</string>
+    <string name="sign_up_invalid_corporate_code_msg">Please check the code and retry or go back to registration process</string>
+    <string name="sign_up_error_referral_code_msg">You can only use your referral code when you buy a YFC Gym subscription. Don\'t worry, buying a subscription and accessing all of our facilities is just a few taps away.</string>
+    <string name="sign_up_error_challenge_code_msg">You can only use your challenge code when joining a YFC challenge. Don\'t worry, joining this challenge is a couple of taps away.</string>
+    <string name="sign_up_success_challenge_code_msg">Great news! You\'ve successfully joined the %s challenge and can now monitor your progress on the %s leaderboard.</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="code">Code</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="unknown">Unknown</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="photo_gallery">Photo Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="log_in">Log In</string>
+    <string name="characters_phone_number">01234567890 +-()</string>
+    <string name="okay">Okay!</string>
+    <string name="thanks">Thanks!</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_skip_step">Skip this step</string>
+    <string name="credits">%d credits</string>
+    <string name="bonus_credits">%d bonus credits</string>
+    <string name="class_booked">Class booked</string>
+    <string name="spots_available">%d spots available</string>
+    <string name="no_spots_available">No spots available</string>
+    <string name="btn_book_credits">Book | %d credits</string>
+    <string name="no_classes_available">No classes available</string>
+    <string name="rebook_title">Re-book %s</string>
+    <string name="buy_credits">Buy Credits</string>
+    <!--WELCOME_SLIDER_SCREEN-->
+    <string name="welcome_slider_screen_have_account">I have an account</string>
+    <string name="welcome_slider_screen_sign_up_button">Sign up</string>
+    <string name="welcome_slider_screen_got_it_button">Got it!</string>
+    <string name="welcome_slider_screen_cancel_anytime_text">No Contract\nCancel Anytime</string>
+    <string name="welcome_slider_screen_one_app_text"/>
+    <string name="welcome_slider_screen_premium_gym_locations_text">20+ premium \nGym Locations</string>
+    <string name="welcome_slider_screen_smash_your_text" />
+    <string name="welcome_slider_screen_leaderboard_challenge_text">Monthly Leaderboard\nChallenges</string>
+    <string name="welcome_slider_screen_connect_your_text"/>
+    <!--WELCOME_BACK_SCREEN-->
+    <string name="welcome_back_screen_log_in_button">Log In</string>
+    <string name="welcome_back_screen_dont_have_account_button">I don’t have an account</string>
+    <string name="welcome_back_screen_welcome_back_text">Welcome back!</string>
+    <string name="welcome_back_screen_we_missed_text">We missed working out with you, let\'s get you settled in</string>
+    <!--BOTTOM_MENU-->
+    <string name="bottom_menu_progress_text">Progress</string>
+    <string name="bottom_menu_map_text">Map</string>
+    <string name="bottom_menu_profile_text">Profile</string>
+    <string name="bottom_menu_more_text">More</string>
+    <string name="pt_bottom_menu_dashboard_text">Dashboard</string>
+    <string name="pt_bottom_menu_calendar_text">Calendar</string>
+    <!--MORE_SCREEN-->
+    <string name="more_screen_more_awesomeness_text">More awesomeness</string>
+    <string name="more_screen_we_love_surprise_text">We love to surprise you - look out for these new things!</string>
+    <string name="more_screen_coming_soon_text">Coming soon</string>
+    <string name="more_screen_yfc_shop_text">YFC Shop</string>
+    <string name="more_screen_faq_text">F.A.Q.</string>
+    <string name="more_screen_all_the_text">All the hacks you should know</string>
+    <string name="more_screen_learn_more_text">Learn More</string>
+    <string name="more_screen_fitness_calendar_text">Fitness Calendar</string>
+    <string name="more_screen_fitness_calendar_text2">My PT Calendar</string>
+    <string name="more_screen_manage_your_text">Manage your PT sessions</string>
+    <string name="more_screen_go_to_text">Go to Calendar</string>
+    <string name="more_screen_go_to_challenges_text">Go to Challenges</string>
+    <string name="more_screen_challenges_text">Challenges</string>
+    <string name="more_screen_compete_with_users_text">Compete with other YFC users</string>
+    <string name="more_screen_go_to_shop">Go to Shop</string>
+    <string name="more_screen_get_help">Get help</string>
+    <string name="more_screen_get_help_msg">Contact our support center</string>
+    <string name="more_screen_get_help_action">Contact us</string>
+
+    <!-- FAQ_SCREEN-->
+    <string name="faq_screen_faq_text">F.A.Q.</string>
+    <string name="faq_screen_first_time_text">First time here?</string>
+    <string name="faq_screen_how_to_earn_coins_text">How to earn coins?</string>
+    <string name="faq_screen_how_to_earn_credits_text">How to earn credits?</string>
+    <string name="faq_screen_yfc_partners_text">YFC partners</string>
+    <string name="faq_screen_how_to_join_challenge">How to join a challenge?</string>
+    <string name="faq_screen_how_to_join_community">Join the YFC Community</string>
+    <string name="faq_screen_how_to_buy_a_gym_text">How to buy a\ngym\nsubscription?</string>
+    <string name="faq_screen_how_to_buy_a_gym_normal_text">How to buy a gym subscription?</string>
+    <string name="faq_screen_how_to_buy_class_text">How to buy class credits?</string>
+    <string name="faq_screen_how_to_buy_pt_sessions">How to buy PT sessions?</string>
+    <string name="faq_screen_how_to_book_pt_sessions">How to book PT sessions?</string>
+    <string name="faq_screen_how_to_manage_pt_sessions">How to manage PT sessions?</string>
+    <string name="faq_screen_how_to_spend_coins">How to spend your YFC coins?</string>
+    <string name="faq_screen_how_to_manage_your_text">How to manage your fitness calendar?</string>
+    <string name="faq_screen_stuck_need_text">Stuck! Need Help?</string>
+    <string name="faq_screen_how_to_use_your_class_text">How to use your Class Access card?</string>
+    <string name="faq_screen_how_to_use_your_gym_text">How to use your Gym Access card?</string>
+    <!--ALMOST_THERE_SCREEN-->
+    <string name="almost_there_screen_welcome_to_text">Welcome to the YFC family</string>
+    <string name="almost_there_screen_enjoy_your_text">Enjoy your fitness journey!</string>
+    <!--STORY_SCREEN-->
+    <string name="story_screen_take_look_text">Take a look</string>
+    <string name="story_screen_here_is_how">Here\'s how</string>
+    <string name="story_screen_sync_your_fitness_text">Sync your fitness device and start uploading your activity data</string>
+    <string name="story_screen_burn_calories_text">Burn calories, walk as many steps as possible and start earning points</string>
+    <string name="story_screen_earn_coins_text">When you reach certain goals, you earn coins to spend in the YFC shop</string>
+    <string name="story_screen_every_points_text">Every %s points will give you %s coins and when you reach %s points you get a massive %s coins!</string>
+    <string name="story_screen_page_text">%d/%d</string>
+    <string name="story_screen_the_more_classes_text">The more classes you do, the more credits you get to spend on new bookings</string>
+    <string name="story_screen_each_studio_text">Each studio counts its own visits so you can only spend credits in the studio where you earned them</string>
+    <string name="story_screen_number_credits_text">%s credits</string>
+    <string name="story_screen_number_visit_text">%sth visit</string>
+    <string name="story_screen_use_the_map_text">Use the Map to find gyms and personal trainers near you</string>
+    <string name="story_screen_to_work_out_text">To work out at a gym in the YFC network, you need a subscription</string>
+    <string name="story_screen_earn_coins_for_text">Earn coins for burning calories or walking steps using your fitness tracker – go, go, go!</string>
+    <string name="story_screen_your_access_text">Your access card gets you into a gym</string>
+    <string name="story_screen_lets_roll_text">Let\'s roll</string>
+    <string name="story_screen_cost_subscription_text">%s AED</string>
+    <string name="story_screen_go_to_gym_list_text">Go to gym list</string>
+    <string name="story_screen_go_to_studio_list_text">Go to studio list</string>
+    <string name="story_screen_meet_our_gym_text">Meet our Gym partners!</string>
+    <string name="story_screen_cost_subscription_month_text">%s AED/month</string>
+    <string name="story_screen_lets_find_out_text">Let\'s find out</string>
+    <string name="story_screen_easily_manage_future_text">Easily manage future class bookings</string>
+    <string name="story_screen_go_to_fitness_calendar_text">Go to the My Fitness Calendar link on your dashboard to make any changes to your classes schedule</string>
+    <string name="story_screen_can_access_text">Or you can access by tapping the more option</string>
+    <string name="story_screen_schedule_classes_text">Scheduled classes can be cancelled up to %d mins before the starting time\n\nDon\'t stress, if you cancel or reschedule a class, we\'ll credit you</string>
+    <string name="story_screen_any_issues_text">Any issues with our app or getting access to a YFC facility, please get in touch right away. One of our YFC Support staff will contact you within minutes</string>
+    <string name="story_screen_once_youve_bought_text">Once you\'ve bought a YFC subscription, you immediately have access to all the gyms in our network. Enjoy your workout!</string>
+    <string name="story_screen_use_our_map_text">Use our Map to find gyms where you live or work</string>
+    <string name="story_screen_use_our_filters_text">Use filters to get exactly what you want</string>
+    <string name="story_screen_dont_have_subscription_text">If you do not have a YFC subscription, tap \'Get Gym Access\' to open the subscription screen</string>
+    <string name="story_screen_choose_payment_text">Choose a payment option and you\'re all set to join our family of fitness fans. Remember: you can cancel at any time!</string>
+    <string name="story_screen_cancel_subscription_text">To Cancel, simply go to Profile > Subscription and tap on Cancel Auto Subscription</string>
+    <string name="story_screen_use_quick_access_text">Use your Quick Access Button to get access at any of the YFC Gyms.</string>
+    <string name="story_screen_proceed_payment_text">Proceed to Payment  |  AED %s</string>
+    <string name="story_screen_lets_us_explain_text">Let us explain</string>
+    <string name="story_screen_once_purchased_yfc_text">Once you’ve purchased YFC class credits you can book any class in our network</string>
+    <string name="story_screen_on_profile_screen_text">On your profile screen tap class credits and purchase the package that meets your needs</string>
+    <string name="story_screen_use_map_find_studios_text">Use our Map to find studios and classes near you</string>
+    <string name="story_screen_pick_studio_text">Pick a studio you like and you\'ll see a list of available classes</string>
+    <string name="story_screen_tap_class_you_want_text">Tap on the class you want to attend and book it</string>
+    <string name="story_screen_dont_have_enough_credits_text">If you don\'t have enough credits, top up with a package that suits your needs</string>
+    <string name="story_screen_choose_payment_option_text">Choose a payment option and you\'re all set to join our family of fitness fans. Remember: you can cancel at any time!</string>
+    <string name="story_screen_cost_subscription_revers_text">AED %s</string>
+    <string name="story_screen_class_cards_available_text">Class access cards are available %d minutes before the class starts. Tap on Quick Access to see info for the next available class.</string>
+    <string name="story_screen_confirm_that_text">Confirm that this is the one you want, show them your access card and enjoy your workout!</string>
+    <string name="story_screen_tap_on_quick_access_text">Tap on the Quick Access button to get in</string>
+    <string name="story_screen_confirm_location_text">Verify location and check  available access hours before proceeding with your session. This will help you have a smooth and hassle-free experience.</string>
+    <string name="story_screen_show_access_text">Show them your Access Card</string>
+    <string name="story_screen_different_location_text">If you\'re at a different location than you wanted, then select the correct one from your \'near to me\' list</string>
+    <string name="story_screen_still_havent_text">Still haven\'t found what you\'re looking for? Try the manual search!</string>
+    <string name="story_screen_want_to_ear_coins_text">Want to earn YFC coins?</string>
+    <string name="story_screen_3_easy_steps_text">3 easy steps</string>
+    <string name="story_screen_its_easy_text">It\'s easy</string>
+    <string name="story_screen_the_more_classes_you_text">The more classes you do, the more credits you get to spend on new bookings</string>
+    <string name="story_screen_each_studio_counts_its_text">Each studios counts its own visits so you can  only spend credits in the studio where you earned them</string>
+
+    <string name="story_buy_pt_sessions_2">Once you have bought PT sessions, you can view their schedules and book sessions</string>
+    <string name="story_buy_pt_sessions_3">Use your Map to find the PT that meets your needs</string>
+    <string name="story_buy_pt_sessions_4">Use filters to refine your search</string>
+    <string name="story_buy_pt_sessions_5">Select the amount of sessions you need. And choose your payment option</string>
+    <string name="story_buy_pt_sessions_6">Use your PT calendar to book any available time slots</string>
+
+    <string name="story_book_pt_sessions_2">Effortlessly handle your booking sessions with your dedicated personal trainer</string>
+    <string name="story_book_pt_sessions_3">Find an available time slot</string>
+    <string name="story_book_pt_sessions_4">Choose a preferred facility for your session from the available options</string>
+    <string name="story_book_pt_sessions_5">Upon submitting your booking request, it will be sent to the PT. Once the PT confirms your booking, you will receive a notification, and your session will be successfully booked</string>
+
+    <string name="story_manage_pt_sessions_2">Easily manage your booked PT Sessions</string>
+    <string name="story_manage_pt_sessions_3">You can access your fitness calendar by tapping the link on your dashboard</string>
+    <string name="story_manage_pt_sessions_4">Or you can access by tapping the more option</string>
+
+    <string name="story_how_to_spend_coins_2">Go to the YFC Shop</string>
+    <string name="story_how_to_spend_coins_3">Take Note of your coin balance</string>
+    <string name="story_how_to_spend_coins_4">Each product has a maximum amount of coins you can use</string>
+    <string name="story_how_to_spend_coins_5">When adding a product to your cart. Use the slider to select the amount of YFC coins you want to use</string>
+
+    <string name="story_join_challenge_2">Join any of the public challenges and see where you rank on the leader board.</string>
+    <string name="story_join_challenge_3">Enter the unique code and join any of our private challenges.</string>
+
+    <string name="story_join_community_2">Become a part of the YFC community, where you can connect with friends, follow their fitness journeys, and provide mutual support to boost each other\'s workout efforts.</string>
+    <string name="story_join_community_3">Discover who has liked your workouts and participate in the challenges that your friends have already joined.</string>
+
+    <!--PROFILE_SCREEN-->
+    <string name="profile_screen_profile">Profile</string>
+    <string name="profile_screen_subscription">Subscription</string>
+    <string name="profile_screen_buy_credits">Buy class credits</string>
+    <string name="profile_screen_shop_orders">YFC Shop Orders</string>
+    <string name="profile_screen_profile_settings">Profile Settings</string>
+    <string name="profile_screen_payment_history">Payment History</string>
+    <string name="profile_screen_notification_settings">Notification Settings</string>
+    <string name="profile_screen_connected_devices">Connected Devices</string>
+    <string name="profile_screen_my_referral_code">My referral code</string>
+    <string name="profile_screen_help_center">Help Center</string>
+    <string name="profile_screen_deletion_request">Deletion Request</string>
+    <string name="profile_screen_privacy_policy">Privacy Policy</string>
+    <string name="profile_screen_terms_and_condition">Terms &#38; Condition</string>
+    <string name="profile_screen_format_credits">%d credits</string>
+    <string name="sign_out">Sign out</string>
+    <string name="sign_out_we_save_all_your_progress">No worries, we\'ll save all your progress so come back any time!</string>
+    <string name="sign_out_tapping_out">Tapping out?</string>
+    <string name="settings">Settings</string>
+    <string name="profile_settings_category_account">Account</string>
+    <string name="profile_settings_category_preferences">Preferences</string>
+    <string name="profile_settings_units">Units</string>
+    <string name="profile_settings_privacy">Privacy</string>
+    <string name="profile_settings_category_general_info">General info</string>
+    <string name="profile_settings_category_physical_data">Physical data</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="instagram">Instagram</string>
+    <string name="gender">Gender</string>
+    <string name="account">Account</string>
+    <string name="save">Save</string>
+    <string name="username">\@username</string>
+    <string name="browse_with">Browse with</string>
+    <!--CONNECTED_DEVICES_SCREEN-->
+    <string name="connected_devices_screen_connect_your_device_text">Connect your device</string>
+    <string name="connected_devices_screen_connect_your_device_text_spike">Connect your device(Spike)</string>
+    <string name="connected_devices_screen_connecting_your_fitness_text">Connecting your fitness device allows us to reward you for your steps taken and calories burned</string>
+    <string name="connected_devices_screen_google_fit_text">Google Fit</string>
+    <string name="connected_devices_screen_connected_text">Connected</string>
+    <string name="connected_devices_screen_connected_device_text">Connected Devices</string>
+    <string name="connected_devices_screen_disconnected_text">Disconnected\n(Sign in with Google account first)</string>
+    <string name="connected_devices_screen_google_fit_connected_text">%s is now connected</string>
+    <string name="connected_devices_screen_all_set_text">You have successfully connected your device and can now earn points for your efforts</string>
+    <string name="connected_devices_screen_get_started_text">Get started</string>
+    <string name="connected_devices_screen_google_fit_disconnected_text">Disconnect %s</string>
+    <string name="connected_devices_screen_are_you_sure_text">Sure you want to disconnect your %s device?</string>
+    <string name="connected_devices_screen_you_can_reconnect_text">No problem, you can reconnect it again later!</string>
+    <string name="connected_devices_screen_connect_different_device_text">Connect a different device</string>
+    <string name="connected_devices_screen_disconnect_google_fit_text">Disconnect %s</string>
+    <string name="connected_devices_screen_wait_went_wrong_text">Wait, what went wrong?</string>
+    <string name="connected_devices_screen_lets_give_text">Let\'s give that another try – please enter your data correctly</string>
+    <string name="connected_devices_screen_health_connect_missing">It looks like Health Connect isn\'t installed on your device. Please download it from the app store.</string>
+    <string name="connected_devices_screen_lets_go_text">Let\'s go</string>
+    <string name="connected_devices_screen_disconnect_text">Disconnect</string>
+    <string name="connected_devices_screen_sign_in_google_text">Sign in with Google</string>
+    <string name="connected_devices_screen_sign_in_spike_text">Sign in with Spike</string>
+    <!--HELP_CENTER_SCREEN-->
+    <string name="help_center_screen_feeling_a_bit_lost_text">Feeling a bit lost?</string>
+    <string name="help_center_screen_if_you_have_problems_text">If you have any problems, email us and we\'ll sort you out as soon as possible</string>
+    <string name="help_center_screen_mail_address_text">support@yourfitness.coach</string>
+    <string name="help_center_screen_go_to_mail_text">Go to my mail</string>
+    <string name="help_center_screen_mail_copy_text">Mail copied: %s</string>
+    <string name="help_center_screen_mail_to_text">mailto: %s</string>
+    <string name="map_screen_gyms">Gyms</string>
+    <string name="map_screen_studios">Studios</string>
+    <string name="map_screen_trainers">Trainers</string>
+    <string name="map_screen_show_classes">Show Classes</string>
+    <string name="map_screen_map_view">Map view</string>
+    <string name="map_screen_list_view">List view</string>
+    <string name="map_screen_gyms_count_format">%d gyms</string>
+    <string name="map_screen_trainers_count_format">%d gyms (%d trainers)</string>
+    <string name="map_screen_studios_count_format">%d studios</string>
+    <string name="map_screen_view_button_format">%s | %s</string>
+    <string name="map_screen_get_gym_access">Get Gym Access</string>
+    <string name="facility_details_amenities">Amenities</string>
+    <string name="facility_details_personal_trainers">Available Personal Trainers</string>
+
+    <!--PROGRESS_SCREEN-->
+    <string name="progress_screen_earn_extra_credits_text">Earn extra credits</string>
+    <string name="progress_screen_steps_text">Steps</string>
+    <string name="progress_screen_kcal_text">Kcal</string>
+    <string name="progress_screen_points_text">Points</string>
+    <string name="progress_screen_connect_device_text">Connect device</string>
+    <string name="progress_screen_ready_lets_go_text">Ready? Let\'s go!</string>
+    <string name="progress_screen_today_text">Today</string>
+    <string name="progress_screen_keep_moving_text">Keep moving!</string>
+    <string name="progress_screen_available_bonus_credits_text">Available bonus credits</string>
+    <string name="progress_screen_available_book_class_text">Book class</string>
+    <string name="progress_screen_completed_text">completed</string>
+    <string name="progress_screen_visits_text">%s/ %s visits</string>
+    <string name="progress_screen_visit_text">%s visits</string>
+    <string name="progress_screen_ring_progress_text">%s%%</string>
+    <string name="progress_screen_bonus_studio_credits_text">Bonus studio credits</string>
+    <string name="progress_screen_upcoming_classes_text">Upcoming classes</string>
+    <string name="progress_screen_ok_thanks_text">Ok thanks</string>
+    <string name="progress_screen_get_bonus_credits_text">Get bonus credits</string>
+    <string name="progress_screen_boost_your_levels_text">Boost your levels every time you visit a certain studio</string>
+    <string name="progress_screen_visits_th_text">%sth visits</string>
+    <string name="progress_screen_credits_text">%s credits</string>
+    <string name="progress_screen_subscribe_text">Subscribe</string>
+    <string name="progress_screen_get_a_subscription_text">Get a subscription</string>
+    <string name="progress_screen_get_access_to_gyms_text">And get access to all the Gyms in our network</string>
+    <string name="progress_screen_my_friends">MY FRIENDS</string>
+    <string name="progress_screen_fitness_calendar">fitness calendar </string>
+
+    <!--MY_REFERRAL_SCREEN-->
+    <string name="my_referral_screen_referral_code_text">Referral code</string>
+    <string name="my_referral_screen_share_my_referral_code_text">Share my referral code</string>
+    <string name="my_referral_screen_for_each_friends_text">For each friend that subscribes using your referral code you will receive %s YFC coins</string>
+    <string name="my_referral_screen_referral_code_copied_text">Referral code copied: %s</string>
+    <string name="my_referral_screen_your_referral_code_text">Check out the YFC app using my code! %s\nDownload the Your Fitness Coach app from App Store (https://tyn.ai/yfcapple) or Google Play (https://tyn.ai/yfcandroid)</string>
+    <string name="my_referral_share_screen_with_your_friends_text">Share with your friends</string>
+    <string name="my_referral_share_with_your_friends_text">Share with your friends</string>
+    <!-- PAYMENT_HISTORY_SCREEN -->
+    <string name="payment_history_screen_start_date_text">Start date</string>
+    <string name="payment_history_screen_end_date_text">End date</string>
+    <string name="payment_history_screen_subscription_text">Subscription</string>
+    <string name="payment_history_screen_one_time_subscription_text">%s subscription</string>
+    <string name="payment_history_screen_credits_text">%d credits</string>
+    <string name="payment_history_screen_aed_text">AED %s</string>
+    <string name="payment_history_recent_first_text">Recent first</string>
+    <string name="payment_history_oldest_first_text">Oldest first</string>
+    <string name="payment_history_no_payment_history_text">No payment history</string>
+    <string name="payment_history_reset_text">Reset</string>
+    <!--MAP_SCREEN-->
+    <string name="map_screen_no_subscription_text">No subscription available</string>
+    <string name="map_screen_youre_not_active_text">You\'re not an active subscriber right now – shall we change that?</string>
+    <string name="map_screen_work_out_in_all_text">To work out in all gyms, sign up now!</string>
+    <string name="map_screen_sign_me_up_text">Sign me up!</string>
+    <string name="map_screen_location_permission_needed_text">Location Permission Needed</string>
+    <string name="map_screen_ok_text">OK</string>
+    <string name="map_screen_needs_location_permission_text">This app needs the Location permission, please accept to use location functionality</string>
+    <string name="map_screen_yes_text">Yes</string>
+    <string name="map_screen_no_text">No</string>
+    <string name="map_screen_need_enable_gps_text">Need to enable gps</string>
+    <string name="map_screen_gps_not_available_text">GPS not available</string>
+    <string name="map_screen_head_over_text">Head over to Settings, then give the app access to your geolocation, otherwise we can\’t show you gyms near you.</string>
+    <string name="map_screen_go_to_phone_settings_text">Go to Phone Settings</string>
+    <string name="map_screen_what_is_your_location_text">What is your location?</string>
+    <string name="map_screen_go_to_settings_text">Go to Phone Settings</string>
+    <string name="map_screen_are_you_here_text">Are you here right now?</string>
+    <string name="map_screen_yes_i_want_to_go_in_text">Yes, I want to go in!</string>
+    <string name="map_screen_no_im_not_here_text">No, I\'m not there, let\'s pick another?</string>
+    <string name="map_screen_find_yfc_facility_text">Find a YFC Facility</string>
+    <string name="map_screen_sorry_it_seems_text">Sorry it seems like you are a bit far away. Access Cards are only available if you are at a YFC Facility</string>
+    <string name="map_screen_need_permission_text">Need permission</string>
+    <string name="map_screen_go_to_permission_text">Go to permission settings</string>
+    <string name="map_screen_would_like_access_text">“Your Fitness Coach” would like to access your location</string>
+    <string name="access_camera_permission_screen_text">“Your Fitness Coach” would like to access your camera</string>
+    <string name="map_screen_remember_dont_provide_text">Remember, if you don\'t provide permission, we will not be able to find the gyms</string>
+    <string name="kinestex_remember_dont_provide_text">Remember, if you don\'t provide permission, you will not be able to use our AI-powered workouts</string>
+    <string name="map_screen_adjust_filters">Adjust filters</string>
+    <string name="map_screen_no_matches_found">No matches found</string>
+    <string name="map_screen_sorry_no_anything_that_matches_that_setting">Sorry, we don\'t have anything that matches that setting, can you adjust your filters?</string>
+    <string name="map_screen_you_have_upcoming_class">You have an upcoming class</string>
+    <string name="map_screen_you_have_give_me_access">I\'m here, give me access!</string>
+    <string name="map_screen_go_to_gym_thanks">I\'ll go to the gym, thanks</string>
+    <string name="map_screen_bit_quite_here">It\'s a bit quiet here…</string>
+    <string name="map_screen_your_gym_subscription">Your gym subscription isn\'t active right now and you don\'t have any classes booked</string>
+    <string name="map_screen_dont_delay">Don\'t delay, kickstart your fitness journey now!</string>
+    <string name="map_screen_show_me_the_map">Show me the map</string>
+    <string name="map_screen_subscribe_text">Subscribe</string>
+    <string name="map_screen_get_all_gyms_text">to get access to all gyms</string>
+    <string name="map_screen_subscribe_now_text">Subscribe Now</string>
+    <string name="map_screen_buy_credits_text">Buy credits</string>
+    <string name="map_screen_buy_credits_to_attend_text">Buy credits to attend classes in the studios</string>
+    <!--MANUAL_SEARCH_SCREEN-->
+    <string name="manual_search_screen_gyms_nearby_text">Gyms nearby</string>
+    <string name="manual_search_screen_recent_gyms_text">Recent Gyms</string>
+    <string name="manual_search_screen_gym_access_text">Gym Access</string>
+    <string name="manual_search_screen_get_access_text">Get access</string>
+    <string name="manual_search_screen_find_gym_text">Find gym manually</string>
+    <string name="manual_search_you_have_not_visited_text">You have not visited any gym yet</string>
+    <!--FITNESS_CALENDAR_SCREEN-->
+    <string name="fitness_calendar_screen_get_access_text">Get class access</string>
+    <string name="fitness_calendar_screen_manage_class_text">Manage class</string>
+    <string name="fitness_calendar_screen_cancel_class_text">Cancel class</string>
+    <string name="fitness_calendar_screen_rebook_class_text">Re-book class</string>
+    <!--FILTERS-->
+    <string name="filters_screen_1_km">1 km</string>
+    <plurals name="filters_show_gyms_format">
+        <item quantity="one">Show %d gym</item>
+        <item quantity="other">Show %d gyms</item>
+    </plurals>
+    <plurals name="filters_show_studios_format">
+        <item quantity="one">Show %d studio</item>
+        <item quantity="other">Show %d studios</item>
+    </plurals>
+    <string name="filters_no_matching_gyms">No matching gyms</string>
+    <string name="filters_no_matching_studios">No matching studios</string>
+    <string name="filters_types_format">Type (%d)</string>
+    <string name="filters_amenities_format">Amenities (%d)</string>
+    <!--SUBSCRIPTION_SCREEN-->
+    <string name="subscription_screen_sign_up_now">Sign up now</string>
+    <string name="subscription_screen_your_subscription">Your Subscription</string>
+    <string name="subscription_screen_sign_up_flow_option_1">Get access to any gym in the YFC network</string>
+    <string name="subscription_screen_sign_up_flow_option_2">Your subscription can be canceled at any time</string>
+    <string name="subscription_screen_sign_up_flow_option_3">Month to month subscription</string>
+    <string name="subscription_screen_sign_up_flow_option_4">Get rewarded for every <font color="#FF4C8AFF">calorie you burn</font></string>
+    <string name="subscription_screen_one_time_flow_option_1">Exclusive offer for %s</string>
+    <string name="subscription_screen_one_time_flow_option_2">Fixed subscription</string>
+
+    <string name="subscription_screen_monthly_plan">Monthly</string>
+    <string name="subscription_screen_cancel_auto_subscription">Cancel auto-subscription</string>
+    <string name="subscription_screen_status_">Status:</string>
+    <string name="subscription_screen_active">Active</string>
+    <string name="subscription_screen_resubscribe">Resubscribe</string>
+    <string name="subscription_screen_cancel_anytime">Cancel anytime</string>
+    <string name="subscription_screen_pay_once">Once off payment</string>
+    <string name="subscription_screen_monthly_plan_price_format">%s/month</string>
+    <string name="subscription_screen_your_next_payment">Your next payment date is <b>%s</b></string>
+    <string name="subscription_screen_will_terminate">Subscription expires on <b>%s</b></string>
+    <string name="subscription_screen_referral_code_text">Referral code</string>
+    <string name="subscription_screen_enter_code_text">Enter your referral, influencer or corporate code here.</string>
+    <string name="subscription_screen_redeem_text">Redeem</string>
+    <string name="subscription_screen_referral_code_redeemed_text">Voucher code redeemed</string>
+    <string name="subscription_screen_successfully_redeemed_text">The referral code was successfully redeemed</string>
+    <string name="subscription_screen_bonus_coins_text">%s bonus coins</string>
+    <string name="subscription_screen_will_credited_text">will be credited to you after you purchase a subscription</string>
+    <string name="subscription_screen_new_cost_text">You are now able to purchase a YFC subscription at %s</string>
+    <string name="subscription_screen_referral_code_invalid_text">Referral code is invalid</string>
+    <string name="subscription_screen_please_check_code_text">Please check the code and retry or go back to a subscription purchase</string>
+    <string name="subscription_screen_retry_text">Retry</string>
+    <string name="subscription_screen_back_subscription_text">Back to subscription</string>
+    <string name="subscription_screen_discard_code_text">Discard code</string>
+    <!--SUCCESS_PAYMENT_SUBSCRIPTION-->
+    <string name="success_payment_subscription_title">Success! Your subscription is now active</string>
+    <string name="success_payment_subscription_subtitle">Now you can visit any gym in the YFC network</string>
+    <string name="success_payment_subscription_description">Choose one, request access and enjoy your workout</string>
+    <string name="success_payment_subscription_tell_me_more">Tell me more about subscribing</string>
+    <!--CANCEL_SUBSCRIPTION-->
+    <string name="confirm_cancel_subscription_title">Time to say goodbye?</string>
+    <string name="confirm_cancel_subscription_subtitle">Sure you want to cancel your auto-subscription?</string>
+    <string name="confirm_cancel_subscription_description">You\'ll still have access for the rest of this month</string>
+    <string name="confirm_cancel_subscription_btn_yes_cancel_auto_subscription">Yes, cancel auto-subscription</string>
+    <!--SUCCESS_CANCEL_SUBSCRIPTION-->
+    <string name="success_cancel_subscription_title">We\'ll miss you</string>
+    <string name="success_cancel_subscription_description_format">Your current subscription will end on %s. We hope you\'ll miss us too! If you want back in, remember to manually renew your subscription</string>
+    <!--PROGRESS_POINTS-->
+    <string name="progress_screen_show_us_what_you_are_made_of">Show us what you\'re made of!</string>
+    <string name="progress_your_total_points">Your total points</string>
+    <string name="progress_2k_points_goal">%dk points goal</string>
+    <string name="progress_percent_format">%d%%</string>
+    <string name="progress_next_goal">Next goal</string>
+    <string name="points_hint_how_points_work">How points are calculated?</string>
+    <string name="points_hint_you_get_coins_for_points">Get points for steps taken and kcal burned recorded from a recognized fitness wearable synced with your </string>
+    <string name="points_hint_up_your_earning_potential">How do we count?</string>
+    <string name="points_hint_ok_cool">Ok cool!</string>
+    <string name="points_hint_connect_a_device">Connect a device</string>
+    <string name="coin_reward_your_prize">Your prize</string>
+    <string name="coin_reward_your_first_prize">Your first prize</string>
+    <string name="coin_reward_great">Great!</string>
+    <string name="coin_reward_thats_a_great_start">That\'s a great start!</string>
+    <string name="coin_reward_thats_a_next_level_performance">That\'s a next level performance! Good job!</string>
+    <string name="coin_reward_you_have_reached_your_goal">You\'ve reached your goal of %s points! Keep pushing!</string>
+    <string name="coin_reward_great_news_you_new_on_level_now">Great news!&lt;br/&gt;&lt;font color="#7E5E11"&gt;You\'re on %s Level now&lt;/font&gt;</string>
+    <string name="level_reward_msg">%s level!&lt;br/&gt;&lt;font color="#7E5E11"&gt;%s&lt;/font&gt;</string>
+    <string name="leveled_up_msg">Congratulations! You leveled up!</string>
+    <string name="coin_reward_congrats_you_leveled_up_at">Congrats! You\'ve leveled up at</string>
+    <string name="coin_reward_keep_it_up">Keep It Up!</string>
+    <string name="coin_reward_yay">Yay!</string>
+    <string name="coin_reward_someone_redeemed_your_voucher_code">Someone redeemed your voucher code</string>
+    <string name="coin_reward_received_bonus_coins_via_voucher">You received bonus coins via voucher</string>
+    <!--DELETION_REQUEST_SCREEN-->
+    <string name="deletion_request_screen_saddest_news_today_text">Saddest news today</string>
+    <string name="deletion_request_screen_submitting_deletion_request_text">By submitting this deletion request your entire account record, along with associated personal data will be deleted. Any records of active Gym subscriptions, Class credits or Booked classes will also be deleted.</string>
+    <string name="deletion_request_screen_submit_delete_request_text">Yes, submit delete request</string>
+    <string name="deletion_request_screen_we_cant_send_delete_request_text">We can\’t send the delete request</string>
+    <string name="deletion_request_wrong_delete_request_text">Something went wrong with the deletion request, please contact our support team</string>
+    <string name="deletion_request_screen_got_it_text">Got it</string>
+    <string name="deletion_request_screen_success_text">Success</string>
+    <string name="deletion_request_screen_request_deletion_submitted_request_text">Your account deletion request has been submitted</string>
+    <string name="deletion_request_please_note_text">Please note that this deletion process can take up to 72 hours. You will receive an email notification from YFC administrator confirming that your account has been deleted.</string>
+    <string name="cancel_class_message">Wait, sure you want to cancel this class?</string>
+    <string name="coin_reward_your_gift">Your gift</string>
+    <!--CREDITS-->
+    <string name="credits_screen_title">Get some credits</string>
+    <string name="credits_screen_subtitle">Buy credits now to book your favourite class</string>
+    <string name="credits_screen_credits_format">%d credits</string>
+    <string name="credits_not_enough_screen_title">You\'re a bit low on credits</string>
+    <string name="credits_not_enough_screen_description">Buy some now and you\'ll be working out in just a few clicks</string>
+    <!--BOOK_CLASS-->
+    <string name="book_class_screen_title">Book class</string>
+    <string name="book_class_screen_btn_confirm_booking">Confirm Booking</string>
+    <string name="book_class_screen_cancel_info">You can cancel your booking any time</string>
+    <string name="book_class_screen_credits_will_be_debited_format">%s will be debited</string>
+    <string name="book_class_screen_btn_yes_reschedule_me">Yes, reschedule me</string>
+    <string name="book_class_screen_double_booked_title">Oops, you are double booked!</string>
+    <string name="book_class_screen_double_booked_warning_with_conflict_format">You\'ve already booked %s at this time. Would you like to replace it with %s?</string>
+    <string name="book_class_screen_double_booked_warning_format">You\'ve already booked %s at this time.</string>
+    <string name="book_class_screen_debited_info">were debited from your account</string>
+    <string name="book_class_screen_refunded_info">will be refunded to your account</string>
+    <string name="book_class_screen_your_class_is_cancelled">Your class is cancelled</string>
+    <!--BOOK_CLASS_RESULT-->
+    <string name="book_class_result_screen_title_boom_you_are_loaded_with">Boom! You\'re loaded with</string>
+    <string name="book_class_result_screen_title_happy_days">Happy days!</string>
+    <string name="book_class_result_screen_title_booking_is_your_again">Booking is yours again!</string>
+    <string name="book_class_result_screen_title_booking_is_your_again_description">Great stuff, you\'re back on, %s!\nYour booking is reconfirmed for %s at %s</string>
+    <string name="book_class_result_screen_message">Lucky you, %s! Your booking is confirmed and you\'re all set. The class will be held on %s at %s.</string>
+    <string name="book_class_result_screen_message_congratulations">Congratulations, %s!\nYour booking is now confirmed.\nThe class will be held on %s at %s.</string>
+    <string name="btn_yes_i_want_to_cancel">Yes, I want to cancel</string>
+    <!--CHALLENGES_SCREEN-->
+    <string name="challenges_screen_challenges_text">Challenges</string>
+    <string name="challenges_screen_show_more_text">Show more</string>
+    <string name="challenges_screen_new_challenges_coming_soon_text">New Challenges are coming soon, stay tuned</string>
+    <string name="challenges_screen_my_challenges_text">My challenges</string>
+    <string name="challenges_screen_active_challenges_text">Active challenges</string>
+    <string name="challenges_screen_show_less_text">Show less</string>
+    <string name="challenges_screen_dont_have_code_text">I don’t have a code</string>
+    <string name="challenges_screen_have_code_text">Yes, I have a code!</string>
+    <string name="challenges_screen_join_this_challenge_text">To join this challenge, please enter your access code</string>
+    <string name="challenges_screen_join_want_private_challenge_text">Want to join private challenge?</string>Join private challenge
+    <string name="challenges_screen_join_private_challenge_text">Join private challenge</string>
+    <string name="challenges_screen_enter_access_code_text">Enter your access code to join the challenge</string>
+    <string name="challenges_screen_code_text">Code</string>
+    <string name="challenges_screen_incorrect_code_text">The code is incorrect or invalid</string>
+    <!--CHALLENGE_DETAILS_SCREEN-->
+    <string name="challenge_details_screen_description_text">Description</string>
+    <string name="challenge_details_screen_rules_text">Rules</string>
+    <string name="challenge_details_screen_join_challenge_text">Join challenge</string>
+    <string name="challenge_details_screen_start_text">Start</string>
+    <string name="challenge_details_screen_finish_text">Finish</string>
+    <string name="challenge_details_screen_want_join_challenge_text">Want to join the challenge?</string>
+    <string name="challenge_details_screen_you_will_be_able_text">You will be able to compete with other YFC users and get on the leaderboard</string>
+    <string name="challenge_details_screen_yes_join_text">Yes, I would love to join!</string>
+    <string name="challenge_details_screen_maybe_later_text">Maybe later</string>
+    <string name="challenge_details_screen_you_joined_text">You\'ve joined the challenge</string>
+    <string name="challenge_details_screen_challenge_will_begin_text">%s will begin on %s</string>
+    <string name="challenge_details_screen_compete_with_other_text">Compete with other YFC users and find yourself on the leaderboard</string>
+    <string name="challenge_details_screen_want_leave_text">Want to leave the challenge?</string>
+    <string name="challenge_details_screen_you_can_still_join_text">You can still join before the challenge begins</string>
+    <string name="challenge_details_screen_leave_text">Leave</string>
+    <string name="challenge_details_screen_leave_challenge_text">Leave challenge</string>
+    <string name="challenge_details_screen_leave_private_challenge_text">Want to leave private challenge?</string>
+    <string name="challenge_details_screen_see_challenge_details_text">See challenge details</string>
+    <string name="challenge_details_screen_see_leaderboard_text">See the Leaderboard</string>
+    <string name="challenge_details_screen_challenge_began_text">The challenge has already begun, get in on it!</string>
+    <string name="challenge_details_screen_you_joined_private_text">You\'ve joined private challenge</string>
+    <string name="challenge_details_screen_return_private_challenge_challenge_text">To return to private challenge, you will have to enter the code again</string>
+    <string name="challenge_details_screen_compete_top_spot_text">Compete with other users for the top spot on the leaderboard</string>
+    <!--LEADERBOARD_SCREEN-->
+    <string name="leaderboard_screen_steps_text">%s steps</string>
+    <string name="leaderboard_screen_points_text">%s points</string>
+    <string name="leaderboard_screen_calories_text">%s calories</string>
+    <string name="leaderboard_screen_name_text">%s (You)</string>
+    <string name="leaderboard_screen_week_text">Week</string>
+    <string name="leaderboard_screen_month_text">Month</string>
+    <string name="leaderboard_screen_all_time_text">All time</string>
+
+    <!--KINESTEX_SCREEN-->
+    <string name="kinestex_screen_text">30 DAY WORKOUT</string>
+    <string name="kinestex_screen_title_text">Start your 30-day fitness!</string>
+    <string name="kinestex_screen_body_text">Experience personalized fitness at home with our DFC Tailored workout plan. Let us guide you through a 30-day program designed to help you achieve your fitness goals with ease and convenience.</string>
+    <string name="kinestex_button_text">Access our 30-day workout plan</string>
+    <string name="kinestex_secondary_button_text">How does it work?</string>
+
+    <!--FB DATA-->
+    <string name="facebook_app_id" translatable="false">1124406491581497</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1124406491581497</string>
+    <string name="facebook_client_token" translatable="false">bdfbcede82f26884d9b7e242ac6e7e32</string>
+
+    <!--HARD UPDATE-->
+    <string name="update_action">Update to the latest version</string>
+    <string name="update_title">Time to update!</string>
+    <string name="update_msg">We have added new features and functionality to enhance your experience. In order to continue using the app, please update it.</string>
+
+    <string name="your_level">Your level</string>
+    <string name="your_level_is">Your level is %s</string>
+    <string name="next_level_msg">Let\'s burn some calories.\n%s are up for grabs.</string>
+    <string name="last_level_msg">You\'ve reached maximum level!\nStay top of the %s</string>
+    <string name="last_level_msg2">Wow! You did it, you\'re on top!\nStay tuned, new levels are coming soon…</string>
+    <string name="global_leaderboard">Global leaderboard</string>
+    <plurals name="extra_coins">
+        <item quantity="one">%s extra coin</item>
+        <item quantity="other">%s extra coins</item>
+    </plurals>
+    <string name="every">Every&#160;</string>
+    <string name="next_level_msg_2">You are %s to %s level\nand your bonus coins!</string>
+    <string name="how_points_calculated"><u>How points are calculated?</u></string>
+    <string name="amount_formatted">/%s</string>
+    <string name="or">or</string>
+    <string name="apple_health">Apple Health</string>
+    <string name="google_fit">Google Fit</string>
+    <string name="_1_step">1 step</string>
+    <string name="_1_calorie">1 calorie</string>
+    <string name="equals_sign">=</string>
+
+    <plurals name="coins_plural_format">
+        <item quantity="one">%d coin</item>
+        <item quantity="other">%d coins</item>
+    </plurals>
+
+    <plurals name="points_plural_format">
+        <item quantity="one">%s point</item>
+        <item quantity="other">%s points</item>
+    </plurals>
+
+    <plurals name="calories_plural_format">
+        <item quantity="one">%s calorie</item>
+        <item quantity="other">%s calories</item>
+    </plurals>
+
+    <plurals name="steps_plural_format">
+        <item quantity="one">%s step</item>
+        <item quantity="other">%s steps</item>
+    </plurals>
+
+    <string name="shop">Shop</string>
+    <string name="change_gender_to_female">Change gender to Female</string>
+    <string name="buy_subscription">Buy subscription</string>
+    <string name="warning">Warning!</string>
+    <string name="code_is_invalid">Code is invalid!</string>
+    <string name="sign_up_code_error">The code you entered is invalid. Please try again.</string>
+    <string name="enter_code_error">Please check the code and retry or go back to a subscription purchase.</string>
+    <string name="referral_reward_msg">You received bonus\ncoins via voucher</string>
+
+    <string name="voucher_code_redeemed">Voucher code redeemed</string>
+    <string name="voucher_code_is_invalid">Voucher code is invalid</string>
+    <string name="successfully_redeemed">The voucher code was successfully redeemed</string>
+    <string name="successfully_redeemed_expired_soon">Hurry up! This voucher expires in %s and if you don\'t buy a subscription by this time it will be automatically discarded</string>
+    <string name="error_redeemed">Please check the code and retry or go back to a subscription purchase</string>
+    <string name="complimentary_code_redeemed_msg">As an %s affiliate, you can now access any of our facilities</string>
+    <string name="my_trainers">Personal Training</string>
+    <string name="inactive">Inactive</string>
+
+    <plurals name="trainers_amount">
+        <item quantity="one">%d trainer works here</item>
+        <item quantity="other">%d trainers work here</item>
+    </plurals>
+    <plurals name="hour">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <plurals name="minute">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+
+    <plurals name="credits">
+        <item quantity="one">%d credit</item>
+        <item quantity="other">%d credits</item>
+    </plurals>
+
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="track_progress">Track progress</string>
+    <string name="join_challenges">Join challenges</string>
+    <string name="log_in_your_daily_progress">Log in your daily progress</string>
+    <string name="dubai30x30_calendar_msg">30 minutes of exercise per day for 30 days. Tap on the days that you have completed your workout.</string>
+    <string name="save_progress">Save progress</string>
+    <string name="discard_the_changes_and_close">Discard the changes and close</string>
+    <string name="no_challenges_found">No challenges found</string>
+    <string name="government">Government</string>
+
+    <string name="dubai_30x30">Dubai 30x30</string>
+    <string name="dubai_30x30_intercorporate">Dubai 30x30 intercorporate</string>
+    <string name="global_dubai_30x30">Global Dubai 30x30</string>
+    <string name="global_dubai_30x30_msg">Check your progress in the Dubai 30x30 campaign</string>
+    <string name="global_dubai_30x30_preview_msg">You are all set! The challenge starts on 26 October 2024</string>
+
+    <string name="intercorporate_competition">Intercorporate competition</string>
+    <string name="intercorporate_competition_msg">Follow the progress of private and government companies</string>
+    <string name="intercorporate_competition_msg2">During September, different companies will be battling it out against each other. Stay tuned and find out who comes out on top!</string>
+    <string name="intercorporate_leaderboard">Intercorporate leaderboard</string>
+
+    <string name="dubai30x30_is_here">Dubai 30x30 is here!</string>
+    <string name="dubai3030_info_msg">It is time for the Dubai Fitness Challenge 2024! 30 mins of activity for 30 consecutive days. Access your DFC features here.</string>
+    <string name="dubai30x30_is_coming">Dubai 30x30 is coming soon!</string>
+    <string name="dubai3030_coming_msg">Dubai 30x30 kicks off on October 26, offering a range of exciting opportunities. Engage in thrilling challenges, accumulate rewards, track your progress on leaderboards, and explore numerous other features.</string>
+
+    <string name="place_number">Place %s</string>
+
+    <string name="dubai_30x30_details_title">Dubai 30x30</string>
+    <string name="dubai_30x30_details_description">Welcome to the Dubai 30x30 challenge where you are encouraged to work out for 30 mins per day for the next 30 days, starting 26 October 2024.</string>
+    <string name="dubai_30x30_details_rules">1. In this challenge, we\'ll be tracking the number of steps you take during your workouts. Ranking is based on your total amount of steps during Dubai 30x30.\n2. If you have a fitness wearable, it needs to be synchronized with either Apple Health or Google Fit.\n3. Your data will only be updated if you open the YFC app.\n4. You will need to open your app on or before the challenge ends on 24 November 2024. The leaderboard closes for submissions on 00:00 25 November 2024.\n5. Only recognized fitness wearables will be accepted. Any foreign device producing suspect data feedback will be removed from the challenge.</string>
+    <string name="app_version_label">App version: %s Build: %d</string>
+
+    <string name="the_september_step_challenge_is_here">The September step challenge is here!</string>
+    <string name="test_september_msg">During the month of September, corporates will fight it out in an intercorporate step challenge. Stay updated on the excitement by keeping an eye on the intercorporate leaderboard.</string>
+    <string name="results_are_coming_soon">Results are coming soon</string>
+    <string name="the_data_will_be_available_within_24_hours">The data will be available within 24 hours</string>
+    <string name="choose">Choose</string>
+    <string name="equivalent_to_month_price">Equivalent to\n%s/month</string>
+    <string name="corporate_discount">CORPORATE DISCOUNT</string>
+
+    <plurals name="number_of_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+
+    <string name="code_redeemed_title">Code redeemed</string>
+    <string name="code_redeemed">The corporate code has been successfully redeemed.</string>
+    <string name="influencer_code_redeemed_title">Influencer code redeemed</string>
+    <string name="influencer_code_redeemed">The influencer code was successfully redeemed</string>
+    <string name="influencer_code_redeemed_bonus_msg">will be credited to you after you purchase a subscription</string>
+
+    <string name="data_provider_health_connect">Health Connect</string>
+    <string name="data_provider_garmin">Garmin</string>
+    <string name="data_provider_polar">Polar</string>
+    <string name="data_provider_suunto">Suunto</string>
+    <string name="data_provider_google_fit">Google Fit</string>
+
+    <string name="need_permission_header">Permissions required</string>
+    <string name="need_permission_title">Please grant permissions to continue</string>
+    <string name="need_permission_msg">Open permissions menu item and grant all Health Connect permissions.</string>
+    <string name="need_permission_action">Go to settings</string>
+</resources>

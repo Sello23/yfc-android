@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_calendar"
+        layout="@layout/view_calendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_current_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        app:layout_constraintStart_toStartOf="@id/view_calendar"
+        app:layout_constraintTop_toBottomOf="@id/view_calendar"
+        tools:text="10 September | Friday" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/spacing_1x"
+        android:paddingVertical="@dimen/spacing_0.5x"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/text_current_day" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_no_classes_booked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_3x"
+        android:text="@string/fitness_calendar_screen_no_classes_booked_text"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/gray_light"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/view_calendar"
+        app:layout_constraintStart_toStartOf="@id/view_calendar"
+        app:layout_constraintTop_toBottomOf="@id/text_current_day" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

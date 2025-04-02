@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/toolbar_search"
+        layout="@layout/toolbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/empty_search_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1.5x"
+        android:gravity="center"
+        android:text="@string/no_challenges_found"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/grey"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_search"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:paddingHorizontal="@dimen/spacing_1x"
+        android:paddingTop="@dimen/spacing_0.75x"
+        android:text="@string/map_screen_results_format"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_background"
+        android:paddingTop="@dimen/spacing_0.25x"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_results"
+        tools:listitem="@layout/item_challenge" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        style="@style/Widget.YFC.ScrollView.Content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_background"
+        android:fitsSystemWindows="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_search">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_dubai_30x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_2x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:text="@string/dubai_30x30"
+                android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/dubai_preview"
+                layout="@layout/view_dubai_30x30_challenge_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text_dubai_30x30" />
+
+            <include
+                android:id="@+id/global_leaderboard"
+                layout="@layout/view_dubai_30x30_challenge_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/dubai_preview" />
+
+            <include
+                android:id="@+id/intercorporate_leaderboard_test"
+                layout="@layout/view_dubai_30x30_challenge_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/global_leaderboard" />
+
+            <include
+                android:id="@+id/intercorporate_leaderboard"
+                layout="@layout/view_dubai_30x30_challenge_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_1x"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/intercorporate_leaderboard_test" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_my_challenges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_2x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:text="@string/challenges_screen_my_challenges_text"
+                android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intercorporate_leaderboard" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/my_challenges_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.5x"
+                app:layout_constraintTop_toBottomOf="@+id/text_my_challenges"
+                tools:layout_editor_absoluteX="16dp"
+                tools:listitem="@layout/item_challenge" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_show_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:text="@string/challenges_screen_show_more_text"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_challenges_list" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_active_challenges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_2.5x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:text="@string/challenges_screen_active_challenges_text"
+                android:textAppearance="@style/TextAppearance.YFC.Heading2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_show_more" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/active_challenges_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.5x"
+                app:layout_constraintTop_toBottomOf="@+id/text_active_challenges"
+                tools:listitem="@layout/item_challenge" />
+
+            <View
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_1x"
+                android:background="@color/gray_background"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_my_challenges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="my_challenges_list,text_my_challenges" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="text_active_challenges,text_my_challenges,text_show_more,active_challenges_list,my_challenges_list,background" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/dubai_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="global_leaderboard,intercorporate_leaderboard"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_aim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_aim_challenges"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_new_challenges_coming"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:text="@string/challenges_screen_new_challenges_coming_soon_text"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_aim" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_new_challenges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="image_aim,text_new_challenges_coming" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

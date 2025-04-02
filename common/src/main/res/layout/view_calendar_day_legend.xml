@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/legendLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_sunday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        tools:text="SUN" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_monday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        tools:text="MON" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_tuesday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        tools:text="TUE" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_wednesday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        tools:text="WED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_thursday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        tools:text="THU" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_friday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        tools:text="FRI" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_saturday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        tools:text="SAT" />
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_toolbar">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:text="@string/map_screen_results_format"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_facility"
+        style="@style/ShapeAppearance.YFC.ImageView.Rounded"
+        android:layout_width="67dp"
+        android:layout_height="64dp"
+        android:layout_marginVertical="@dimen/spacing_1x"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_results"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Search" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Gold's gym"
+        android:textAppearance="@style/TextAppearance.YFC.Button"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_facility"
+        app:layout_constraintTop_toBottomOf="@id/text_results" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:drawableStart="@drawable/ic_address_small"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="489 Al Bridge Apt. 307\naaa "
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_facility"
+        app:layout_constraintTop_toBottomOf="@id/text_name" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:drawableStart="@drawable/ic_distance_small"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="13 km"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_facility"
+        app:layout_constraintTop_toBottomOf="@id/text_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

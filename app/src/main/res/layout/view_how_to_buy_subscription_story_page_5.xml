@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_background"
+        android:layout_width="343dp"
+        android:layout_height="86dp"
+        android:background="@drawable/image_subscription_cost_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_subscription_cost"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_background"
+        app:layout_constraintEnd_toEndOf="@id/image_background"
+        app:layout_constraintTop_toTopOf="@id/image_background" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_vector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:src="@drawable/image_vector"
+        app:layout_constraintBottom_toTopOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_background" />
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:background="@drawable/gradient_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_vector" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_subscription_cost_proceed_to_payment"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@+id/view_background"
+        app:layout_constraintTop_toTopOf="@id/view_background" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_badge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_vector" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

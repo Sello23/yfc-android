@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:layout_gravity="bottom">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardBookClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_1x"
+        android:background="@drawable/background_card_book_class">
+
+        <TextView
+            android:id="@+id/tvBookingName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:fontFamily="@font/work_sans_bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/tvBookingTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Beginner classes" />
+
+        <TextView
+            android:id="@+id/tvBookingTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:layout_marginEnd="@dimen/spacing_0.75x"
+            android:fontFamily="@font/work_sans_bold"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvBookingName"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="13:00" />
+
+        <TextView
+            android:id="@+id/tvCoach"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.25x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tvDate"
+            app:layout_constraintStart_toStartOf="@id/tvBookingName"
+            app:layout_constraintTop_toBottomOf="@id/tvBookingName"
+            tools:text="Jane Cooper" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.25x"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCoach"
+            app:layout_constraintEnd_toEndOf="@id/tvBookingTime"
+            tools:text="Monday, January 10" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_1.5x"
+            android:drawablePadding="@dimen/spacing_0.25x"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_address_small"
+            app:layout_constraintStart_toStartOf="@id/tvCoach"
+            app:layout_constraintTop_toBottomOf="@id/tvCoach"
+            tools:text="Monday, January 10" />
+
+        <TextView
+            android:id="@+id/tvActivityType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvAddress"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress"
+            tools:text="Classic Pilates" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@id/tvBookingTime"
+            app:layout_constraintTop_toTopOf="@id/tvAddress"
+            app:shapeAppearance="@style/ShapeAppearance.YFC.BookClassIcon"
+            tools:src="@drawable/ic_circle_logo" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/spacing_0.75x"
+            android:background="@color/grey_separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityType" />
+
+        <TextView
+            android:id="@+id/tvDebitedCredits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            android:drawablePadding="@dimen/spacing_0.25x"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_profile_credits"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator"
+            tools:text="10 credits will  be debited" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:text="@string/book_class_screen_btn_confirm_booking" />
+
+    <TextView
+        android:id="@+id/tvCancelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginBottom="@dimen/spacing_1.5x"
+        android:background="@color/white_transparent"
+        android:fontFamily="@font/work_sans_regular"
+        android:text="@string/book_class_screen_cancel_info"
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/configuration"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/spacing_1x"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        android:text="@string/catalog_filter"
+        app:drawableStartCompat="@drawable/ic_toolbar_filter"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/text_gray" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        app:drawableStartCompat="@drawable/ic_toolbar_sort"
+        android:layout_weight="1"
+        android:text="@string/catalog_sort"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/text_gray" />
+
+</LinearLayout>

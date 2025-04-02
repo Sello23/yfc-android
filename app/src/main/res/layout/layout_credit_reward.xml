@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_reward"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/text_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_level_reward"
+        android:layout_width="184dp"
+        android:layout_height="184dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/text_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/image_diamond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_reward_diamond"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/image_reward"
+        app:layout_constraintEnd_toEndOf="@id/image_reward"
+        app:layout_constraintStart_toStartOf="@id/image_reward"
+        app:layout_constraintTop_toTopOf="@id/image_reward"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2.75x"
+        android:layout_marginBottom="@dimen/spacing_3.25x"
+        android:gravity="center_horizontal"
+        android:text="@string/coin_reward_great_news_you_new_on_level_now"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toTopOf="@id/text_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/level_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2.75x"
+        android:layout_marginTop="@dimen/spacing_1.5x"
+        android:layout_marginBottom="@dimen/spacing_3.25x"
+        android:gravity="center_horizontal"
+        android:text="@string/coin_reward_great_news_you_new_on_level_now"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/image_level_reward" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2x"
+        android:layout_marginBottom="@dimen/spacing_0.25x"
+        android:gravity="center_horizontal"
+        android:text="@string/coin_reward_keep_it_up"
+        android:textAppearance="@style/TextAppearance.YFC.Heading1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/text_subtitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2x"
+        android:layout_marginBottom="@dimen/spacing_1.75x"
+        android:gravity="center_horizontal"
+        android:text="@string/coin_reward_congrats_you_leveled_up_at"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/text_studio" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="@dimen/spacing_2x"
+        android:scaleType="centerCrop"
+        android:src="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/text_studio"
+        app:layout_constraintEnd_toStartOf="@id/text_studio"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_studio"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon.Tiny" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_studio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_0.5x"
+        android:layout_marginEnd="@dimen/spacing_2x"
+        android:layout_marginBottom="@dimen/spacing_4.75x"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_icon"
+        tools:text="Yoga Time Studio" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_level_congrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2x"
+        android:layout_marginBottom="@dimen/spacing_1.5x"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/yellow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Yoga Time Studio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

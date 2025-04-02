@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>hardDescrText</key>
+        <value />
+    </entry>
+    <entry>
+        <key>hardTitleText</key>
+        <value />
+    </entry>
+    <entry>
+        <key>hardVersion</key>
+        <value />
+    </entry>
+    <entry>
+        <key>dubai3030Enabled</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>sendStepsMinInterval</key>
+        <value>5</value>
+    </entry>
+</defaultsMap>

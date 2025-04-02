@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text_coins"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawablePadding="@dimen/spacing_0.4x"
+    android:paddingStart="0dp"
+    android:paddingEnd="@dimen/spacing_0.4x"
+    android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+    android:textColor="@color/main_active"
+    app:drawableStartCompat="@drawable/ic_profile_coins"
+    app:drawableEndCompat="@drawable/ic_arrow_drop"
+    tools:text="50 / AED 100" />

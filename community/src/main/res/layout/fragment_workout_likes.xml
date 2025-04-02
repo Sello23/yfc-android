@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="26dp"
+    android:minHeight="26dp"
+    tools:background="@color/text_gray">
+
+    <include
+        android:id="@+id/shortcut1"
+        layout="@layout/view_friend_shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/shortcut2"
+        layout="@layout/view_friend_shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/shortcut1"
+        app:layout_constraintStart_toEndOf="@id/shortcut1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/shortcut3"
+        layout="@layout/view_friend_shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/shortcut2"
+        app:layout_constraintStart_toEndOf="@id/shortcut2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:background="@drawable/text_dashed_line"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/workout_not_liked"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/shortcut3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4 people liked this workout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/new_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_0.25x"
+        android:background="@drawable/new_likes_background"
+        android:drawablePadding="2dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="2dp"
+        android:textAppearance="@style/TextAppearance.YFC.Body3.SemiBold"
+        android:textColor="@color/main_active"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/ic_heart"
+        app:layout_constraintBottom_toBottomOf="@id/info"
+        app:layout_constraintStart_toEndOf="@id/info"
+        app:layout_constraintTop_toTopOf="@id/info"
+        tools:text="99+"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/info_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_1x"
+    android:layout_marginTop="@dimen/spacing_1.25x"
+    android:layout_marginEnd="22dp"
+    android:background="@drawable/rounded_border_yellow"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_1x">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="@dimen/spacing_0.75x"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView"
+        app:srcCompat="@drawable/ic_info_yellow_big" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stub_message"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        tools:ignore="HardcodedText"
+        tools:text="Effective July 1st, Team Nogueira will only be available between 5:30 AM and 3:00 PM in the afternoon. After 3:00 PM, YFC users will not have access to this facility." />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

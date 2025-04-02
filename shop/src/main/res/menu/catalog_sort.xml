@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/low_to_high_price"
+        android:title="@string/price_low_to_high" />
+
+    <item
+        android:id="@+id/high_to_low_price"
+        android:title="@string/price_high_to_low" />
+
+</menu>

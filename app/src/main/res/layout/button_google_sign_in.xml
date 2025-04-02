@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_google_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_google_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/google_blue"
+        app:layout_constraintBottom_toBottomOf="@id/image_google_logo"
+        app:layout_constraintStart_toEndOf="@id/image_google_logo"
+        app:layout_constraintTop_toTopOf="@id/image_google_logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_google_fit"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:text="@string/connected_devices_screen_sign_in_google_text"
+        android:textAppearance="@style/TextAppearance.YFC.GoogleText"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_google_logo"
+        app:layout_constraintStart_toEndOf="@id/image_google_logo"
+        app:layout_constraintTop_toTopOf="@id/image_google_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

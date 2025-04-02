@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/spacing_1.5x"
+    android:paddingBottom="@dimen/spacing_1.5x">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/provider_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:cardCornerRadius="8dp"
+        app:cardPreventCornerOverlap="false"
+        app:strokeColor="@color/gray_light"
+        app:strokeWidth="0.5dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/provider_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.BSRounded"
+            tools:srcCompat="@drawable/ic_health_connect" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/provider_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/text_fitness_provider"
+        tools:text="Garmin" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_view"
+        style="@style/Widget.YFC.Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/orange"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false" />
+</LinearLayout>

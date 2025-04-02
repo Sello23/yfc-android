@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_profile_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_on_profile_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_background_first_level"
+        android:layout_width="258dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:background="@drawable/image_profile_screen_background_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_profile_settings" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_first_level_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/image_background_first_level"
+        app:layout_constraintTop_toTopOf="@id/image_background_first_level"
+        tools:text="Pro" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_first_level_cost"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_first_level"
+        app:layout_constraintStart_toStartOf="@id/image_background_first_level"
+        tools:text="2000 AED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_first_level_credits"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_first_level"
+        app:layout_constraintEnd_toEndOf="@id/image_background_first_level"
+        app:layout_constraintTop_toTopOf="@id/image_background_first_level"
+        tools:text="100 credits" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_background_second_level"
+        android:layout_width="258dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginEnd="@dimen/spacing_3x"
+        android:background="@drawable/image_background_how_to_buy_class_credits_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_background_first_level" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_second_level_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/black_light"
+        app:layout_constraintStart_toStartOf="@id/image_background_second_level"
+        app:layout_constraintTop_toTopOf="@id/image_background_second_level"
+        tools:text="Pro" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_second_level_cost"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_second_level"
+        app:layout_constraintStart_toStartOf="@id/image_background_second_level"
+        tools:text="2000 AED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_second_level_credits"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_second_level"
+        app:layout_constraintEnd_toEndOf="@id/image_background_second_level"
+        app:layout_constraintTop_toTopOf="@id/image_background_second_level"
+        tools:text="100 credits" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_third_level_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/black_light"
+        app:layout_constraintStart_toStartOf="@id/image_background_third_level"
+        app:layout_constraintTop_toTopOf="@id/image_background_third_level"
+        tools:text="Pro" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_third_level_cost"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_3x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_third_level"
+        app:layout_constraintStart_toStartOf="@id/image_background_third_level"
+        tools:text="2000 AED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_third_level_credits"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+        android:textColor="@color/black_light"
+        app:layout_constraintBottom_toBottomOf="@id/image_background_third_level"
+        app:layout_constraintEnd_toEndOf="@id/image_background_third_level"
+        app:layout_constraintTop_toTopOf="@id/image_background_third_level"
+        tools:text="100 credits" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_background_third_level"
+        android:layout_width="258dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:background="@drawable/image_background_how_to_buy_class_credits_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_background_second_level" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

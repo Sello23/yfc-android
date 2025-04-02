@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/spacing_1x"
+    android:paddingBottom="@dimen/spacing_0.5x"
+    tools:background="@drawable/gradient_dubai">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/dubai_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="14dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Circle"
+        tools:srcCompat="@drawable/dubai_logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:ellipsize="end"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/spacing_4.75x"
+        android:text="@string/dubai30x30_is_here"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/white"
+        app:drawableEndCompat="@drawable/ic_info_white"
+        app:layout_constraintEnd_toStartOf="@id/dubai_image"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/info_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginEnd="@dimen/spacing_0.4x"
+        android:ellipsize="end"
+        android:text="@string/dubai3030_info_msg"
+        android:textAppearance="@style/TextAppearance.YFC.Body2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/dubai_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

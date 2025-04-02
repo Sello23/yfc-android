@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_start_date"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:drawableStart="@drawable/ic_calendar_start"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        android:text="@string/payment_history_screen_start_date_text"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="14dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/spacing_0.75x"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@id/text_start_date"
+        app:layout_constraintStart_toEndOf="@id/text_start_date"
+        app:layout_constraintTop_toTopOf="@id/text_start_date" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_end_date"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:drawableStart="@drawable/ic_calendar_end"
+        android:drawablePadding="@dimen/spacing_0.75x"
+        android:text="@string/payment_history_screen_end_date_text"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@id/view_line"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_start_date" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_no_payment_history"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_0.75x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:text="@string/payment_history_no_payment_history_text"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/grey"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_reset"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:text="@string/payment_history_reset_text"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/text_end_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_end_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

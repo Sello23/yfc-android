@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/spacing_1.25x"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginEnd="@dimen/spacing_1.5x"
+            android:text="@string/your_level"
+            android:textAppearance="@style/TextAppearance.YFC.Heading2"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/button_points_hint"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="@dimen/spacing_0.25x"
+            android:layout_marginEnd="@dimen/spacing_1.5x"
+            android:background="@drawable/ic_hint"
+            app:layout_constraintBottom_toBottomOf="@id/text_level_label"
+            app:layout_constraintEnd_toStartOf="@id/level_logo"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/text_level_label"
+            app:layout_constraintTop_toTopOf="@id/text_level_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/level_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginEnd="@dimen/spacing_1.5x"
+            android:textAppearance="@style/TextAppearance.YFC.Heading1"
+            android:textColor="@color/blue"
+            app:layout_constraintEnd_toStartOf="@id/level_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_level_label"
+            tools:text="Newcomer" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/next_level_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1.5x"
+            android:text="@string/next_level_msg"
+            android:textAppearance="@style/TextAppearance.YFC.Hint"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/level_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/level_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/current_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:textAppearance="@style/TextAppearance.YFC.Heading6"
+            android:textColor="@color/blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/next_level_msg"
+            tools:text="3,356,565" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/next_points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+            android:textColor="@color/gray_light"
+            app:layout_constraintBottom_toBottomOf="@id/current_points"
+            app:layout_constraintEnd_toStartOf="@id/level_logo"
+            app:layout_constraintStart_toEndOf="@id/current_points"
+            tools:text="/5mln " />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/level_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_level_system_stub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/slider_prefix"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="16dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="@dimen/spacing_1.25x"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progress="100"
+            android:progressBackgroundTint="@color/gray_light"
+            android:progressTint="@color/yellow"
+            android:thumb="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/current_points" />
+
+        <ProgressBar
+            android:id="@+id/slider_levels"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="@dimen/spacing_1.25x"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginEnd="64dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:max="100"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progress="70"
+            android:progressBackgroundTint="@color/gray_light"
+            android:progressTint="@color/yellow"
+            android:thumb="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/current_points" />
+
+        <ProgressBar
+            android:id="@+id/slider_suffix"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="64dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="@dimen/spacing_1.25x"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progress="0"
+            android:progressBackgroundTint="@color/gray_light"
+            android:progressTint="@color/yellow"
+            android:thumb="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/current_points" />
+
+        <include
+            android:id="@+id/layout_start"
+            layout="@layout/layout_start"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="@id/slider_levels"
+            app:layout_constraintStart_toStartOf="@id/slider_levels"
+            app:layout_constraintTop_toTopOf="@id/slider_levels" />
+
+        <include
+            android:id="@+id/layout_next_goal"
+            layout="@layout/layout_next_goal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/slider_levels"
+            app:layout_constraintEnd_toEndOf="@id/level_logo"
+            app:layout_constraintTop_toTopOf="@id/slider_levels" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="210dp"
+        android:visibility="gone">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

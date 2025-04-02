@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_points"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:background="@drawable/background_tooltip"
+        android:drawableStart="@drawable/ic_coin_white"
+        android:drawablePadding="@dimen/spacing_0.125x"
+        android:lines="1"
+        android:paddingHorizontal="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="6dp"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+        android:textColor="@color/white"
+        tools:text="100 coins" />
+
+    <View
+        android:id="@+id/view_thumb"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:background="@drawable/shape_thumb" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/next_level_name"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:lines="1"
+        android:text="Rookie"
+        android:textAppearance="@style/TextAppearance.YFC.Heading5"
+        android:textColor="@color/gray_light" />
+
+</LinearLayout>

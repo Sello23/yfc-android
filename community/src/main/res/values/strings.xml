@@ -1,0 +1,54 @@
+<resources>
+    <string name="community">Community</string>
+    <string name="community_card_msg">Check on your friends\' progress</string>
+    <string name="community_card_action">Go to Community</string>
+    <string name="profile">My Profile</string>
+    <string name="profile_card_msg">Update my profile details</string>
+    <string name="friends_empty_state_title">Start making friends</string>
+    <string name="friends_empty_state_msg">Use the search to add your first friend</string>
+    <string name="enter_friend_name">Enter friend’s name</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+    <string name="friend_request">Friend request</string>
+    <string name="your_friend">Your friend</string>
+    <string name="friend_request_sent">Friend request sent</string>
+    <string name="friend_request_accepted">Friend request accepted</string>
+    <string name="friends">Friends (%d)</string>
+    <string name="requests">Requests (%d)</string>
+    <string name="unfriend">Unfriend</string>
+    <string name="minutes">Minutes</string>
+    <plurals name="minutes">
+        <item quantity="one">Minute</item>
+        <item quantity="other">Minutes</item>
+    </plurals>
+    <string name="steps">Steps</string>
+    <string name="kcal">Kcal</string>
+    <string name="kcal_value">%d Kcal</string>
+    <plurals name="steps">
+        <item quantity="one">%d Step</item>
+        <item quantity="other">%d Steps</item>
+    </plurals>
+    <string name="workouts">Workouts</string>
+    <string name="campaigns">Campaigns</string>
+
+    <string name="unfriend_title">Want to unfriend this friend?</string>
+    <string name="unfriend_desc">This person will be removed from your friends list</string>
+    <string name="unfriend_positive">Yes, unfriend</string>
+    <string name="unfriend_negative">Leave on friends list</string>
+    <plurals name="people_liked_this_workout">
+        <item quantity="one">%d Like</item>
+        <item quantity="other">%d Likes</item>
+    </plurals>
+    <string name="workout_not_liked">No likes so far. How to get them?</string>
+    <string name="you_have_new_likes">You have new likes</string>
+
+    <string name="likes">Likes</string>
+
+    <string name="get_likes_title">How do I get likes?</string>
+    <string name="get_likes_msg">Now your friends have the power to applaud your daily workouts. Join the YFC Community, find your friends, send connection requests, and engage in a mutual exchange of likes to supercharge your motivation!</string>
+    <string name="get_likes_action_main">Go to Community</string>
+    <string name="get_likes_action_secondary">Okay, got it</string>
+
+    <string name="max_new_likes_label">99+</string>
+    <string name="new_likes_label">+%d</string>
+</resources>

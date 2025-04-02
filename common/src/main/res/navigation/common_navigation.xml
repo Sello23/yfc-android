@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/common_navigation">
+
+    <dialog
+        android:id="@+id/dialog_add_credit_card"
+        android:name="com.yourfitness.common.ui.features.payments.add_credit_card.AddCreditCardBottomSheetDialogFragment" >
+        <deepLink app:uri="android-app://com.yourfitness.common/dialog_add_credit_card" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dialog_common_error"
+        android:name="com.yourfitness.common.ui.views.CommonErrorDialog" >
+        <deepLink app:uri="android-app://com.yourfitness.common/dialog_common_error" />
+    </dialog>
+
+</navigation>

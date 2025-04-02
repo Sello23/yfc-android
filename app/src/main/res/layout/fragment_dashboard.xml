@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/dashboard"
+        android:name="com.yourfitness.pt.ui.features.dashboard.PtDashboardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_bar"
+        android:name="com.yourfitness.coach.ui.features.bottom_menu.BottomMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

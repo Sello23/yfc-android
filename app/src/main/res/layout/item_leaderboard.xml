@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout_back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="68dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_user"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:scaleType="centerCrop"
+                android:src="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_rank"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Circle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.YFC.Button"
+                app:layout_constraintEnd_toStartOf="@id/image_medal"
+                app:layout_constraintStart_toEndOf="@id/image_user"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Cameron Williamson" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginBottom="@dimen/spacing_0.75x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_user"
+                tools:text="20000 points" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_medal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/image_bronze_medal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/view_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:background="@color/gray_light"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/material_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

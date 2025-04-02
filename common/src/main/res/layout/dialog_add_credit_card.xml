@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/spacing_0.5x">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvCardNumber"
+        style="@style/AddCreditCard_Title"
+        android:text="@string/add_credit_card_screen_card_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <View
+        android:id="@+id/separatorCardNumber"
+        style="@style/AddCreditCard_Separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCardNumber" />
+
+    <TextView
+        android:id="@+id/tvCardHolder"
+        style="@style/AddCreditCard_Title"
+        android:text="@string/add_credit_card_screen_name_on_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separatorCardNumber" />
+
+    <View
+        android:id="@+id/separatorCardHolder"
+        style="@style/AddCreditCard_Separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCardHolder" />
+
+    <TextView
+        android:id="@+id/tvExpDate"
+        style="@style/AddCreditCard_Title"
+        android:text="@string/add_credit_card_screen_exp_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separatorCardHolder" />
+
+    <View
+        android:id="@+id/separatorExpDate"
+        style="@style/AddCreditCard_Separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExpDate" />
+
+    <TextView
+        android:id="@+id/tvCVV"
+        style="@style/AddCreditCard_Title"
+        android:text="@string/add_credit_card_screen_cvv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separatorExpDate" />
+
+    <View
+        android:id="@+id/separatorCVV"
+        style="@style/AddCreditCard_Separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCVV" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:barrierMargin="@dimen/spacing_1.5x"
+        app:constraint_referenced_ids="tvCardNumber,tvCardHolder,tvExpDate,tvCVV" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCardNumber"
+        style="@style/Widget.YFC.EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:autofillHints="creditCardNumber"
+        android:background="@color/white_transparent"
+        android:hint="@string/add_credit_card_screen_hint_card_number"
+        android:inputType="phone"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvCardNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrierTitle"
+        tools:text="1234 1234 1234 1234" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCardHolder"
+        style="@style/Widget.YFC.EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:autofillHints="name"
+        android:background="@color/white_transparent"
+        android:hint="@string/add_credit_card_screen_hint_name_on_card"
+        android:inputType="textCapCharacters"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvCardHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrierTitle"
+        tools:text="JOHN DOE" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etExpDate"
+        style="@style/Widget.YFC.EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:autofillHints="creditCardExpirationDate"
+        android:background="@color/white_transparent"
+        android:hint="@string/add_credit_card_screen_hint_exp_date"
+        android:inputType="date"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvExpDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrierTitle"
+        tools:text="12/21" />
+
+    <TextView
+        android:id="@+id/tvExpDateError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="@dimen/spacing_0.25x"
+        android:text="@string/add_credit_card_screen_your_card_has_expired"
+        android:textColor="@color/issue_red"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/separatorExpDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCVV"
+        style="@style/Widget.YFC.EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:autofillHints="creditCardSecurityCode"
+        android:background="@color/white_transparent"
+        android:hint="@string/add_credit_card_screen_hint_cvv"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvCVV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrierTitle"
+        tools:text="***" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddCard"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_1x"
+        android:enabled="false"
+        android:text="@string/add_credit_card_screen_add_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separatorCVV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

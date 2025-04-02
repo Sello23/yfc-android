@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="48dp"
+    android:layout_marginEnd="3dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_profile_coins" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/image_limit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#63000000"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading7"
+        android:textColor="@color/white" />
+</FrameLayout>

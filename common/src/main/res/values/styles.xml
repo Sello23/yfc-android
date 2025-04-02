@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.YFC.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.YFC.Button.Round" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:background">@drawable/button_background_round</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Body3.SemiBold</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.YFC.Button.Outline.Rounded" parent="Widget.MaterialComponents.Button.OutlinedButton">
+<!--        <item name="android:background">@drawable/button_background_outline_round</item>-->
+        <item name="strokeColor">@color/white</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Body3.SemiBold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.YFC.TextView.Ladies">
+        <item name="android:background">@drawable/background_ladies</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/spacing_0.25x</item>
+        <item name="android:paddingEnd">@dimen/spacing_0.25x</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Hint</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Widget.YFC.ScrollView.Content" parent="">
+        <!--        <item name="android:layout_marginBottom">-16dp</item>-->
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="Widget.YFC.EditText.Search" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:background">@drawable/edit_text_background_normal</item>
+        <item name="android:maxHeight">36dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:drawablePadding">@dimen/spacing_0.5x</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Input</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart">@dimen/spacing_0.75x</item>
+    </style>
+
+    <style name="Widget.YFC.EditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:drawablePadding">@dimen/spacing_0.5x</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Input</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey</item>
+    </style>
+
+    <style name="Widget.YFC.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">@null</item>
+        <item name="android:minWidth">160dp</item>
+        <item name="tabIndicator">@drawable/tab_indicator</item>
+        <item name="tabIndicatorGravity">center</item>
+        <item name="tabTextAppearance">@style/TextAppearance.YFC.Subheading2</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabMinWidth">80dp</item>
+        <item name="tabPaddingStart">2dp</item>
+        <item name="tabPaddingEnd">2dp</item>
+    </style>
+
+    <style name="Widget.YFC.EditText2" parent="Widget.YFC.EditText">
+        <item name="android:background">@drawable/edit_text_background_light</item>
+    </style>
+
+    <style name="Widget.YFC.TextView.Button" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Button</item>
+        <item name="android:textColor">@color/text_button</item>
+    </style>
+
+    <style name="Widget.YFC.BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearance">@null</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+        <item name="android:background">@drawable/background_bottom_sheet</item>
+    </style>
+
+    <style name="Widget.YFC.BottomSheet.Gray" parent="Widget.YFC.BottomSheet">
+        <item name="android:background">@drawable/background_bottom_sheet_gray</item>
+    </style>
+
+    <style name="Widget.YFC.SeekBar" parent="@style/Widget.MaterialComponents.Slider">
+        <item name="android:progressDrawable">@drawable/seekbar_background_blue</item>
+        <item name="android:thumb">@drawable/seekbar_thumb_blue</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="labelStyle">@style/Widget.YFC.Tooltip</item>
+    </style>
+
+    <style name="Widget.YFC.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Heading1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Widget.YFC.MaterialCalendar.HeaderToggleButton" parent="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="Widget.YFC.MaterialCalendar.HeaderTitle" parent="Widget.MaterialComponents.MaterialCalendar.HeaderTitle">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="Widget.YFC.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@drawable/background_toolbar</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="android:actionMenuTextAppearance">@style/TextAppearance.YFC.Button</item>
+        <item name="actionMenuTextAppearance">@style/TextAppearance.YFC.Button</item>
+        <item name="android:actionMenuTextColor">@color/main_active</item>
+    </style>
+
+    <style name="Widget.YFC.TextView.Error">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Hint</item>
+        <item name="android:textColor">@color/issue_red</item>
+    </style>
+
+    <style name="Widget.YFC.Tooltip" parent="@style/Widget.MaterialComponents.Tooltip">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Heading2</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="TextAppearance.YFC" parent="" />
+
+    <style name="TextAppearance.YFC.Heading1">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Heading2">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Heading3">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Heading4">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">45sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Heading5">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Heading6">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Heading7">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Heading8">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading1">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading2">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading3">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading4">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading5">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading6">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading7">
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading8">
+        <item name="android:fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Subheading9">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Button">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Button2">
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Button.Context">
+        <item name="android:fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Input">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Label">
+        <item name="android:fontFamily">@font/work_sans_bold</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Hint">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Hint2">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Hint3">
+        <item name="android:fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Hint4">
+        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Hint5">
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Hint6">
+        <item name="android:fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body1">
+        <item name="fontFamily">@font/tajawal_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body2">
+        <item name="fontFamily">@font/tajawal_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body3">
+        <item name="fontFamily">@font/work_sans_regular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body3.SemiBold">
+        <item name="fontFamily">@font/work_sans_semi_bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body4">
+        <item name="fontFamily">@font/tajawal_bold</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body5">
+        <item name="fontFamily">@font/tajawal_bold</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body6">
+        <item name="fontFamily">@font/tajawal_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.YFC.Body7">
+        <item name="fontFamily">@font/tajawal_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Widget.YFC.ImageView.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">64.5dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Avatar.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">36dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Avatar" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Icon.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Icon.Tiny" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Icon.Medium" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.BookClassIcon" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Icon.Middle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Search" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView2" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopRight">4dp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">4dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Icon" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.ImageView.Marker" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">21dp</item>
+    </style>
+
+    <style name="ShapeAppearance.YFC.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="Subscription_ImageOption">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="srcCompat">@drawable/ic_circle_check</item>
+    </style>
+
+    <style name="Subscription_TextViewOption">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/spacing_1x</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Input</item>
+    </style>
+
+    <style name="AddCreditCard_Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/spacing_1x</item>
+        <item name="android:layout_marginTop">@dimen/spacing_1.25x</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AddCreditCard_Separator">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">@dimen/spacing_1.25x</item>
+        <item name="android:background">@color/grey_separator</item>
+    </style>
+
+    <style name="TextAppearance.YFC.GoogleText">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DialogAppearance.YFC.InputModal" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowSoftInputMode">adjustResize</item>-->
+    </style>
+
+    <style name="Widget.YFC.CheckBox.Chip" parent="@style/Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/background_chip</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/spacing_0.5x</item>
+        <item name="android:paddingEnd">@dimen/spacing_0.5x</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Heading5</item>
+        <item name="android:textColor">@color/text_chip</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.BSRounded" parent="">
+        <item name="cornerSize">8dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style
+        name="ThemeOverlay.BSRounded.BottomSheetDialog"
+        parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.BSRounded.BottomSheet</item>
+    </style>
+
+    <style name="Widget.BSRounded.BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.BSRounded</item>
+        <item name="shapeAppearance">@null</item>
+        <item name="android:background">@drawable/background_bottom_sheet_gray</item>
+    </style>
+
+    <style name="Widget.YFC.Datepicker.White" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColorPrimaryInverse">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/main_active</item>
+        <item name="android:textColorSecondaryInverse">@color/main_active</item>
+        <item name="android:textColorTertiary">@color/black</item>
+        <item name="android:headerBackground">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_bottom_sheet_gray"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:id="@+id/view_background_gray"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom_sheet_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_gym"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView2"
+        app:srcCompat="@drawable/gradient_blue" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_background_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:background="@drawable/round_bottom"
+        android:paddingBottom="@dimen/spacing_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_gym">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_gym_name"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:textAppearance="@style/TextAppearance.YFC.Heading2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Gold gym" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_gym_type"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.4x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+            android:textColor="@color/gray_light"
+            app:layout_constraintBottom_toTopOf="@id/work_time"
+            app:layout_constraintEnd_toStartOf="@id/image_gym_logo"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_gym_name"
+            tools:text="MMA, Crossfit, Powerlifting" />
+
+        <include
+            android:id="@+id/work_time"
+            layout="@layout/view_work_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_gym_type"
+            app:layout_constraintVertical_bias="1"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_gym_address"
+            style="@style/Widget.YFC.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="@dimen/spacing_0.5x"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/work_time"
+            tools:text="489 Al Bridge Apt. 307" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_gym_logo"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon.Medium" />
+
+        <include
+            android:id="@+id/info_message_container"
+            layout="@layout/view_info_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1.25x"
+            android:layout_marginEnd="22dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_gym_address"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_yes_want_to_go"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:text="@string/map_screen_yes_i_want_to_go_in_text"
+        app:layout_constraintEnd_toEndOf="@id/view_background_white"
+        app:layout_constraintStart_toStartOf="@id/view_background_white"
+        app:layout_constraintTop_toBottomOf="@id/view_background_white" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_no_im_not_here"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:background="@null"
+        android:text="@string/map_screen_no_im_not_here_text"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_yes_want_to_go" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

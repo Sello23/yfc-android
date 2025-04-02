@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/view_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginVertical="@dimen/spacing_0.5x"
+        android:layout_marginTop="@dimen/spacing_1x"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_class_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:textAppearance="@style/TextAppearance.YFC.Heading3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Beginner classes" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:layout_marginEnd="@dimen/spacing_1x"
+                android:textAppearance="@style/TextAppearance.YFC.Heading3"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="13:00" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_coach_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+                app:layout_constraintStart_toStartOf="@+id/text_class_name"
+                app:layout_constraintTop_toBottomOf="@id/text_class_name"
+                tools:text="Jane Cooper" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+                android:textColor="@color/grey"
+                app:layout_constraintEnd_toEndOf="@id/text_time"
+                app:layout_constraintTop_toBottomOf="@id/text_time"
+                tools:text="Monday, January 10" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_1.5x"
+                android:drawableStart="@drawable/ic_address_small"
+                android:drawablePadding="@dimen/spacing_0.25x"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAppearance="@style/TextAppearance.YFC.Hint"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="@id/text_class_name"
+                app:layout_constraintTop_toBottomOf="@id/text_coach_name"
+                app:layout_constraintVertical_bias="1"
+                tools:text="489 Al Bridge Apt. 307" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_facility_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_1x"
+                android:paddingBottom="@dimen/spacing_0.5x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading4"
+                app:layout_constraintStart_toStartOf="@id/text_class_name"
+                app:layout_constraintTop_toBottomOf="@id/text_address"
+                tools:text="Classic Pilates" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="@dimen/spacing_0.75x"
+                android:scaleType="centerCrop"
+                android:src="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/text_facility_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_address"
+                app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon.Small" />
+
+            <View
+                android:id="@+id/view_separator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/spacing_0.4x"
+                android:background="@color/gray_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_facility_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_get_access"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_0.75x"
+                android:layout_marginBottom="@dimen/spacing_0.75x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_separator"
+                tools:text="Get class access" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_no_classes_booked_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_0.5x"
+        android:text="@string/fitness_calendar_screen_no_classes_booked_text"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/gray_light"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

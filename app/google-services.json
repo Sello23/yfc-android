@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "897723461711",
+    "project_id": "yourfitness-coach",
+    "storage_bucket": "yourfitness-coach.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897723461711:android:542fd281daf90ff5f83a3a",
+        "android_client_info": {
+          "package_name": "com.yourfitness.coach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897723461711-8u845rldk39als3nsffv4nag5hkeeq8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLHnS1V1dkIjcyT6AjJpU_yFGSG0r26gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897723461711-8u845rldk39als3nsffv4nag5hkeeq8k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "897723461711-4250qdkn4l6qeeit9mq6pi3vpv2s0scg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.event.services.yfc.qa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897723461711:android:5f1978ad692c6e5ef83a3a",
+        "android_client_info": {
+          "package_name": "com.yourfitness.coach.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897723461711-8u845rldk39als3nsffv4nag5hkeeq8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLHnS1V1dkIjcyT6AjJpU_yFGSG0r26gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897723461711-8u845rldk39als3nsffv4nag5hkeeq8k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "897723461711-4250qdkn4l6qeeit9mq6pi3vpv2s0scg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.event.services.yfc.qa"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="false"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="14dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_bg" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_2.5x"
+            android:layout_marginTop="@dimen/spacing_1.25x"
+            android:maxLines="1"
+            android:text="@string/your_level_is"
+            android:textAppearance="@style/TextAppearance.YFC.Heading7"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/subtitle_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/every"
+                android:textAppearance="@style/TextAppearance.YFC.Hint"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/point_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+                android:textColor="@color/yellow"
+                tools:text="2,000 points" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" = "
+                android:textAppearance="@style/TextAppearance.YFC.Hint"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reward_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_profile_coins"
+                android:drawablePadding="@dimen/spacing_0.25x"
+                android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+                android:textColor="@color/yellow"
+                tools:text="2 extra coins" />
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/level_logo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_level_system_stub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_container" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/slider_prefix"
+            android:layout_width="16dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="@dimen/spacing_2.125x"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progress="100"
+            android:progressBackgroundTint="@color/gray_light"
+            android:progressTint="@color/yellow"
+            android:thumb="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/level_logo" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/slider_levels"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="@dimen/spacing_2.125x"
+            android:layout_marginStart="@dimen/spacing_1x"
+            android:layout_marginEnd="64dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progress="70"
+            android:progressBackgroundTint="@color/gray_light"
+            android:progressTint="@color/yellow"
+            android:thumb="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/level_logo" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/slider_suffix"
+            android:layout_width="64dp"
+            android:layout_height="2dp"
+            android:layout_marginVertical="@dimen/spacing_2.125x"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progress="0"
+            android:progressBackgroundTint="@color/gray_light"
+            android:progressTint="@color/yellow"
+            android:thumb="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/level_logo" />
+
+        <include
+            android:id="@+id/layout_start"
+            layout="@layout/layout_start"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="@id/slider_levels"
+            app:layout_constraintStart_toStartOf="@id/slider_levels"
+            app:layout_constraintTop_toTopOf="@id/slider_levels" />
+
+        <include
+            android:id="@+id/layout_next_goal"
+            layout="@layout/layout_next_goal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_1x"
+            app:layout_constraintBottom_toBottomOf="@id/slider_levels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/slider_levels" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/next_level_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_2.375x"
+            android:text="@string/next_level_msg_2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.YFC.Body2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider_levels" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/points_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.75x"
+            android:text="@string/how_points_calculated"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.YFC.Hint5"
+            android:textColor="@color/main_active"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/next_level_msg" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/spacing_1.25x"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/points_info" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/levels_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        tools:listitem="@layout/item_level_system" />
+</LinearLayout>

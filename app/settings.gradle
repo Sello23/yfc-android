@@ -1,0 +1,4 @@
+include ':shop'
+include ':common'
+include ':pt'
+include ':community'

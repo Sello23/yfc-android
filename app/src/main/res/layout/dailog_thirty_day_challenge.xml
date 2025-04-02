@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="14dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_bg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_thirty_day_fitness"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/spacing_0.75x"
+        android:src="@drawable/dubai_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/close" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_thirty_day_challenge_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_2x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:gravity="center_horizontal"
+        android:text="@string/kinestex_screen_title_text"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/text_thirty_day_challenge_body"
+        app:layout_constraintTop_toBottomOf="@id/image_thirty_day_fitness"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_thirty_day_challenge_body"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1.5x"
+        android:gravity="center_horizontal"
+        android:text="@string/kinestex_screen_body_text"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/button_thirty_day_challenge"
+        app:layout_constraintTop_toBottomOf="@id/text_thirty_day_challenge_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_thirty_day_challenge"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:text="@string/kinestex_button_text"
+        app:layout_constraintBottom_toTopOf="@id/text_thirty_day_challenge_secondary_button" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_thirty_day_challenge_secondary_button"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_2.5x"
+        android:gravity="center_horizontal"
+        android:text="@string/kinestex_secondary_button_text"
+        android:textAppearance="@style/TextAppearance.YFC.Heading2"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_mail_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_2x"
+        android:src="@drawable/image_mail_send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_if_you_have_problems"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1.5x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:gravity="center_horizontal"
+        android:text="@string/help_center_screen_if_you_have_problems_text"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/image_mail_send" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        app:boxBackgroundMode="none"
+        app:endIconDrawable="@drawable/ic_copy"
+        app:endIconMode="custom"
+        app:endIconTint="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/button_got_to_mail"
+        app:layout_constraintTop_toBottomOf="@id/text_if_you_have_problems">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_mail_text"
+            style="@style/Widget.YFC.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="@string/help_center_screen_mail_address_text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_got_to_mail"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_1x"
+        android:text="@string/help_center_screen_go_to_mail_text"
+        app:icon="@drawable/ic_icon_send_mail_arrow"
+        app:iconGravity="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

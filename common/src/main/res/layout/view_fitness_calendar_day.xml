@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/card"
+        layout="@layout/view_facility_full_info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.5x" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_1.25x"
+        android:layout_marginBottom="@dimen/spacing_1.75x"
+        android:gravity="center"
+        android:text="@string/fitness_calendar_screen_no_classes_booked_text"
+        android:textAppearance="@style/TextAppearance.YFC.Body1"
+        android:textColor="@color/gray_light"
+        android:visibility="gone" />
+
+</FrameLayout>

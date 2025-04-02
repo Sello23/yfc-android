@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/spacing_0.4x"
+    android:weightSum="15">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/weekday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        android:textColor="@color/black"
+        tools:text="Monday" />
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_interval"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading6"
+        android:textColor="@color/black"
+        tools:text="10:00 – 22:00 " />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

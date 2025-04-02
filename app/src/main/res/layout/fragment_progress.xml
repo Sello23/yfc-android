@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_container"
+            style="@style/Widget.YFC.ScrollView.Content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="72dp"
+            android:background="@color/gray_background"
+            android:fitsSystemWindows="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/fitness_info"
+                    layout="@layout/fragment_fitness_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="top" />
+
+                <include
+                    android:id="@+id/view_subscribe_banner"
+                    layout="@layout/view_subscribe_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fitness_info"
+                    tools:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="14dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_subscribe_banner"
+                    app:spanCount="2"
+                    tools:listitem="@layout/item_progress_action" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragment_points"
+                    android:name="com.yourfitness.coach.ui.features.progress.points.PointsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_1x"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    android:layout_marginBottom="@dimen/spacing_1x"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_view"
+                    tools:layout="@layout/fragment_points" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragment_upcoming_class"
+                    android:name="com.yourfitness.coach.ui.features.progress.upcoming_class.UpcomingClassFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_points"
+                    tools:layout="@layout/fragment_upcoming_class" />
+                <!--<fragment // TODO temporary removed Studios
+                    android:id="@+id/fragment_upcoming_class"
+                    android:name="com.yourfitness.coach.ui.features.progress.upcoming_class.UpcomingClassFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_points"
+                    tools:layout="@layout/fragment_upcoming_class" />
+
+                    <fragment
+                        android:id="@+id/fragment_visited_classes"
+                        android:name="com.yourfitness.coach.ui.features.progress.visited_class.VisitedClassesFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_1x"
+                        app:layout_constraintTop_toBottomOf="@id/fragment_upcoming_class"
+                        tools:layout="@layout/fragment_visited_classes" />
+                <fragment
+                    android:id="@+id/fragment_visited_classes"
+                    android:name="com.yourfitness.coach.ui.features.progress.visited_class.VisitedClassesFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_1x"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_upcoming_class"
+                    tools:layout="@layout/fragment_visited_classes" />-->
+
+                <!--            <androidx.fragment.app.FragmentContainerView-->
+                <!--                android:id="@+id/fragment_upcoming_training"-->
+                <!--                android:name="com.yourfitness.pt.ui.features.upcoming_training.UpcomingTrainingFragment"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="@dimen/spacing_1x"-->
+                <!--                app:layout_constraintTop_toBottomOf="@id/fragment_points"-->
+                <!--                tools:layout="@layout/fragment_training" />-->
+
+                <View
+                    android:id="@+id/view_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_1.75x"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_points" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_bar"
+        android:name="com.yourfitness.coach.ui.features.bottom_menu.BottomMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

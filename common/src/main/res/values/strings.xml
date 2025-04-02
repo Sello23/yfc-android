@@ -1,0 +1,106 @@
+<resources>
+    <string name="unknown_error">Unknown error</string>
+    <plurals name="profile_screen_format_coins">
+        <item quantity="one">%s coin</item>
+        <item quantity="other">%s coins</item>
+    </plurals>
+    <string name="filters_screen_reset_all">Reset all</string>
+    <string name="filters_screen_filters">Filters</string>
+    <string name="close">Close</string>
+    <string name="filters_screen_no_limits">No limits</string>
+    <string name="map_screen_search">Search</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="map_screen_results_format">Results (%d)</string>
+    <string name="map_screen_no_facilities_found">No facilities found</string>
+    <string name="map_screen_no_pt_found">No trainers found</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="btn_retry">Retry</string>
+    <string name="got_it">Got it</string>
+    <string name="will_be_refund">will be refund</string>
+    <string name="map_screen_ladies_only">Ladies only</string>
+    <string name="progress_screen_go_to_fitness_calendar_text">Go to fitness calendar</string>
+
+    <!--PAYMENT_METHOD_SCREEN-->
+    <string name="payment_method_screen_subscribe">Subscribe</string>
+    <string name="payment_options">Payment options</string>
+    <string name="payment_method">Payment method</string>
+    <string name="payment_method_screen_you_will_pay_now">You will pay now</string>
+    <string name="payment_method_screen_one_time_payment">One-time payment</string>
+    <string name="payment_method_screen_you_will_pay">You will pay</string>
+    <string name="payment_method_screen_future_payments">Future payments</string>
+    <string name="payment_method_screen_credit_card">Credit card</string>
+    <string name="payment_method_screen_mastercard_visa">Mastercard, Visa</string>
+    <string name="payment_method_screen_payment_method_doesnt_work_title">Hmm…that payment doesn\'t work</string>
+    <string name="payment_method_screen_payment_method_doesnt_work_description">Please try another payment method or check that you\'ve entered everything correctly?</string>
+    <string name="payment_method_screen_back_to_the_map">Back to the map</string>
+    <string name="payment_method_screen_back_to_shopping">Back to shopping</string>
+
+    <!--ADD_CREDIT_CARD_SCREEN-->
+    <string name="add_credit_card_screen_card_number">Card number</string>
+    <string name="add_credit_card_screen_hint_card_number">1234 1234 1234 1234</string>
+    <string name="add_credit_card_screen_name_on_card">Name on card</string>
+    <string name="add_credit_card_screen_hint_name_on_card">NAME SURNAME</string>
+    <string name="add_credit_card_screen_exp_date">Exp date</string>
+    <string name="add_credit_card_screen_hint_exp_date">MM/YY</string>
+    <string name="add_credit_card_screen_your_card_has_expired">Your card has expired</string>
+    <string name="add_credit_card_screen_cvv">CVV</string>
+    <string name="add_credit_card_screen_hint_cvv">123</string>
+    <string name="add_credit_card_screen_add_card">Add Card</string>
+    <string name="add_credit_card_screen_add_credit_card">Add credit card</string>
+
+    <!-- ERROR-->
+    <string name="error_something_went_wrong">Something went wrong</string>
+
+    <string name="map_screen_successfully_passed_text">Successfully passed!</string>
+
+    <!-- FILTERS-->
+    <string name="filters_see_all">See all</string>
+    <string name="map_screen_type">Type</string>
+    <string name="filters_screen_distance">Distance</string>
+    <string name="details">Details</string>
+    <string name="facilities">Facilities</string>
+    <string name="proceed_to_payment">Proceed to Payment | %s </string>
+    <string name="proceed_to_payment_empty">Proceed to Payment</string>
+
+    <!--FITNESS_CALENDAR_SCREEN-->
+    <string name="fitness_calendar_screen_no_classes_booked_text">No classes booked</string>
+    <string name="fitness_calendar_screen_schedule_text">Schedule</string>
+    <string name="fitness_calendar_screen_month_text">Month</string>
+    <string name="fitness_calendar_screen_week_text">Week</string>
+    <string name="fitness_calendar_screen_day_text">Day</string>
+    <string name="fitness_calendar_screen_day_and_day_week_text">%s | %s</string>
+    <string name="fitness_calendar_screen_calendar_text">calendar</string>
+    <string name="fitness_calendar_screen_fitness_calendar_text">Fitness calendar</string>
+    <string name="fitness_calendar_screen_current_month_text">%s %s</string>
+    <string name="fitness_calendar_screen_start_end_week_text">%s - %s</string>
+    <string name="training_calendar_screen_time_interval">%s-%s</string>
+
+    <string name="common_error_dialog_title">Oops, something went wrong!</string>
+    <string name="common_error_dialog_msg">An error occurred, please try again</string>
+    <string name="remove_blocked_time_slot">Remove blocked time slot</string>
+
+    <string name="no_access_for_today">No access for today</string>
+    <string name="no_access">No access</string>
+    <string name="access_hours">Access hours: %s</string>
+    <string name="access_times">Access Times</string>
+
+    <string name="coming_soon">COMING SOON</string>
+    <string name="connection_issue">No server connection</string>
+
+    <string name="level_number">Level %d</string>
+
+    <string name="challenges_screen_ongoing_text">ongoing</string>
+    <string name="challenges_screen_private_text">Private</string>
+    <string name="challenges_screen_start_text">Start:</string>
+    <string name="challenges_screen_finish_text">Finish:</string>
+    <string name="challenges_screen_join_text">Join</string>
+
+    <string name="challenges_screen_leaderboard_text">Leaderboard</string>
+    <string name="challenges_screen_details_text">Details</string>
+
+    <string name="class_booked">Class booked</string>
+    <string name="no_classes_available">No classes available</string>
+    <string name="see_full_list">See full list</string>
+    <string name="next">Next</string>
+</resources>

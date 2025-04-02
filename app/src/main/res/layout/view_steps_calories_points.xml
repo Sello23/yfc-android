@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ic_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_steps"
+        app:layout_constraintBottom_toBottomOf="@id/text_steps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_steps_amount" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_steps_amount"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="123" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_steps"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:text="@string/progress_screen_steps_text"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/gray_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_steps_amount" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ic_kcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_kcal"
+        app:layout_constraintBottom_toBottomOf="@id/text_kcal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_kcal_amount" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_kcal_amount"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_steps"
+        tools:text="312" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_kcal"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:text="@string/progress_screen_kcal_text"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/gray_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_kcal_amount" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ic_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_points"
+        app:layout_constraintBottom_toBottomOf="@id/text_points"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_points_amount" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_points_amount"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading3"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_kcal"
+        tools:text="23" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_points"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1.5x"
+        android:text="@string/progress_screen_points_text"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/gray_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_points_amount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

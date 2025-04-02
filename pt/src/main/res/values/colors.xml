@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_status_requested">@color/yellow</color>
+    <color name="color_status_booked">@color/main_active</color>
+    <color name="color_status_completed">@color/gray_light</color>
+    <color name="color_status_confirmed">#49C594</color>
+    <color name="color_status_cancellation_requested">@color/issue_red</color>
+    <color name="color_status_charged">#EE3A50</color>
+    <color name="color_status_blocked_slot">#FFD6DB</color>
+
+</resources>

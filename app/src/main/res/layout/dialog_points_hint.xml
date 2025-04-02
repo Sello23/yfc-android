@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_bottom_sheet_gray"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/spacing_0.5x"
+        android:layout_marginEnd="@dimen/spacing_0.5x"
+        android:padding="@dimen/spacing_0.5x"
+        android:src="@drawable/ic_close_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_2.375x"
+        android:gravity="center_horizontal"
+        android:text="@string/points_hint_how_points_work"
+        android:textAppearance="@style/TextAppearance.YFC.Heading7"
+        android:textColor="@color/black" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_1x" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_message_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:gravity="center_horizontal"
+        android:text="@string/points_hint_you_get_coins_for_points"
+        android:textAppearance="@style/TextAppearance.YFC.Body2"
+        android:textColor="@color/black" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_0.5x" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/apple_health"
+            android:drawablePadding="@dimen/spacing_0.5x"
+            android:gravity="center"
+            android:text="@string/apple_health"
+            android:textAppearance="@style/TextAppearance.YFC.Body7"
+            android:textColor="@color/black" />
+
+        <Space
+            android:layout_width="@dimen/spacing_0.75x"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/or"
+            android:textAppearance="@style/TextAppearance.YFC.Body2"
+            android:textColor="@color/black" />
+
+        <Space
+            android:layout_width="@dimen/spacing_0.75x"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/google_fit"
+            android:drawablePadding="@dimen/spacing_0.5x"
+            android:gravity="center"
+            android:text="@string/google_fit"
+            android:textAppearance="@style/TextAppearance.YFC.Body7"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_2x" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_message_bottom"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1.5x"
+        android:gravity="center_horizontal"
+        android:text="@string/points_hint_up_your_earning_potential"
+        android:textAppearance="@style/TextAppearance.YFC.Button"
+        android:textColor="@color/gray_light" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_0.75x" />
+
+    <include
+        android:id="@+id/count_info"
+        layout="@layout/view_how_fitness_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_1.5x" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_action_primary"
+        style="@style/Widget.YFC.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.25x"
+        android:text="@string/points_hint_ok_cool" />
+
+
+</LinearLayout>

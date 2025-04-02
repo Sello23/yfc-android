@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_1x"
+    android:layout_marginVertical="@dimen/spacing_0.5x"
+    android:layout_marginTop="@dimen/spacing_1x"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="136dp">
+
+        <ImageView
+            android:id="@+id/image_facility"
+            android:layout_width="132dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/spacing_0.75x"
+            android:layout_marginEnd="@dimen/spacing_0.75x"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearance.YFC.ImageView.Icon.Small" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_ladies"
+            style="@style/Widget.YFC.TextView.Ladies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.5x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:text="@string/map_screen_ladies_only"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.75x"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Button"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/work_time"
+            app:layout_constraintEnd_toStartOf="@id/image_icon"
+            app:layout_constraintStart_toEndOf="@id/image_facility"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:text="Gold's gym" />
+
+        <include
+            android:id="@+id/work_time"
+            layout="@layout/view_work_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_0.4x"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/text_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/image_facility"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginTop="@dimen/spacing_0.5x"
+            android:drawableStart="@drawable/ic_address_small"
+            android:drawablePadding="@dimen/spacing_0.25x"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.YFC.Hint"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/text_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_facility"
+            app:layout_constraintVertical_bias="1"
+            tools:text="489 Al Bridge Apt. 307\naaa " />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            android:drawableStart="@drawable/ic_distance_small"
+            android:drawablePadding="@dimen/spacing_0.25x"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading5"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_facility"
+            tools:text="13 km" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_get_access"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_1x"
+            android:layout_marginBottom="@dimen/spacing_0.75x"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/manual_search_screen_get_access_text"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

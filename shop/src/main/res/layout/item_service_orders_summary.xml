@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="152dp"
+    android:layout_marginHorizontal="@dimen/spacing_1x"
+    android:layout_marginVertical="@dimen/spacing_0.25x"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/service_image"
+        android:layout_width="108dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_accessories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_0.5x"
+        android:background="@drawable/rounded_border_in_stock"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="92dp"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/spacing_0.25x"
+        android:paddingVertical="@dimen/spacing_0.125x"
+        android:textAppearance="@style/TextAppearance.YFC.Hint3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/service_image"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/service_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="RECEIVED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_1x"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/service_logo"
+        app:layout_constraintEnd_toStartOf="@id/service_logo"
+        app:layout_constraintStart_toEndOf="@id/service_image"
+        app:layout_constraintTop_toTopOf="@id/service_logo"
+        tools:text="Aroma massage" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/service_logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/spacing_0.75x"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Widget.YFC.Shop.ImageView.Rounded"
+        tools:srcCompat="@drawable/image_accessories" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/vendor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.625x"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/service_image"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="Classic pilates" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginTop="@dimen/spacing_0.25x"
+        android:drawableStart="@drawable/ic_address"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/service_image"
+        app:layout_constraintTop_toBottomOf="@id/vendor_name"
+        tools:text="489 Al Bridge Apt. 307" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="@dimen/spacing_0.25x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Hint"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@id/voucher_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/service_image"
+        app:layout_constraintTop_toBottomOf="@id/text_address"
+        app:layout_constraintVertical_bias="0"
+        tools:text="+971-50-6256243" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/voucher_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_1x"
+        android:gravity="center"
+        android:text="@string/details"
+        android:textAppearance="@style/TextAppearance.YFC.Button"
+        android:textColor="@color/main_active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/voucher_claim" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/voucher_claim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/spacing_1x"
+        android:layout_marginEnd="@dimen/spacing_1x"
+        android:text="@string/claim_voucher"
+        android:textAppearance="@style/TextAppearance.YFC.Button"
+        android:textColor="@color/main_active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

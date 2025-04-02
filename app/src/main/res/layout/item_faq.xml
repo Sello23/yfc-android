@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_0.25x">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/background_image"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Widget.YFC.ImageView.Rounded"
+        tools:srcCompat="@drawable/gradient_blue" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@id/background_image"
+        app:layout_constraintTop_toTopOf="@id/background_image"
+        tools:srcCompat="@drawable/image_coin" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/coming_soon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_0.125x"
+        android:background="@drawable/background_yellow_rounded_4"
+        android:paddingHorizontal="@dimen/spacing_0.25x"
+        android:paddingVertical="@dimen/spacing_0.125x"
+        android:text="@string/coming_soon"
+        android:textAppearance="@style/TextAppearance.YFC.Hint3"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/text_title"
+        app:layout_constraintStart_toStartOf="@+id/text_title"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_1x"
+        android:layout_marginBottom="@dimen/spacing_0.5x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/background_image"
+        app:layout_constraintEnd_toEndOf="@id/background_image"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/background_image"
+        tools:text="@string/faq_screen_how_to_earn_coins_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

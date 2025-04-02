@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_1x"
+    android:layout_marginVertical="@dimen/spacing_0.25x"
+    android:background="@color/white"
+    android:padding="@dimen/spacing_0.75x">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:background="@drawable/rounded_border_in_stock"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/spacing_0.25x"
+        android:paddingVertical="@dimen/spacing_0.125x"
+        android:textAppearance="@style/TextAppearance.YFC.Hint3"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="RECEIVED" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/order_number_label"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:maxLines="1"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/spacing_0.4x"
+        android:paddingBottom="@dimen/spacing_0.125x"
+        android:text="@string/order_number"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/text_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/order_number_value"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:maxLines="1"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/spacing_0.4x"
+        android:paddingBottom="@dimen/spacing_0.125x"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/order_number_label"
+        app:layout_constraintTop_toBottomOf="@id/status_label"
+        tools:text="YFC-14" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/order_date_label"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/spacing_0.4x"
+        android:text="@string/order_date"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading2"
+        android:textColor="@color/text_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_number_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/order_date_value"
+        style="@style/Widget.YFC.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/order_date_label"
+        app:layout_constraintTop_toBottomOf="@id/order_number_label"
+        tools:text="April 23, 2022" />
+
+    <LinearLayout
+        android:id="@+id/items_images"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/spacing_1x"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/order_details"
+        app:layout_constraintTop_toBottomOf="@id/order_date_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/order_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/spacing_0.25x"
+        android:paddingVertical="@dimen/spacing_0.125x"
+        android:text="@string/details"
+        android:textAppearance="@style/TextAppearance.YFC.Hint3"
+        android:textColor="@color/main_active"
+        app:layout_constraintBottom_toBottomOf="@id/items_images"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/blocked_slots_list_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-16dp"
+        android:layout_weight="1"
+        android:background="#F6F7FB"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/spacing_0.5x"
+        android:paddingBottom="@dimen/spacing_4.5x"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_calendar_blocked_week" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/remove_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/spacing_1x"
+            android:paddingStart="@dimen/spacing_1.5x"
+            android:paddingEnd="@dimen/spacing_0.125x"
+            android:text="@string/remove_all"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/issue_red" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/info_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/slots_selected_default"
+            android:textAppearance="@style/TextAppearance.YFC.Heading2"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/remove_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/spacing_1x"
+            android:paddingStart="@dimen/spacing_0.125x"
+            android:paddingEnd="@dimen/spacing_1.5x"
+            android:text="@string/remove_label"
+            android:textAppearance="@style/TextAppearance.YFC.Subheading1"
+            android:textColor="@color/color_set_date_time" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

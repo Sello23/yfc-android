@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_toolbar_bottom_sheet"
+    app:menu="@menu/bottom_sheet">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/new_likes_background"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.YFC.Heading2"
+            android:textColor="@color/black"
+            tools:text="Title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/new_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_0.25x"
+            android:background="@drawable/new_likes_details_background"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="5dp"
+            android:textAppearance="@style/TextAppearance.YFC.Body3.SemiBold"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/info"
+            app:layout_constraintStart_toEndOf="@id/info"
+            app:layout_constraintTop_toTopOf="@id/info"
+            tools:text="99+"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</com.google.android.material.appbar.MaterialToolbar>

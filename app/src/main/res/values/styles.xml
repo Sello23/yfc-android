@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.YFC.TextView.Avatar">
+        <item name="android:background">@drawable/background_photo</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Heading4</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.YFC.EditText.SearchLine" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:background">@drawable/edit_text_search_line_background</item>
+        <item name="android:drawablePadding">@dimen/spacing_0.5x</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Input</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey</item>
+    </style>
+
+    <style name="Widget.YFC.Button.Small" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:background">@drawable/button_background_pill</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Body3</item>
+        <item name="backgroundTint">@color/grey</item>
+    </style>
+
+    <style name="Widget.YFC.RadioButton" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:background">@drawable/radio_background</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Input</item>
+        <item name="android:textColor">@color/text_radio_button</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="Widget.YFC.PinView" parent="">
+        <item name="android:itemBackground">@drawable/pin_background</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.YFC.Input</item>
+        <item name="android:textSize">20sp</item>
+        <item name="viewType">none</item>
+        <item name="itemWidth">40dp</item>
+        <item name="itemSpacing">@dimen/spacing_0.5x</item>
+    </style>
+
+    <style name="Widget.YFC.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorPrimary">@color/main_active</item>
+        <item name="colorSurfaceVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurfaceContainerHighest">@color/transparent</item>
+        <item name="colorOutline">@color/grey</item>
+        <item name="colorOnSurface">@color/grey</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnSurfaceVariant">@color/grey</item>
+    </style>
+</resources>
